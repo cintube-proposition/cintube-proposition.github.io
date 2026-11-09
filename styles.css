@@ -75,7 +75,7 @@ img,canvas,svg{display:block;max-width:100%}
 /* ── barre ── */
 .top{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--navh);display:flex;align-items:center;gap:22px;padding:0 var(--gut);
   transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
-.top.solid,html.menu-open .top{background:var(--glass-bg);-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);border-bottom-color:var(--line);box-shadow:inset 0 1px 0 var(--glass-line)}
+.top.solid,html.menu-open .top{background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom-color:var(--line);box-shadow:inset 0 1px 0 var(--glass-line)}
 .skip{position:absolute;left:var(--gut);top:-80px;z-index:9;min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--ink);color:var(--bg);font:600 15px var(--f)}
 .skip:focus{top:14px}
 .brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:600;font-size:20px;letter-spacing:-.02em}
@@ -158,7 +158,7 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 .card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;padding:22px;border-radius:var(--r);overflow:hidden;isolation:isolate;
   background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);translate:var(--lift,0 0);
   transition:translate .5s var(--ease),box-shadow .5s var(--ease),border-color .4s}
-.card__img{position:absolute;left:0;top:-8%;z-index:0;object-fit:cover;width:100%;height:116%;
+.card__img{position:absolute;left:0;top:-14%;z-index:0;object-fit:cover;width:100%;height:128%;
   filter:grayscale(1) contrast(.82) brightness(1.04);opacity:.8;--sc:1;transform:translate3d(0,var(--dy,0px),0) scale(var(--sc));
   transition:filter .8s var(--ease-io),opacity .8s var(--ease-io),scale 1.2s var(--ease)}
 :root[data-theme="dark"] .card__img,html:not([data-theme="light"]) .card__img:where(.dark *){filter:grayscale(1) contrast(.9) brightness(.8)}
@@ -242,6 +242,13 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 .drop__row .t{flex:1;min-width:180px}
 .drop__row .t b{display:block;font-weight:600;font-size:16px}
 .drop__row .t span{display:block;font-size:14.5px;color:var(--mute)}
+.drop__fields{display:grid;gap:12px}
+.drop__fields .fld input,.drop__fields .fld textarea{min-height:46px;padding:10px 14px}
+.drop__fields .fld textarea{min-height:0;line-height:1.45}
+.drop__fields .opt{color:var(--mute)}
+.drop__send{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.drop__note{font-size:13.5px;color:var(--mute);margin:0;max-width:30ch}
+@media (max-width:620px){ .drop__send .pill{width:100%} }
 .flist li{display:flex;align-items:center;gap:12px;min-height:44px;border-top:1px solid var(--line);font-size:15px}
 .flist li:first-child{border-top:0}
 .flist li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
@@ -324,7 +331,7 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 
 /* ── entrées au défilement ── */
 [data-drift]{transform:translate3d(0,var(--dy,0px),0);will-change:transform}
-html.js .rv{opacity:0;translate:0 24px}
+html.js .rv{opacity:0;translate:0 14px}
 html.js .rv.in{opacity:1;translate:var(--lift,0 0);transition:opacity .9s var(--ease-io),translate .5s var(--ease)}
 .ar{display:inline-block}
 
@@ -356,7 +363,7 @@ html.js .rv.in{opacity:1;translate:var(--lift,0 0);transition:opacity .9s var(--
 }
 @media (max-width:620px){
   :root{--navh:64px}
-  .cards,.cards--3{grid-template-columns:1fr 1fr;gap:12px}
+  .cards,.cards--3{grid-template-columns:1fr 1fr;gap:16px}
   .card{padding:14px;border-radius:16px}
   .card__body h3{font-size:16px}
   .card__body p{display:none}

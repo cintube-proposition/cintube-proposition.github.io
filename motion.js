@@ -25,11 +25,12 @@ function boot(){
   var nav = function(){ if (top) top.classList.toggle('solid', scrollY > 24); };
   addEventListener('scroll', nav, { passive:true }); nav();
 }
-function scrollTop(){
-  window.scrollTo(0, 0);
-  if (lenis){ lenis.scrollTo(0, { immediate:true, force:true }); lenis.scrollTo(0, { immediate:true, force:true }); }
-  window.scrollTo(0, 0);
+function scrollTo(y){
+  y = y || 0; window.scrollTo(0, y);
+  if (lenis){ lenis.scrollTo(y, { immediate:true, force:true }); lenis.scrollTo(y, { immediate:true, force:true }); }
+  window.scrollTo(0, y);
 }
+function scrollTop(){ scrollTo(0); }
 function isDark(){ var t = document.documentElement.getAttribute('data-theme'); return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
 function setTheme(dark){
   document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
@@ -129,8 +130,13 @@ function drift(root){
   var narrow = matchMedia('(max-width: 900px)'), items = [], vh = innerHeight;
   function measure(){
     vh = innerHeight; var f = narrow.matches ? .6 : 1;
-    items = els.map(function(el){ el.style.setProperty('--dy', '0px'); var r = el.getBoundingClientRect();
-      return { el:el, top:r.top + scrollY, h:r.height, k:(parseFloat(el.dataset.drift) || 0) * f, last:null }; });
+    var KCOL = [.03, -.02, .02, -.03];
+    items = els.map(function(el){ el.style.setProperty('--dy', '0px'); var r = el.getBoundingClientRect(), k;
+      if (el.dataset.drift === 'col'){ /* vitesse par colonne réelle : les cartes d'une même colonne glissent ensemble */
+        var lefts = []; [].forEach.call(el.parentNode.children, function(c){ var x = Math.round(c.getBoundingClientRect().left); if (lefts.indexOf(x) < 0) lefts.push(x); });
+        lefts.sort(function(a, b){ return a - b; }); k = KCOL[lefts.indexOf(Math.round(r.left)) % 4] * f; }
+      else k = (parseFloat(el.dataset.drift) || 0) * f;
+      return { el:el, top:r.top + scrollY, h:r.height, k:k, last:null }; });
   }
   function render(){
     var y = scrollY, mid = vh / 2;
@@ -218,5 +224,5 @@ function page(root){
   if (window.ScrollTrigger) ScrollTrigger.refresh();
   return function(){ stops.forEach(function(f){ try { f(); } catch(e){} }); };
 }
-return { boot:boot, page:page, scrollTop:scrollTop, isDark:isDark, setTheme:setTheme, reduce:reduce };
+return { boot:boot, page:page, scrollTop:scrollTop, scrollTo:scrollTo, isDark:isDark, setTheme:setTheme, reduce:reduce };
 })();
