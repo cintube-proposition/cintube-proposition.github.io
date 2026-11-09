@@ -6,8 +6,8 @@
 <title>Cintube | Cintrage et fabrication métallique sur mesure depuis 1955</title>
 <meta name="description" content="Cintreur et fabricant métallique sur mesure depuis 1955. Usines à Lachine, Mississauga et Plattsburgh. Code ASME, estampilles S et U.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#243C33">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23243C33'/%3E%3Cpath d='M7 25V18a11 11 0 0 1 11-11h7' fill='none' stroke='%23DADEE0' stroke-width='4.5'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ECEEEF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ECEEEF'/%3E%3Cpath d='M7 25V18a11 11 0 0 1 11-11h7' fill='none' stroke='%2315181B' stroke-width='4.5'/%3E%3Ccircle cx='25' cy='7' r='3' fill='%23F2C200'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cintube | Cintrage et fabrication métallique sur mesure depuis 1955">
 <meta property="og:description" content="Cintreur et fabricant métallique sur mesure depuis 1955. Usines à Lachine, Mississauga et Plattsburgh. Code ASME, estampilles S et U.">
@@ -17,269 +17,242 @@
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400&display=swap">
 <style>
-/* Plaque signalétique : chaque appareil sous pression que Cintube fabrique porte
-   une plaque d'inox rivée sur sa tôle peinte. Le site fait la même chose : la tôle
-   émaillée est le fond, les faits sont gravés sur l'inox. */
+/* Acier en 3D. Scène : un ingénieur, de jour, devant son écran, compare des
+   fournisseurs. Fond clair de studio, comme une pièce posée sur un fond de photo
+   produit ; tout est acier, une seule couleur : le jaune des machines d'atelier. */
 :root{
-  --enamel:#243C33; --enamel-2:#2C483D; --enamel-3:#355648;
-  --on:#E8EFE9; --on-2:#C3D2C8; --on-mute:#A9BCB1; --rule:rgba(232,239,233,.16);
-  --etch:#1B2021; --etch-2:#3A4245;
-  --f:"B612", "Helvetica Neue", Arial, sans-serif;
-  --m:"B612 Mono", ui-monospace, Menlo, monospace;
-  --gut:clamp(16px,5vw,72px); --max:1180px;
+  --studio:#ECEEEF; --studio-2:#F6F7F7; --steel:#D5D9DC; --card:rgba(255,255,255,.72);
+  --ink:#15181B; --ink-2:#3B4248; --mute:#4F575E; --line:rgba(21,24,27,.12); --line-2:rgba(21,24,27,.22);
+  --signal:#F2C200; --signal-2:#FFD12E;
+  --f:"Host Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --m:"Martian Mono", ui-monospace, Menlo, monospace;
+  --gut:clamp(16px,5vw,72px); --max:1280px; --navh:78px;
   --ease:cubic-bezier(.16,1,.3,1);
 }
 *{box-sizing:border-box}
-html{background:var(--enamel);color-scheme:dark;scrollbar-color:var(--enamel-3) var(--enamel);-webkit-text-size-adjust:100%}
-body{margin:0;color:var(--on);font-family:var(--f);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--enamel);caret-color:var(--on);overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;z-index:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
-::selection{background:var(--on);color:var(--enamel)}
-::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--enamel)}
-::-webkit-scrollbar-thumb{background:var(--enamel-3);border-radius:10px;border:2px solid var(--enamel)}
-:focus-visible{outline:2px solid var(--on);outline-offset:3px;border-radius:6px}
-.plate :focus-visible{outline-color:var(--etch)}
+html{background:var(--studio);scrollbar-color:var(--steel) var(--studio);-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:radial-gradient(120% 90% at 62% 30%,var(--studio-2) 0%,var(--studio) 55%,#E3E6E8 100%) fixed;caret-color:var(--ink)}
+::selection{background:var(--signal);color:var(--ink)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--studio)}
+::-webkit-scrollbar-thumb{background:var(--steel);border-radius:10px;border:2px solid var(--studio)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
 h1:focus{outline:none}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,p,dl,dd,dt,ul,figure{margin:0}
 ul{padding:0;list-style:none}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-main,#top,#foot{position:relative;z-index:1}
-main{display:block;max-width:var(--max);margin:0 auto;padding:0 var(--gut) clamp(60px,10vh,120px)}
-.pg-home{max-width:none;padding:0}
+main{display:block;max-width:var(--max);margin:0 auto;padding:var(--navh) var(--gut) clamp(60px,10vh,120px)}
+main.pg-home{max-width:none;padding:0 0 clamp(60px,10vh,120px)}
 
 /* ── entête ── */
-#top{display:flex;align-items:center;gap:28px;padding:18px var(--gut);max-width:calc(var(--max) + 2*var(--gut));margin:0 auto}
-.skip{position:absolute;left:var(--gut);top:-80px;z-index:9;min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--on);color:var(--enamel);font:700 16px var(--f)}
-.skip:focus{top:10px}
-.brand{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:20px;letter-spacing:-.01em}
-.links{display:flex;gap:26px;margin-left:auto;color:var(--on-2);font-size:16px}
-.links a{display:inline-flex;align-items:center;min-height:44px}.links a:hover,.links a[aria-current]{color:var(--on)}
-.links a[aria-current]{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:8px}
-.lang{color:var(--on-mute);font-size:16px;padding:0 6px;min-height:44px;display:inline-flex;align-items:center}
-.lang:hover{color:var(--on)}
-#top .cta{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid rgba(232,239,233,.35);font-size:16px;font-weight:700}
-#top .cta:hover{background:var(--enamel-2)}
-.menu{display:none;width:46px;height:46px;border-radius:12px;border:1px solid rgba(232,239,233,.25);background:transparent;color:var(--on);align-items:center;justify-content:center;cursor:pointer}
-.menu svg{width:18px;height:18px}
-#drawer{position:fixed;inset:82px 0 0 0;z-index:20;background:var(--enamel);padding:10px var(--gut) 40px;overflow:auto}
-#drawer nav{display:flex;flex-direction:column}
-#drawer a{display:flex;align-items:center;min-height:60px;font-size:24px;font-weight:700;border-bottom:1px solid var(--rule)}
-#drawer a:last-child{font-size:18px;color:var(--on-2);font-weight:400}
-html.menu-open{overflow:hidden}
-
-/* ── la plaque ── */
-.plate{--mx:30%;--my:20%;position:relative;border-radius:16px;color:var(--etch);
-  padding:clamp(28px,4.4vw,64px) clamp(22px,4.6vw,72px) clamp(30px,4vw,58px);
-  background:
-    repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 2px,transparent 2px 4px),
-    linear-gradient(104deg,#B7BCBF 0%,#DADEE0 26%,#C3C8CB 50%,#E1E4E6 72%,#BABFC2 100%);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -2px 0 rgba(0,0,0,.18),0 2px 3px rgba(0,0,0,.35),0 40px 80px -40px rgba(0,0,0,.75)}
-.plate::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:soft-light;
-  background:radial-gradient(60% 80% at var(--mx) var(--my),rgba(255,255,255,.75),rgba(255,255,255,0) 60%)}
-.plate > .etched{position:relative;z-index:1}
-.rivet{position:absolute;width:18px;height:18px;border-radius:50%;z-index:1;
-  background:radial-gradient(circle at 36% 34%,#F7F8F9 0 18%,#B9BEC1 45%,#7C8286 80%,#5D6367 100%);
-  box-shadow:0 1px 2px rgba(0,0,0,.45),inset 0 -1px 1px rgba(0,0,0,.3)}
-.rivet:nth-of-type(1){left:18px;top:18px}.rivet:nth-of-type(2){right:18px;top:18px}
-.rivet:nth-of-type(3){left:18px;bottom:18px}.rivet:nth-of-type(4){right:18px;bottom:18px}
-.etched{text-shadow:0 1px 0 rgba(255,255,255,.6)}
-.plate a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-
-/* accueil */
-.hero{padding:clamp(10px,3vh,40px) var(--gut) clamp(60px,10vh,120px)}
-.hplate{max-width:var(--max);margin:0 auto}
-.maker{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding:0 6px}
-.maker b{font-weight:700;font-size:clamp(20px,2vw,26px)}
-.maker span{font-size:16px;color:var(--etch-2)}
-.hero h1{margin-top:clamp(22px,3.4vw,46px);font-weight:700;font-size:clamp(38px,5.4vw,80px);line-height:1.02;letter-spacing:-.035em;max-width:16ch;padding:0 6px;text-wrap:balance}
-.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px clamp(24px,4vw,64px);margin-top:clamp(28px,4vw,52px);padding:0 6px}
-.fields dt,.facts dt,.codes dd,.pfields dt{font-size:16px;color:var(--etch-2)}
-.fields dd{margin-top:4px;font-size:clamp(18px,1.6vw,21px);font-weight:700;line-height:1.42}
-.drop{margin-top:clamp(28px,4vw,48px);display:flex;align-items:center;gap:12px;padding:10px 10px 10px 20px;border-radius:12px;
-  background:linear-gradient(180deg,#B8BEC1,#CBD0D2);box-shadow:inset 0 2px 5px rgba(0,0,0,.35),inset 0 -1px 0 rgba(255,255,255,.5),0 1px 0 rgba(255,255,255,.6)}
-.drop.over{background:linear-gradient(180deg,#AEB4B8,#C2C7CA)}
-.drop svg{width:22px;height:22px;flex:none;color:var(--etch)}
-.drop .t{flex:1;min-width:0;cursor:pointer;min-height:44px;display:flex;flex-direction:column;justify-content:center}
-.drop .t b{display:block;font-size:16px}
-.drop .t span{display:block;font-size:16px;color:var(--etch);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;border:0;cursor:pointer;
-  background:var(--etch);color:#E9ECEE;font-family:var(--f);font-weight:700;font-size:16px;text-align:center;text-decoration:none!important;text-shadow:none;
-  box-shadow:0 1px 0 rgba(255,255,255,.4),0 6px 14px -8px rgba(0,0,0,.7);transition:background .3s var(--ease),transform .2s var(--ease)}
-.btn:hover{background:#2B3233}.btn:active{transform:translateY(1px)}
-main > .btn,.prose .btn,.btn.solo{background:var(--on);color:var(--enamel);box-shadow:none}
-main > .btn:hover,.prose .btn:hover{background:#fff}
+#top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;gap:28px;height:var(--navh);padding:0 var(--gut);
+  transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+#top.solid,.menu-open #top{background:rgba(236,238,239,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.skip{position:absolute;left:var(--gut);top:-80px;z-index:9;min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--ink);color:#fff;font:600 16px var(--f)}
+.skip:focus{top:16px}
+.brand{display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:21px;letter-spacing:-.02em}
+.links{display:flex;gap:26px;margin-left:auto;font-size:16px;color:var(--ink-2)}
+.links a{display:inline-flex;align-items:center;min-height:44px}.links a:hover{color:var(--ink)}
+.links a[aria-current]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--signal)}
+.lang{font-size:16px;color:var(--mute);padding:0 4px;min-height:44px;display:inline-flex;align-items:center}
+.lang:hover{color:var(--ink)}
+.cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:12px;border:0;cursor:pointer;text-align:center;
+  background:var(--signal);color:var(--ink);font:600 16px var(--f);box-shadow:0 8px 22px -12px rgba(150,110,0,.55);transition:background .3s var(--ease),transform .3s var(--ease)}
+.cta:hover,.btn:hover{background:var(--signal-2);transform:translateY(-1px)}
 .btn.big{min-height:54px;padding:0 26px;font-size:17px}
 .btn.solo{margin-top:clamp(36px,6vh,64px)}
-.btn.ghost{background:transparent;color:var(--etch);box-shadow:inset 0 0 0 1.5px var(--etch)}
-.btn.ghost:hover{background:rgba(27,32,33,.08)}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:rgba(21,24,27,.05)}
+.menu{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line-2);background:transparent;align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}
+.menu svg{width:18px;height:18px}
+#drawer{position:fixed;inset:var(--navh) 0 0 0;z-index:40;background:var(--studio);padding:10px var(--gut) 40px;overflow:auto}
+#drawer nav{display:flex;flex-direction:column}
+#drawer a{display:flex;align-items:center;min-height:60px;font-size:26px;font-weight:500;letter-spacing:-.02em;border-bottom:1px solid var(--line)}
+#drawer a:last-child{font-size:18px;color:var(--mute)}
+html.menu-open{overflow:hidden}
 
-/* bandes et rangées */
-.band{padding:clamp(56px,9vh,110px) 0 0}
+/* ── héros : la pièce est la page ── */
+.hero{position:relative;height:100svh;min-height:660px;overflow:hidden}
+.hero3d{position:absolute;inset:0}
+.part canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.fallback{position:absolute;right:8%;top:22%;width:46%;opacity:0}
+.no-gl .fallback{opacity:1}
+.hero-in{position:absolute;left:var(--gut);top:clamp(130px,20vh,200px);z-index:2;width:min(620px,calc(100% - 2*var(--gut)));display:flex;flex-direction:column;gap:26px}
+.hero h1{font-weight:500;font-size:clamp(44px,6vw,92px);line-height:.98;letter-spacing:-.04em;text-wrap:balance}
+.hero .lede{font-size:clamp(18px,1.55vw,21px);color:var(--ink-2);max-width:44ch}
+.drop{display:flex;align-items:center;gap:12px;padding:8px 8px 8px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px -26px rgba(21,24,27,.45);transition:border-color .3s var(--ease)}
+.drop.over,.drop:hover{border-color:var(--ink)}
+.drop svg{width:22px;height:22px;flex:none}
+.drop .t{flex:1;min-width:0;cursor:pointer;min-height:44px;display:flex;flex-direction:column;justify-content:center}
+.drop .t b{display:block;font-weight:500;font-size:16px}
+.drop .t span{display:block;font-size:16px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dim{position:absolute;z-index:1;font-family:var(--m);font-size:16px;color:var(--ink);pointer-events:none;padding:4px 8px;background:rgba(246,247,247,.86);border-radius:6px;white-space:nowrap;transform:translate(-50%,-50%)}
+.no-gl .dim{display:none}
+
+/* ── bandes ── */
+.band{padding:clamp(60px,10vh,120px) 0 0}
 .pg-home .band{max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
 .band.tight{padding-top:clamp(40px,6vh,70px)}
-.band h2{font-weight:700;font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;line-height:1.04;max-width:18ch;text-wrap:balance}
-.band h2.sm{font-size:clamp(24px,2.4vw,32px);max-width:none}
-.band .intro{margin-top:18px;color:var(--on-2);max-width:56ch;font-size:18px}
-.rows{margin-top:clamp(32px,5vh,60px);border-bottom:1px solid var(--rule)}
+.band h2{font-weight:500;font-size:clamp(34px,4.2vw,60px);letter-spacing:-.035em;line-height:1.02;max-width:17ch;text-wrap:balance}
+.band h2.sm{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;max-width:none}
+.band .intro{margin-top:20px;max-width:54ch;color:var(--ink-2);font-size:18px}
+.rows{margin-top:clamp(32px,5vh,56px);border-bottom:1px solid var(--line)}
 .band h2.sm + .rows{margin-top:20px}
-.row{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) 24px;align-items:baseline;gap:10px clamp(24px,5vw,80px);padding:28px 0;border-top:1px solid var(--rule);transition:background .4s var(--ease)}
-.row h2,.row h3{font-weight:700;font-size:clamp(23px,2.4vw,34px);letter-spacing:-.02em;line-height:1.1}
-.row p{color:var(--on-2);max-width:46ch}
-.row .ar{width:22px;height:22px;color:var(--on-mute);transition:transform .5s var(--ease),color .3s}
-.row:hover .ar{transform:translateX(4px);color:var(--on)}
-.row:hover h2,.row:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
-.fig.inrow{padding:6px 0 34px}
-.after{margin-top:28px;color:var(--on-2);max-width:60ch}
+.row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) 24px;align-items:baseline;gap:10px clamp(24px,5vw,80px);padding:28px 0;border-top:1px solid var(--line)}
+.row h2,.row h3{font-weight:500;font-size:clamp(24px,2.5vw,36px);letter-spacing:-.03em;line-height:1.08}
+.row p{color:var(--ink-2);max-width:46ch}
+.row .ar{width:22px;height:22px;color:var(--mute);transition:transform .5s var(--ease),color .3s}
+.row:hover .ar{transform:translateX(4px);color:var(--ink)}
+.row:hover h2,.row:hover h3{box-shadow:inset 0 -2px 0 var(--signal)}
+.after{margin-top:28px;color:var(--ink-2);max-width:60ch}
 
-/* page intérieure */
-.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding-top:clamp(18px,4vh,40px);font-size:16px;color:var(--on-mute)}
-.crumbs a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-2)}.crumbs a:hover{color:var(--on)}
-.phead{padding-top:clamp(18px,4vh,46px)}
-.phead h1{font-weight:700;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.04em;max-width:15ch;text-wrap:balance}
-.phead .lede{margin-top:clamp(18px,2.6vh,28px);font-size:clamp(18px,1.7vw,22px);color:var(--on-2);max-width:48ch;line-height:1.5}
-.phead .role{margin-top:12px;font-size:18px;color:var(--on-mute)}
-.fig-wrap{margin-top:clamp(40px,7vh,80px)}
+/* accueil : la même pièce change de forme avec la lecture */
+.stage{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);margin-top:40px}
+.list{display:flex;flex-direction:column}
+.item{min-height:52vh;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.item h3,.item p{color:var(--mute);transition:color .8s var(--ease)}
+.item.on h3{color:var(--ink)}.item.on p{color:var(--ink-2)}
+.item h3{font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:-.03em;line-height:1.05}
+.item h3 a{display:inline-flex;align-items:center;min-height:44px}
+.item h3 a:hover{box-shadow:inset 0 -2px 0 var(--signal)}
+.item p{max-width:40ch}
+.view{position:sticky;top:calc(var(--navh) + 10px);height:min(76vh,700px)}
+.view .part{position:absolute;inset:0}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px clamp(24px,4vw,60px);margin-top:clamp(32px,5vh,56px)}
+.plant{padding-top:22px;border-top:1px solid var(--line-2)}
+.plant h3{font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:-.03em}
+.plant h3 a{display:inline-flex;align-items:center;min-height:44px}
+.plant h3 a:hover{box-shadow:inset 0 -2px 0 var(--signal)}
+.plant .role{color:var(--mute);font-size:16px}
+.plant .adr{margin-top:14px;color:var(--ink-2)}
+.tel{display:inline-flex;align-items:center;min-height:44px;font-family:var(--m);font-size:16px}
+
+/* ── pages intérieures ── */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding-top:clamp(18px,4vh,40px);font-size:16px;color:var(--mute)}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink-2)}.crumbs a:hover{color:var(--ink)}
+.phead{padding-top:clamp(14px,3vh,36px)}
+.phead h1{font-weight:500;font-size:clamp(42px,6.2vw,96px);line-height:.98;letter-spacing:-.045em;max-width:14ch;text-wrap:balance}
+.phead .lede{margin-top:clamp(18px,2.6vh,28px);font-size:clamp(18px,1.7vw,22px);color:var(--ink-2);max-width:48ch;line-height:1.5}
+.phead .role{margin-top:12px;font-size:18px;color:var(--mute)}
+.fig-wrap{margin-top:clamp(30px,5vh,60px)}
+.fig3d{position:relative}
+.fig3d .part{position:relative;height:clamp(340px,60vh,640px);border-radius:24px;overflow:hidden;
+  background:radial-gradient(80% 70% at 50% 42%,rgba(255,255,255,.75),rgba(255,255,255,0) 70%)}
+.fig3d figcaption{margin-top:12px;font-size:16px;color:var(--mute)}
+.no-gl .fig3d .part{height:auto;min-height:0;background:none}
+.seg{position:absolute;left:16px;top:16px;z-index:2;display:inline-flex;padding:4px;border-radius:14px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.seg button{min-height:44px;padding:0 16px;border:0;border-radius:10px;background:transparent;font:500 16px var(--f);color:var(--ink-2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
 .split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px clamp(30px,6vw,96px);padding-top:clamp(48px,8vh,90px);align-items:start}
 .prose{display:flex;flex-direction:column;gap:18px;font-size:clamp(18px,1.5vw,20px);max-width:52ch}
 .prose .btn{align-self:flex-start;margin-top:14px}
-.lk{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.lk{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:500;box-shadow:inset 0 -2px 0 var(--signal)}
 .lk .ar{width:20px;height:20px}
 .spec-t{width:100%;border-collapse:collapse;font-size:16px}
-.spec-t caption{text-align:left;font-weight:700;font-size:18px;padding-bottom:12px}
-.spec-t th,.spec-t td{text-align:left;vertical-align:top;padding:12px 12px 12px 0;border-top:1px solid var(--rule)}
-.spec-t thead th{color:var(--on-mute);font-weight:400;border-top:0}
-.spec-t tbody th{font-weight:700}
-.spec-t td{color:var(--on-2)}
-.xlist h2{font-size:18px;font-weight:700}
-.xlist ul{margin-top:12px;border-bottom:1px solid var(--rule)}
-.xlist li{padding:11px 0;border-top:1px solid var(--rule);color:var(--on-2)}
+.spec-t caption{text-align:left;font-weight:600;font-size:18px;padding-bottom:12px}
+.spec-t th,.spec-t td{text-align:left;vertical-align:top;padding:12px 12px 12px 0;border-top:1px solid var(--line)}
+.spec-t thead th{color:var(--mute);font-weight:400;border-top:0}
+.spec-t tbody th{font-weight:600}
+.spec-t td{color:var(--ink-2)}
+.xlist h2{font-size:18px;font-weight:600}
+.xlist ul{margin-top:12px;border-bottom:1px solid var(--line)}
+.xlist li{padding:11px 0;border-top:1px solid var(--line);color:var(--ink-2)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.chips a{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid rgba(232,239,233,.3);font-size:16px}
-.chips a:hover{background:var(--enamel-2);border-color:var(--on-2)}
-.next{display:grid;grid-template-columns:1fr 24px;align-items:center;gap:6px 20px;margin-top:clamp(56px,9vh,100px);padding:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.next span{grid-column:1;font-size:16px;color:var(--on-mute)}
-.next b{grid-column:1;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;line-height:1.1}
+.chips a{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line-2);font-size:16px;background:rgba(255,255,255,.4)}
+.chips a:hover{border-color:var(--ink);background:#fff}
+.next{display:grid;grid-template-columns:1fr 24px;align-items:center;gap:6px 20px;margin-top:clamp(56px,9vh,100px);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.next span{grid-column:1;font-size:16px;color:var(--mute)}
+.next b{grid-column:1;font-weight:500;font-size:clamp(28px,3vw,42px);letter-spacing:-.03em;line-height:1.1}
 .next .ar{grid-column:2;grid-row:1/3;width:24px;height:24px;transition:transform .5s var(--ease)}
 .next:hover .ar{transform:translateX(5px)}
+.works{margin-top:clamp(20px,4vh,40px)}
+.work{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;align-items:baseline;gap:10px 40px;padding:30px 0;border-top:1px solid var(--line)}
+.work:last-child{border-bottom:1px solid var(--line)}
+.work h2{font-weight:500;font-size:clamp(26px,2.8vw,38px);letter-spacing:-.03em;line-height:1.08}
+.work p{color:var(--ink-2)}
+.work .lk{font-size:16px}
 
-/* dessins techniques */
-.fig{color:var(--on)}
-.drw{display:block;width:100%;max-width:820px;height:auto;overflow:visible}
-.fig figcaption{margin-top:16px;font-size:16px;color:var(--on-mute)}
-.drw .p,.mini .p{fill:none;stroke:var(--on);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
-.drw .tw{stroke:var(--on);stroke-linecap:butt}
-.drw .ti{stroke:var(--enamel);stroke-linecap:butt}
-.drw .ax,.mini .ax{fill:none;stroke:var(--on-mute);stroke-width:1.4;stroke-dasharray:10 6 2 6}
-.drw .ax.back{stroke-dasharray:6 6;stroke-width:1.6}
-.drw .dm{fill:none;stroke:var(--on-2);stroke-width:1.2}
-.drw .grid{fill:none;stroke:rgba(232,239,233,.1);stroke-width:1}
-.drw .tx{font-family:var(--m);font-size:28px;fill:var(--on)}
-.minis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px 18px}
-.fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(4,minmax(0,1fr))}
-.mini{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.mini svg{width:100%;max-width:150px;height:auto;overflow:visible}
-.fig .mini svg{max-width:170px}
-.mini b{font-size:16px;font-weight:700}
-.mini span{font-size:16px;color:var(--on-mute);line-height:1.45}
-html.draw .fig .p{stroke-dasharray:1;stroke-dashoffset:1}
-html.draw .fig .ax,html.draw .fig .dm,html.draw .fig .tx,html.draw .fig .grid{opacity:0}
-html.draw .fig.in .p{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s var(--ease)}
-html.draw .fig.in .ax,html.draw .fig.in .dm,html.draw .fig.in .tx,html.draw .fig.in .grid{opacity:1;transition:opacity 1.2s ease 1.4s}
-html.draw .fig.in .mini:nth-child(2) .p{transition-delay:.2s}
-html.draw .fig.in .mini:nth-child(3) .p{transition-delay:.4s}
-html.draw .fig.in .mini:nth-child(4) .p{transition-delay:.6s}
-html.draw .fig.in .mini:nth-child(5) .p{transition-delay:.8s}
-html.draw .fig.in .mini:nth-child(6) .p{transition-delay:1s}
-html.draw .fig.in .mini:nth-child(7) .p{transition-delay:1.2s}
-
-/* plaques intérieures */
-.facts-plate,.codes-plate,.plant-plate{padding:clamp(34px,4vw,56px) clamp(26px,4vw,56px)}
+/* panneaux : blanc mat posé sur le studio */
+.panel{border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(21,24,27,.4);
+  padding:clamp(28px,4vw,56px) clamp(22px,4vw,56px)}
 .facts{display:grid;gap:18px}
-.facts dd{margin-top:2px;font-size:clamp(20px,1.8vw,24px);font-weight:700;line-height:1.3}
-.tbc{display:inline-block;margin-left:6px;font-family:var(--m);font-size:16px;font-weight:400;color:var(--etch-2);text-shadow:none;border-bottom:1px dashed currentColor}
+.facts dt,.pfields dt,.codes dd{font-size:16px;color:var(--mute)}
+.facts dd{margin-top:2px;font-size:clamp(20px,1.8vw,24px);font-weight:500;line-height:1.3;letter-spacing:-.01em}
+.tbc{display:inline-block;margin-left:6px;font-family:var(--m);font-size:16px;font-weight:400;color:var(--mute);letter-spacing:0;border-bottom:1px dashed currentColor}
 .codes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
-.codes dt{font-size:clamp(34px,4.4vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.codes dt{font-size:clamp(36px,4.6vw,68px);font-weight:500;letter-spacing:-.04em;line-height:1}
 .codes dd{margin-top:8px}
 .cols{columns:3 220px;column-gap:40px;margin-top:20px}
-.cols li{break-inside:avoid;padding:11px 0;border-top:1px solid var(--rule);color:var(--on-2)}
-.pfields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 48px}
+.cols li{break-inside:avoid;padding:11px 0;border-top:1px solid var(--line);color:var(--ink-2)}
+.pfields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px}
 .pfields .wide{grid-column:1/-1}
-.pfields dd{margin-top:4px;font-size:clamp(19px,1.7vw,23px);font-weight:700;line-height:1.4}
-.pfields .wide dd{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.01em}
-.pfields .tbc{font-size:16px}
-.pfields dd a{display:inline-flex;align-items:center;min-height:44px}
+.pfields dd{margin-top:4px;font-size:clamp(19px,1.7vw,23px);font-weight:500;line-height:1.4}
+.pfields .wide dd{font-size:clamp(24px,2.6vw,36px);letter-spacing:-.025em;line-height:1.25}
+.pfields dd a{display:inline-flex;align-items:center;min-height:44px;box-shadow:inset 0 -2px 0 var(--signal)}
+.pfields .tel{box-shadow:inset 0 -2px 0 var(--signal)}
 
-/* accueil : réalisations, usines */
-.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px clamp(24px,4vw,60px);margin-top:clamp(32px,5vh,60px)}
-.plant{padding-top:22px;border-top:1px solid var(--rule)}
-.plant h3{font-size:clamp(26px,2.8vw,38px);font-weight:700;letter-spacing:-.02em}
-.plant h3 a{display:inline-flex;align-items:center;min-height:44px}
-.plant h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
-.plant .role{color:var(--on-mute);font-size:16px}
-.plant .adr{margin-top:14px;color:var(--on-2)}
-.tel{display:inline-flex;align-items:center;min-height:44px;font-family:var(--m);font-size:16px}
-.plant .tel{margin-top:6px}
-.works{margin-top:clamp(20px,4vh,40px)}
-.work{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;align-items:baseline;gap:10px 40px;padding:30px 0;border-top:1px solid var(--rule)}
-.work:last-child{border-bottom:1px solid var(--rule)}
-.work h2{font-size:clamp(24px,2.6vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
-.work p{color:var(--on-2)}
-.work .lk{font-size:16px;color:var(--on-2)}
-
-/* soumission : le formulaire est une grande plaque */
+/* soumission */
 .form-plate{margin-top:clamp(36px,6vh,64px)}
 .qform fieldset{border:0;margin:0;padding:0}
 .qform fieldset + fieldset{margin-top:clamp(34px,5vh,52px)}
-.qform legend{padding:0;font-weight:700;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.01em}
+.qform legend{padding:0;font-weight:500;font-size:clamp(24px,2.4vw,30px);letter-spacing:-.02em}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin-top:20px}
 .fld{display:flex;flex-direction:column;gap:8px;min-width:0}
 .fld.wide{grid-column:1/-1}
-.fld label{font-size:16px;color:var(--etch-2)}
-.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 14px;border:0;border-radius:10px;font:16px var(--f);color:var(--etch);
-  background:linear-gradient(180deg,#B8BEC1,#CED3D5);box-shadow:inset 0 2px 5px rgba(0,0,0,.32),inset 0 -1px 0 rgba(255,255,255,.5),0 1px 0 rgba(255,255,255,.6)}
+.fld label{font-size:16px;color:var(--ink-2)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 14px;border:1px solid var(--line-2);border-radius:12px;font:16px var(--f);color:var(--ink);background:#fff;transition:border-color .2s}
+.fld input:hover,.fld select:hover,.fld textarea:hover{border-color:var(--mute)}
 .fld textarea{resize:vertical;line-height:1.5}
-.fld ::placeholder{color:var(--etch-2);opacity:1}
+.fld ::placeholder{color:var(--mute);opacity:1}
 .fld select{appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231B2021' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8l4 4 4-4'/%3E%3C/svg%3E") right 14px center/18px no-repeat,linear-gradient(180deg,#B8BEC1,#CED3D5)}
-.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{outline:2px solid var(--etch);outline-offset:2px}
-.zone{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:22px;border-radius:12px;border:1.5px dashed rgba(27,32,33,.55);background:rgba(255,255,255,.18)}
-.zone.over{background:rgba(255,255,255,.4)}
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2315181B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8l4 4 4-4'/%3E%3C/svg%3E") right 14px center/18px no-repeat}
+.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.zone{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:22px;border-radius:16px;border:1.5px dashed var(--line-2);background:rgba(255,255,255,.5);transition:border-color .2s,background .2s}
+.zone.over{border-color:var(--ink);background:#fff}
 .zone svg{width:28px;height:28px;flex:none}
-.zone p{flex:1;min-width:200px;font-size:16px}
+.zone p{flex:1;min-width:200px;font-size:16px;color:var(--ink-2)}
 .flist{margin-top:12px}
-.flist li{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 4px 0 2px;border-bottom:1px solid rgba(27,32,33,.18);font-size:16px}
-.flist li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
-.flist li small{font-size:16px;font-family:var(--m);color:var(--etch-2)}
-.flist li button{width:44px;height:44px;border:0;background:transparent;font-size:24px;color:var(--etch);cursor:pointer;border-radius:8px}
-.flist li button:hover{background:rgba(27,32,33,.1)}
-.flist .none{color:var(--etch-2);font-weight:400}
+.flist li{display:flex;align-items:center;gap:12px;min-height:48px;border-bottom:1px solid var(--line);font-size:16px}
+.flist li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.flist li small{font-size:16px;font-family:var(--m);color:var(--mute)}
+.flist li button{width:44px;height:44px;border:0;background:transparent;font-size:24px;color:var(--ink);cursor:pointer;border-radius:8px}
+.flist li button:hover{background:rgba(21,24,27,.06)}
+.flist .none{color:var(--mute)}
 .send{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:clamp(34px,5vh,52px)}
-.mock{font-size:16px;font-weight:700;color:var(--etch);max-width:52ch}
-.hero .mock{margin-top:14px;padding:0 6px}
+.mock{font-size:16px;font-weight:500;color:var(--ink);max-width:52ch}
 
 /* pied de page */
-#foot{max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding:clamp(50px,8vh,90px) var(--gut) 34px;border-top:1px solid var(--rule)}
+#foot{max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding:clamp(50px,8vh,90px) var(--gut) 34px;border-top:1px solid var(--line)}
 .fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 30px}
-.fcols h2{font-size:16px;font-weight:700;color:var(--on)}
+.fcols h2{font-size:16px;font-weight:600}
 .fcols ul{margin-top:10px}
 .fcols li{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px}
-.fcols a{display:inline-flex;align-items:center;min-height:44px;font-size:16px;color:var(--on-2)}
-.fcols a:hover{color:var(--on)}
-.fcols .tel{color:var(--on-mute)}
-.mockline{margin-top:40px;padding-top:22px;border-top:1px solid var(--rule);font-size:16px;color:var(--on-mute)}
+.fcols a{display:inline-flex;align-items:center;min-height:44px;font-size:16px;color:var(--ink-2)}
+.fcols a:hover{color:var(--ink)}
+.fcols .tel{color:var(--mute)}
+.mockline{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:16px;color:var(--mute)}
 
 @media (max-width:1060px){
   .links,#top .lang{display:none}
   .menu{display:inline-flex}
+  #top{gap:10px}
   #top .cta{margin-left:auto}
   .split{grid-template-columns:1fr}
   .fcols{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .minis{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(3,minmax(0,1fr))}
   .codes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:980px){
+  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column}
+  .hero-in{position:relative;left:auto;top:auto;width:auto;margin:calc(var(--navh) + 24px) var(--gut) 0;order:-1}
+  .hero3d{position:relative;inset:auto;flex:1;min-height:360px}
+  .fallback{right:auto;left:15%;top:10%;width:70%}
+  .stage{grid-template-columns:1fr}
+  .view{top:var(--navh);height:40vh;order:-1;background:linear-gradient(var(--studio) 85%,rgba(236,238,239,0));z-index:2}
+  .item{min-height:66vh;justify-content:flex-end;padding-bottom:8vh}
 }
 @media (max-width:760px){
   .row{grid-template-columns:minmax(0,1fr) 22px}
@@ -290,23 +263,20 @@ html.draw .fig.in .mini:nth-child(7) .p{transition-delay:1.2s}
   .grid,.pfields{grid-template-columns:1fr}
 }
 @media (max-width:620px){
-  #top{gap:10px}
+  :root{--navh:70px}
   #top .cta{padding:0 14px}
-  #drawer{inset:80px 0 0 0}
-  .fields{grid-template-columns:1fr;gap:18px}
-  .drop{flex-wrap:wrap;padding:16px}
+  .drop{flex-wrap:wrap;padding:14px}
   .drop .btn{width:100%}
-  .rivet{width:14px;height:14px}
-  .rivet:nth-of-type(1),.rivet:nth-of-type(3){left:12px}.rivet:nth-of-type(2),.rivet:nth-of-type(4){right:12px}
-  .rivet:nth-of-type(1),.rivet:nth-of-type(2){top:12px}.rivet:nth-of-type(3),.rivet:nth-of-type(4){bottom:12px}
-  .minis,.fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(2,minmax(0,1fr))}
   .fcols{grid-template-columns:1fr}
-  .send .btn{width:100%}
-  .zone .btn{width:100%}
+  .send .btn,.zone .btn{width:100%}
+  .seg{left:10px;top:10px}
+  .seg button{padding:0 12px}
 }
 @media (prefers-reduced-motion:no-preference){
-  .hplate{animation:seat 1.6s var(--ease) both}
-  @keyframes seat{from{opacity:.001;transform:translateY(22px)}}
+  .hero-in > *{animation:rise 1.4s var(--ease) both}
+  .hero-in > *:nth-child(2){animation-delay:.12s}
+  .hero-in > *:nth-child(3){animation-delay:.24s}
+  @keyframes rise{from{opacity:.001;transform:translateY(16px)}}
 }
 @media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
 
@@ -633,140 +603,55 @@ var UI = {
 return {PROC:PROC, ROLL:ROLL, SECT:SECT, PROJ:PROJ, PLANTS:PLANTS, UI:UI};
 })();
 
-/* Habillage « plaque signalétique ».
-   La tôle émaillée verte est le fond ; les faits sont gravés sur des plaques
-   d'inox rivées ; chaque procédé a son dessin technique, tracé au défilement. */
+/* Habillage « acier en 3D ».
+   Fond clair de studio, tout est acier, une seule couleur : le jaune des
+   machines d'atelier. Chaque procédé a sa pièce en 3D ; le module acier3d.js
+   les construit et les anime dans les emplacements .part. */
 window.WORLD = (function(){
 var D = window.CINTUBE, UI = D.UI;
-var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-var RIV = '<span class="rivet"></span><span class="rivet"></span><span class="rivet"></span><span class="rivet"></span>';
-function plate(inner, cls){ return '<div class="plate ' + (cls || '') + '">' + RIV + '<div class="etched">' + inner + '</div></div>'; }
-
-/* ── dessins techniques : un tube se dessine comme deux traits (large, puis
-   la couleur du fond par-dessus), l'axe en tirets, les cotes en traits fins ── */
-function tube(d, w){ return '<path class="p tw" pathLength="1" style="stroke-width:' + w + '" d="' + d + '"/><path class="p ti" pathLength="1" style="stroke-width:' + (w - 5) + '" d="' + d + '"/>'; }
-function line(d){ return '<path class="p" pathLength="1" d="' + d + '"/>'; }
-function ax(d){ return '<path class="ax" d="' + d + '"/>'; }
-function dm(d){ return '<path class="dm" d="' + d + '"/>'; }
-function tx(x, y, t){ return '<text class="tx" x="' + x + '" y="' + y + '">' + t + '</text>'; }
-function svg(vb, body, label){ return '<svg class="drw" viewBox="' + vb + '" role="img" aria-label="' + label + '">' + body + '</svg>'; }
-function helix(){
-  var f = '', b = '', x0 = 70, pitch = 66, n = 6;
-  for (var k = 0; k < n; k++){
-    for (var half = 0; half < 2; half++){
-      var s = '';
-      for (var i = 0; i <= 24; i++){ var th = Math.PI * (half + i / 24), x = x0 + pitch * (k + (half + i / 24) / 2), y = 160 - 100 * Math.cos(th);
-        s += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1); }
-      if (half === 0) f += s; else b += s;
-    }
-  }
-  return line('M20 60H70' + f + 'L' + (x0 + pitch * n) + ' 60H540') + '<path class="ax back" d="' + b + '"/>' + ax('M14 160H546');
-}
-function grid(w, h, s){ var g = ''; for (var x = s; x < w; x += s) g += 'M' + x + ' 0V' + h; for (var y = s; y < h; y += s) g += 'M0 ' + y + 'H' + w; return '<path class="grid" d="' + g + '"/>'; }
-function panel(){
-  var s = '';
-  for (var i = 0; i < 7; i++){ var cx = 64 + i * 72;
-    s += line('M' + (cx - 26) + ' 100a26 26 0 1 0 52 0a26 26 0 1 0 -52 0') + line('M' + (cx - 18) + ' 100a18 18 0 1 0 36 0a18 18 0 1 0 -36 0');
-    if (i < 6) s += line('M' + (cx + 25) + ' 95H' + (cx + 47) + 'M' + (cx + 25) + ' 105H' + (cx + 47)); }
-  return s + ax('M14 100H546');
-}
-var ENDS = [
-  'M10 30H60l5-6l5 6l5-6l5 6l5-6l5 6l5-6l5 6l5-6l5 6V70l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6H10',
-  'M10 30H100L110 40V60L100 70H10',
-  'M10 30H86V36H96V30H110V70H96V64H86V70H10',
-  'M10 26H66L84 38H110V62H84L66 74H10',
-  'M10 30H78Q86 18 94 30H110V70H94Q86 82 78 70H10',
-  'M10 32H84Q100 32 112 16V84Q100 68 84 68H10',
-  'M10 34H70L82 25H110V75H82L70 66H10'
-];
-var SECTS = [
-  'M20 14H80V24H55V76H80V86H20V76H45V24H20Z', 'M10 14H90V25H54V75H90V86H10V75H46V25H10Z', 'M22 14H34V74H82V86H22Z',
-  'M74 14H26V86H74V75H38V25H74Z', 'M12 42H88V58H12Z', 'M50 16A34 34 0 1 1 49.99 16ZM50 26A24 24 0 1 0 50.01 26Z'
-];
-var SAX = [50, 50, 28, 32, 50, 50];
-function minis(paths, axes, labels, notes, vb){
-  return '<div class="minis">' + paths.map(function(d, i){
-    return '<div class="mini"><svg viewBox="' + vb + '" aria-hidden="true">' + line(d) + ax(axes(i)) + '</svg><b>' + labels[i] + '</b>' + (notes ? '<span>' + notes[i] + '</span>' : '') + '</div>';
-  }).join('') + '</div>';
-}
-function sections(L){
-  return minis(SECTS, function(i){ return 'M' + SAX[i] + ' 2V98'; }, D.ROLL[L].map(function(r){ return r[0]; }), D.ROLL[L].map(function(r){ return r[1]; }), '0 0 100 100');
-}
-var CAP = {
- 'cintrage-de-precision':['Coude à 90°, rayon de cintrage R','90° bend, bend radius R'],
- 'tubes-de-chaudiere':['Tube cintré posé sur son gabarit grandeur nature','Bent tube laid on its full size layout'],
- 'panneaux-de-tubes':['Panneau de tubes, en coupe','Tube panel, in section'],
- 'appareils-sous-pression':['Serpentin entre deux collecteurs','Coil between two headers'],
- 'fabrication-sur-mesure':['Tube cintré et brides du commerce, assemblés','Bent tube with commercial flanges, assembled'],
- 'serpentins':['Serpentin hélicoïdal, vu de côté','Helical coil, side view']
+var LBL = {
+ 'cintrage-de-precision':['Un tube d’acier s’enroule autour d’une matrice de cintrage jusqu’à 90°.','A steel tube wraps around a bending die to 90°.'],
+ 'roulage-de-charpente':['Poutre en I roulée, sens facile ou sens difficile.','Rolled I-beam, easy way or hard way.'],
+ 'serpentins':['Serpentin hélicoïdal en tube d’acier.','Helical steel tube coil.'],
+ 'formage-de-bout':['Bout de tuyau fileté d’un côté, évasé de l’autre.','Pipe threaded at one end, flared at the other.'],
+ 'tubes-de-chaudiere':['Tube de chaudière cintré, posé sur son gabarit grandeur nature.','Bent boiler tube, laid on its full size layout.'],
+ 'panneaux-de-tubes':['Panneau de tubes de chaudière.','Boiler tube panel.'],
+ 'appareils-sous-pression':['Serpentin entre deux collecteurs.','Coil between two headers.'],
+ 'fabrication-sur-mesure':['Tube cintré et brides du commerce, assemblés.','Bent tube with commercial flanges, assembled.']
 };
-function fig(s, L){
-  var c = CAP[s] ? CAP[s][L === 'fr' ? 0 : 1] : '', body;
-  if (s === 'roulage-de-charpente') return '<figure class="fig">' + sections(L) + '</figure>';
-  if (s === 'formage-de-bout'){
-    var p = D.PROC[3][L].x;
-    return '<figure class="fig">' + minis(ENDS, function(){ return 'M2 50H118'; }, p, null, '0 0 120 100') + '</figure>';
-  }
-  if (s === 'cintrage-de-precision') body = svg('0 0 560 360',
-    line('M40 320H260A180 180 0 0 0 440 140V20') + line('M40 280H260A140 140 0 0 0 400 140V20') + line('M40 280V320M400 20H440') +
-    ax('M28 300H260A160 160 0 0 0 420 140V8') + dm('M260 140L373 253M250 140H270M260 130V150') +
-    tx(322, 186, 'R') + tx(452, 318, '90°'), c);
-  if (s === 'serpentins') body = svg('0 0 560 320', helix(), c);
-  if (s === 'tubes-de-chaudiere') body = svg('0 0 560 340', grid(560, 340, 40) +
-    tube('M40 280H200A40 40 0 0 0 240 240V140A40 40 0 0 1 280 100H420A40 40 0 0 1 460 140V300', 22) +
-    ax('M40 280H200A40 40 0 0 0 240 240V140A40 40 0 0 1 280 100H420A40 40 0 0 1 460 140V300'), c);
-  if (s === 'panneaux-de-tubes') body = svg('0 0 560 200', panel(), c);
-  if (s === 'appareils-sous-pression') body = svg('0 0 560 340',
-    line('M40 50a20 20 0 0 1 20-20h0a20 20 0 0 1 20 20v240a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20Z') +
-    line('M480 50a20 20 0 0 1 20-20h0a20 20 0 0 1 20 20v240a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20Z') +
-    tube('M80 60H440A30 30 0 0 1 440 120H120A30 30 0 0 0 120 180H440A30 30 0 0 1 440 240H120A30 30 0 0 0 120 300H480', 16), c);
-  if (s === 'fabrication-sur-mesure') body = svg('0 0 560 340',
-    tube('M70 280H260A120 120 0 0 0 380 160V60', 36) + line('M52 230H70V330H52Z') + line('M330 42H430V60H330Z') +
-    ax('M70 280H260A120 120 0 0 0 380 160V60') + dm('M38 248H84M38 312H84M348 28V74M412 28V74'), c);
-  return '<figure class="fig">' + body + (c ? '<figcaption>' + c + '</figcaption>' : '') + '</figure>';
-}
+function lbl(s, L){ return LBL[s] ? LBL[s][L === 'fr' ? 0 : 1] : ''; }
+var BENT = '<svg class="fallback" viewBox="0 0 400 300" fill="none" stroke="#15181B" stroke-width="22" stroke-linecap="round" aria-hidden="true"><path d="M0 260H180a100 100 0 0 0 100-100V0"/></svg>';
 
+function fig(s, L){
+  var c = lbl(s, L), seg = '';
+  if (s === 'roulage-de-charpente') seg = '<div class="seg" role="group" aria-label="' + (L === 'fr' ? 'Sens de roulage' : 'Rolling direction') + '">' +
+    '<button type="button" data-way="0" aria-pressed="true">' + (L === 'fr' ? 'Sens facile' : 'Easy way') + '</button>' +
+    '<button type="button" data-way="1" aria-pressed="false">' + (L === 'fr' ? 'Sens difficile' : 'Hard way') + '</button></div>';
+  return '<figure class="fig3d"><div class="part" data-part="' + s + '" role="img" aria-label="' + c + '">' + (s === 'cintrage-de-precision' ? '<span class="dim" hidden>0°</span>' : '') + '</div>' + seg + '<figcaption>' + c + '</figcaption></figure>';
+}
 function hero(L, slot){
   var u = UI[L];
-  return '<header class="hero"><div class="plate hplate">' + RIV +
-    '<div class="maker etched"><b>' + u.maker + '</b><span>' + u.makerS + '</span></div>' +
-    '<h1 class="etched" tabindex="-1">' + u.h1 + '</h1>' +
-    '<dl class="fields etched"><div><dt>' + u.fUs + '</dt><dd>' + u.fUsV + '</dd></div><div><dt>' + u.fCo + '</dt><dd>' + u.fCoV + '</dd></div>' +
-    '<div><dt>' + u.fMa + '</dt><dd>' + u.fMaV + '</dd></div><div><dt>' + u.fFo + '</dt><dd>' + u.fFoV + '</dd></div></dl>' + slot +
-    '</div></header>';
+  return '<header class="hero"><div class="part hero3d" data-part="hero" role="img" aria-label="' + lbl('cintrage-de-precision', L) + '">' + BENT + '<span class="dim" hidden>0°</span></div>' +
+    '<div class="hero-in"><h1 tabindex="-1">' + u.h1 + '</h1><p class="lede">' + u.lede + '</p>' + slot + '</div></header>';
 }
 function homeProcs(L, href){
-  var u = UI[L], ar = '<svg class="ar" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
-  return '<section class="band procs"><h2>' + u.procH + '</h2><p class="intro">' + u.procI + '</p><div class="rows">' +
-    D.PROC.map(function(p){ return '<a class="row" href="' + href(L, 'procs', p) + '"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p>' + ar + '</a>' +
-      (p.s === 'roulage-de-charpente' ? '<div class="fig inrow">' + sections(L) + '</div>' : ''); }).join('') + '</div></section>';
+  var u = UI[L];
+  return '<section class="band procs"><h2>' + u.procH + '</h2><p class="intro">' + u.procI + '</p><div class="stage"><div class="list">' +
+    D.PROC.map(function(p, i){ return '<article class="item' + (i ? '' : ' on') + '" data-k="' + i + '"><h3><a href="' + href(L, 'procs', p) + '">' + p[L].h + '</a></h3><p>' + p[L].l + '</p></article>'; }).join('') +
+    '</div><div class="view"><div class="part" data-part="stage" role="img" aria-label="' + (L === 'fr' ? 'La pièce correspondant au procédé en cours de lecture.' : 'The part for the capability being read.') + '"></div></div></div></section>';
 }
+function plate(inner, cls){ return '<div class="panel ' + (cls || '') + '">' + inner + '</div>'; }
 function plantHead(p, L, head, role){ return head.replace('</h1>', '</h1>' + role); }
-
-/* ── après chaque page : tracer les dessins à leur arrivée, reflet sur l'inox ── */
-function after(root){
-  var offs = [];
-  var figs = [].slice.call(root.querySelectorAll('.fig'));
-  if (!reduce && 'IntersectionObserver' in window && figs.length){
-    document.documentElement.classList.add('draw');
-    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting && e.boundingClientRect.top < innerHeight * .9){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:[0, .25, .5]});
-    figs.forEach(function(f){ io.observe(f); });
-    var chk = function(){ figs.forEach(function(f){ if (!f.classList.contains('in') && f.getBoundingClientRect().top < innerHeight * .86){ f.classList.add('in'); io.unobserve(f); } }); };
-    addEventListener('scroll', chk, {passive:true}); chk();
-    offs.push(function(){ io.disconnect(); removeEventListener('scroll', chk); });
-  } else figs.forEach(function(f){ f.classList.add('in'); });
-  var plates = [].slice.call(root.querySelectorAll('.plate'));
-  if (!reduce && plates.length && matchMedia('(pointer:fine)').matches){
-    var mv = function(e){ plates.forEach(function(p){ var b = p.getBoundingClientRect();
-      if (b.bottom < 0 || b.top > innerHeight) return;
-      p.style.setProperty('--mx', Math.max(0, Math.min(100, (e.clientX - b.left) / b.width * 100)).toFixed(1) + '%');
-      p.style.setProperty('--my', Math.max(0, Math.min(100, (e.clientY - b.top) / b.height * 100)).toFixed(1) + '%'); }); };
-    addEventListener('pointermove', mv, {passive:true});
-    offs.push(function(){ removeEventListener('pointermove', mv); });
-  }
-  return function(){ offs.forEach(function(f){ f(); }); };
+function after(root, r){
+  var go = function(){ return window.ACIER3D ? window.ACIER3D.mount(root, r) : null; };
+  if (window.ACIER3D) return go();
+  var stop = null, wait = function(){ stop = go(); };
+  addEventListener('acier3d-ready', wait, {once:true});
+  return function(){ removeEventListener('acier3d-ready', wait); if (stop) stop(); };
 }
-return {name:'plaque', hero:hero, homeProcs:homeProcs, fig:fig, plate:plate, plantHead:plantHead, after:after};
+var nav = function(){ var t = document.getElementById('top'); if (t) t.classList.toggle('solid', scrollY > 20); };
+addEventListener('scroll', nav, {passive:true});
+return {name:'acier', hero:hero, homeProcs:homeProcs, fig:fig, plate:plate, plantHead:plantHead, after:after};
 })();
 
 /* Le site : routes par #, pages en français et en anglais, titre et description
@@ -1040,6 +925,271 @@ document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape') setM
 addEventListener('hashchange', render);
 render();
 })();
+
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module">
+/* Les pièces en 3D du site « acier ». Chaque procédé a la sienne, construite
+   ici en géométrie : rien n'est chargé, aucun modèle externe. Un seul principe
+   d'animation : lent, et pour montrer comment la pièce est faite. */
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const GL = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; } })();
+if (!GL) document.documentElement.classList.add('no-gl');
+
+const STEEL = new THREE.MeshStandardMaterial({ color:0xd9dde0, metalness:1, roughness:.28 });
+const STEEL2 = new THREE.MeshStandardMaterial({ color:0xd9dde0, metalness:1, roughness:.3, side:THREE.DoubleSide });
+const DIE = new THREE.MeshStandardMaterial({ color:0x9aa1a7, metalness:.95, roughness:.38 });
+const DARK = new THREE.MeshStandardMaterial({ color:0x3b4248, metalness:.9, roughness:.4 });
+const INK = new THREE.LineBasicMaterial({ color:0x15181b });
+const PI = Math.PI;
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeInOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+
+/* Ligne moyenne d'un tube cintré : partie droite, arc de rayon R sur l'angle a,
+   partie droite qui suit. La longueur reste la même pendant le cintrage. */
+class BendPath extends THREE.Curve {
+  constructor(R, a, feed, lead){ super(); this.R = R; this.a = a; this.feed = feed; this.lead = lead; }
+  getPoint(t, out = new THREE.Vector3()){
+    const R = this.R, a = Math.max(this.a, 1e-4), arc = R * a, L = this.feed + arc + this.lead, s = t * L;
+    if (s <= this.feed) return out.set(-this.feed + s, -R, 0);
+    if (s <= this.feed + arc){ const th = (s - this.feed) / R; return out.set(R * Math.sin(th), -R * Math.cos(th), 0); }
+    const u = s - this.feed - arc;
+    return out.set(R * Math.sin(a) + u * Math.cos(a), -R * Math.cos(a) + u * Math.sin(a), 0);
+  }
+}
+/* tracé plan : droites et arcs échantillonnés, sans point doublé */
+function trace(x, y){
+  const p = [new THREE.Vector2(x, y)];
+  const t = {
+    l(x2, y2, n = 6){ const a = p[p.length - 1]; for (let i = 1; i <= n; i++) p.push(new THREE.Vector2(a.x + (x2 - a.x) * i / n, a.y + (y2 - a.y) * i / n)); return t; },
+    a(cx, cy, r, a0, a1, n = 18){ for (let i = 1; i <= n; i++){ const th = a0 + (a1 - a0) * i / n; p.push(new THREE.Vector2(cx + r * Math.cos(th), cy + r * Math.sin(th))); } return t; },
+    pts: p
+  };
+  return t;
+}
+const curve = pts3 => new THREE.CatmullRomCurve3(pts3, false, 'catmullrom', 0);
+/* centre le contenu d'un groupe et retient son rayon, pour cadrer sans couper */
+function centered(inner){
+  const g = new THREE.Group(); g.add(inner);
+  const box = new THREE.Box3().setFromObject(inner);
+  inner.position.sub(box.getCenter(new THREE.Vector3()));
+  const sz = box.getSize(new THREE.Vector3());
+  return { g, r:sz.length() / 2, size:sz, floor:-sz.y / 2 - .04 };
+}
+const turn = (p, k = .00016) => now => { if (!reduce) p.g.rotation.y = (p.base || 0) + now * k; else p.g.rotation.y = (p.base || 0) + .5; };
+const sway = (p, amp = .5) => now => { p.g.rotation.y = (p.base || 0) + (reduce ? 0 : Math.sin(now * .00028) * amp); };
+
+/* ═══ la cintreuse : matrice, tube qui s'enroule, cote d'angle ═══ */
+function bender(el, opts){
+  const R = 1.25, r = .2, TOTAL = 7.2, rig = new THREE.Group();
+  const core = new THREE.Mesh(new THREE.CylinderGeometry(R - r, R - r, r * 2.1, 96), DIE); core.rotation.x = PI / 2; rig.add(core);
+  [-1, 1].forEach(sd => { const fl = new THREE.Mesh(new THREE.CylinderGeometry(R + r * .45, R + r * .45, r * .55, 96), DIE);
+    fl.rotation.x = PI / 2; fl.position.z = sd * r * 1.32; rig.add(fl); });
+  const hub = new THREE.Mesh(new THREE.CylinderGeometry(.3, .3, r * 3.4, 48), DARK); hub.rotation.x = PI / 2; rig.add(hub);
+  /* gorges d'usinage sur la face de la matrice */
+  [.62, .86].forEach(rr => [-1, 1].forEach(sd => { const ring = new THREE.Mesh(new THREE.TorusGeometry(rr, .012, 8, 120), DARK);
+    ring.position.z = sd * (r * 1.32 + r * .275 + .002); rig.add(ring); }));
+  let tube, arc;
+  function setAngle(a){
+    const lead = 1.6, g = new THREE.TubeGeometry(new BendPath(R, a, TOTAL - lead - R * a, lead), 160, r, 32, false);
+    if (tube){ tube.geometry.dispose(); tube.geometry = g; } else { tube = new THREE.Mesh(g, STEEL); rig.add(tube); }
+    const pts = []; for (let i = 0; i <= 40; i++){ const th = a * i / 40; pts.push(new THREE.Vector3(Math.sin(th) * (R + .55), -Math.cos(th) * (R + .55), r * 1.4)); }
+    const ag = new THREE.BufferGeometry().setFromPoints(pts);
+    if (arc){ arc.geometry.dispose(); arc.geometry = ag; } else { arc = new THREE.Line(ag, INK); rig.add(arc); }
+  }
+  rig.rotation.set(-.32, -.78, 0);
+  setAngle(PI / 2);
+  const p = centered(rig);
+  let a = reduce ? PI / 2 : 0; setAngle(a);
+  const dim = el.querySelector('.dim'); if (dim) dim.hidden = false;
+  const tmp = new THREE.Vector3();
+  p.label = { el:dim, at(){ const m = a / 2; return rig.localToWorld(tmp.set(Math.sin(m) * (R + .95), -Math.cos(m) * (R + .95), r * 1.4)); },
+    text(){ return Math.round(a * 180 / PI) + '°'; } };
+  p.tick = now => {
+    if (reduce) return;
+    const k = now - p.t0 - 500; let na;
+    if (!opts.loop) na = easeOut(Math.min(Math.max(k / 3600, 0), 1)) * PI / 2;
+    else { const c = ((k % 9200) + 9200) % 9200;
+      na = c < 3600 ? easeOut(c / 3600) * PI / 2 : c < 6200 ? PI / 2 : c < 8200 ? (1 - easeInOut((c - 6200) / 2000)) * PI / 2 : 0; }
+    if (Math.abs(na - a) > 1e-4){ a = na; setAngle(a); }
+    if (opts.parallax){ p.px += (p.tx - p.px) * .04; p.py += (p.ty - p.py) * .04; p.g.rotation.y = p.px * .18; p.g.rotation.x = p.py * .08; }
+  };
+  p.px = p.py = p.tx = p.ty = 0;
+  return p;
+}
+
+/* ═══ roulage : poutre en I, sens facile ou sens difficile ═══ */
+function beam(){
+  const w = .7, h = .9, tf = .12, tw = .1;
+  const shape = swap => { const s = new THREE.Shape(), P = (x, y) => swap ? [y, x] : [x, y];
+    const pts = [[-w/2,-h/2],[w/2,-h/2],[w/2,-h/2+tf],[tw/2,-h/2+tf],[tw/2,h/2-tf],[w/2,h/2-tf],[w/2,h/2],[-w/2,h/2],[-w/2,h/2-tf],[-tw/2,h/2-tf],[-tw/2,-h/2+tf],[-w/2,-h/2+tf]].map(q => P(q[0], q[1]));
+    s.moveTo(pts[0][0], pts[0][1]); pts.slice(1).forEach(q => s.lineTo(q[0], q[1])); s.closePath(); return s; };
+  const path = curve(Array.from({ length:30 }, (_, i) => { const th = -.75 + 1.5 * i / 29; return new THREE.Vector3(Math.sin(th) * 4.2, Math.cos(th) * 4.2 - 2.6, 0); }));
+  const ways = [false, true].map(sw => new THREE.Mesh(new THREE.ExtrudeGeometry(shape(sw), { steps:160, bevelEnabled:false, extrudePath:path }), STEEL));
+  const inner = new THREE.Group(); ways.forEach(m => inner.add(m)); ways[1].visible = false;
+  const p = centered(inner); p.base = -.85; p.el = .38;
+  p.way = 0; p.ts = 0;
+  p.setWay = k => { p.way = k; ways.forEach((m, i) => m.visible = i === k); p.ts = performance.now(); };
+  p.tick = now => { sway(p, .3)(now); const s = reduce ? 1 : .9 + .1 * easeOut(Math.min((now - p.ts) / 900, 1)); p.g.scale.setScalar(s); };
+  return p;
+}
+function helix(){
+  class H extends THREE.Curve { getPoint(t, o = new THREE.Vector3()){ const th = t * PI * 2 * 5.5; return o.set(Math.cos(th) * 1.25, -1.6 + t * 3.4, Math.sin(th) * 1.25); } }
+  const p = centered(new THREE.Mesh(new THREE.TubeGeometry(new H(), 900, .14, 24), STEEL)); p.tick = turn(p); return p;
+}
+/* formage de bout : profil tourné, fileté en bas, évasé en haut, avec son épaisseur */
+function endForm(){
+  const ro = .55, wall = .08, n = 150, y0 = -2.4, y1 = 2.2, out = [], inn = [];
+  const flare = y => y > 1.4 ? Math.pow((y - 1.4) / .8, 2) * .45 : 0;
+  for (let i = 0; i <= n; i++){ const y = y0 + (y1 - y0) * i / n;
+    const thr = y < -1.25 ? .05 * (1 - Math.abs(((y * 11) % 1 + 1) % 1 * 2 - 1)) : 0;
+    out.push(new THREE.Vector2(ro + flare(y) + thr, y)); inn.push(new THREE.Vector2(ro - wall + flare(y), y)); }
+  const prof = out.concat(inn.reverse()); prof.push(out[0].clone());
+  const m = new THREE.Mesh(new THREE.LatheGeometry(prof, 96), STEEL2); m.rotation.z = -PI / 2.6;
+  const p = centered(m); p.tick = turn(p, .00014); return p;
+}
+/* tube de chaudière posé sur son gabarit : le tracé au sol, puis le tube qui s'y dépose */
+function boiler(){
+  const t = trace(.4, 2.8).l(2, 2.8).a(2, 2.4, .4, PI / 2, 0).l(2.4, 1.4).a(2.8, 1.4, .4, PI, PI * 1.5).l(4.2, 1).a(4.2, 1.4, .4, -PI / 2, 0).l(4.6, 3);
+  const pts = t.pts.map(v => new THREE.Vector3(v.x - 2.5, 0, v.y - 2));
+  const inner = new THREE.Group(), R = .11;
+  const tube = new THREE.Mesh(new THREE.TubeGeometry(curve(pts), 400, R, 24), STEEL); inner.add(tube);
+  const g = []; for (let x = -2.8; x <= 2.81; x += .4) g.push(x, 0, -1.6, x, 0, 1.6); for (let z = -1.6; z <= 1.61; z += .4) g.push(-2.8, 0, z, 2.8, 0, z);
+  const gg = new THREE.BufferGeometry(); gg.setAttribute('position', new THREE.Float32BufferAttribute(g, 3));
+  inner.add(new THREE.LineSegments(gg, new THREE.LineBasicMaterial({ color:0x15181b, transparent:true, opacity:.14 })));
+  const lay = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts.map(v => new THREE.Vector3(v.x, .004, v.z))), new THREE.LineDashedMaterial({ color:0x15181b, dashSize:.12, gapSize:.07 }));
+  lay.computeLineDistances(); inner.add(lay);
+  const p = centered(inner); p.el = .95; p.floor = -.05;
+  p.tick = now => { const k = reduce ? 1 : easeOut(Math.min(Math.max((now - p.t0 - 400) / 2800, 0), 1));
+    tube.position.y = R + (1 - k) * 1.3; p.g.rotation.y = reduce ? .3 : .3 + Math.sin(now * .00022) * .25; };
+  return p;
+}
+function panel(){
+  const inner = new THREE.Group(), n = 7, s = .38, r = .14, H = 3.6;
+  for (let i = 0; i < n; i++){ const x = (i - (n - 1) / 2) * s;
+    const c = new THREE.Mesh(new THREE.CylinderGeometry(r, r, H, 32, 1, true), STEEL2); c.position.x = x; inner.add(c);
+    if (i < n - 1){ const b = new THREE.Mesh(new THREE.BoxGeometry(s - r * 1.6, H, .05), STEEL); b.position.x = x + s / 2; inner.add(b); } }
+  const p = centered(inner); p.base = -.6; p.tick = sway(p, .55); return p;
+}
+function pressure(){
+  const inner = new THREE.Group();
+  [-2.4, 2.4].forEach(x => { const h = new THREE.Mesh(new THREE.CylinderGeometry(.24, .24, 3.2, 40), DIE); h.position.x = x; inner.add(h); });
+  const t = trace(-2.2, 1.2).l(1.7, 1.2, 10).a(1.7, .9, .3, PI / 2, -PI / 2).l(-1.7, .6, 10).a(-1.7, .3, .3, PI / 2, PI * 1.5)
+    .l(1.7, 0, 10).a(1.7, -.3, .3, PI / 2, -PI / 2).l(-1.7, -.6, 10).a(-1.7, -.9, .3, PI / 2, PI * 1.5).l(2.2, -1.2, 10);
+  inner.add(new THREE.Mesh(new THREE.TubeGeometry(curve(t.pts.map(v => new THREE.Vector3(v.x, v.y, 0))), 600, .075, 20), STEEL));
+  const p = centered(inner); p.base = -.4; p.tick = sway(p, .5); return p;
+}
+function fab(){
+  const R = 1.4, lead = 1.6, feed = 2, inner = new THREE.Group();
+  inner.add(new THREE.Mesh(new THREE.TubeGeometry(new BendPath(R, PI / 2, feed, lead), 200, .22, 32), STEEL));
+  const flange = (pos, rotZ) => { const f = new THREE.Group();
+    f.add(new THREE.Mesh(new THREE.CylinderGeometry(.5, .5, .1, 64), DIE));
+    for (let i = 0; i < 8; i++){ const b = new THREE.Mesh(new THREE.CylinderGeometry(.035, .035, .18, 12), DARK); const th = i / 8 * PI * 2; b.position.set(Math.cos(th) * .38, 0, Math.sin(th) * .38); f.add(b); }
+    f.position.copy(pos); f.rotation.z = rotZ; inner.add(f); };
+  flange(new THREE.Vector3(-feed, -R, 0), PI / 2); flange(new THREE.Vector3(R, lead, 0), 0);
+  const p = centered(inner); p.base = -.5; p.tick = sway(p, .6); return p;
+}
+const B = { 'roulage-de-charpente':beam, 'serpentins':helix, 'formage-de-bout':endForm, 'tubes-de-chaudiere':boiler,
+  'panneaux-de-tubes':panel, 'appareils-sous-pression':pressure, 'fabrication-sur-mesure':fab };
+const build = (s, el, opts) => s === 'cintrage-de-precision' ? bender(el, opts || { loop:true }) : B[s]();
+
+/* ═══ une scène : rendu, lumière de studio, ombre de contact, cadrage ═══ */
+function stage(el){
+  const canvas = document.createElement('canvas'); el.prepend(canvas);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  const scene = new THREE.Scene(), pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), .04).texture;
+  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(-3, 6, 5);
+  scene.add(key, new THREE.AmbientLight(0xffffff, .25));
+  const cv = document.createElement('canvas'); cv.width = cv.height = 256;
+  const c2 = cv.getContext('2d'), grd = c2.createRadialGradient(128, 128, 0, 128, 128, 128);
+  grd.addColorStop(0, 'rgba(21,24,27,.30)'); grd.addColorStop(.55, 'rgba(21,24,27,.10)'); grd.addColorStop(1, 'rgba(21,24,27,0)');
+  c2.fillStyle = grd; c2.fillRect(0, 0, 256, 256);
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map:new THREE.CanvasTexture(cv), transparent:true, depthWrite:false }));
+  ground.rotation.x = -PI / 2; scene.add(ground);
+  const camera = new THREE.PerspectiveCamera(30, 1, .1, 200);
+  let W = 0, H = 0, raf = 0, vis = true, cur = null;
+  const v = new THREE.Vector3();
+  function frameCam(){
+    if (!cur || !W) return;
+    if (cur.cam) return cur.cam(camera, W, H, ground);
+    /* cadrage par la boîte : la pièce tourne autour de l'axe vertical, donc sa demi-largeur
+       est la plus grande de x et z ; la caméra surélevée voit aussi un peu de sa profondeur */
+    const s = cur.size, hx = Math.max(s.x, s.z) / 2, hy = s.y / 2, t = Math.tan(THREE.MathUtils.degToRad(15));
+    const el = cur.el || .22, ang = Math.atan(el), vert = hy * Math.cos(ang) + hx * Math.sin(ang);
+    const d = (Math.max(vert / t, hx / (t * camera.aspect)) + hx) * 1.1;
+    v.set(0, el, 1).normalize().multiplyScalar(d); camera.position.copy(v); camera.lookAt(0, 0, 0);
+    ground.position.set(0, cur.floor, 0); ground.scale.set(hx * 2.6, hx * 1.1, 1);
+  }
+  function size(){ const b = el.getBoundingClientRect(); W = b.width; H = b.height; if (!W || !H) return;
+    renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); frameCam(); }
+  function loop(now){
+    raf = 0; if (!W) size();
+    if (cur && cur.tick) cur.tick(now);
+    if (cur && cur.label && cur.label.el){ const q = cur.label.at().project(camera);
+      cur.label.el.style.left = ((q.x + 1) / 2 * W) + 'px'; cur.label.el.style.top = ((1 - q.y) / 2 * H) + 'px'; cur.label.el.textContent = cur.label.text(); }
+    renderer.render(scene, camera);
+    if (vis && !reduce && !document.hidden) raf = requestAnimationFrame(loop);
+  }
+  const kick = () => { if (!raf) raf = requestAnimationFrame(loop); };
+  const ro = new ResizeObserver(() => { size(); kick(); }); ro.observe(el);
+  const io = new IntersectionObserver(es => { vis = es[es.length - 1].isIntersecting; if (vis) kick(); }); io.observe(el);
+  document.addEventListener('visibilitychange', kick);
+  return {
+    set(p){ if (cur === p) return; if (cur) scene.remove(cur.g); cur = p; scene.add(p.g); p.t0 = performance.now(); frameCam(); kick(); },
+    kick,
+    dispose(){ cancelAnimationFrame(raf); ro.disconnect(); io.disconnect(); document.removeEventListener('visibilitychange', kick); renderer.dispose(); renderer.forceContextLoss(); canvas.remove(); }
+  };
+}
+
+/* ═══ le héros : la cintreuse, décalée à droite du texte sur grand écran ═══ */
+function heroPart(el){
+  const p = bender(el, { loop:false, parallax:!reduce });
+  addEventListener('pointermove', p.move = e => { p.tx = e.clientX / innerWidth - .5; p.ty = e.clientY / innerHeight - .5; }, { passive:true });
+  p.cam = (camera, W, H, ground) => {
+    const wide = W >= 980;
+    p.g.position.set(wide ? 2.1 : 0, wide ? -.2 : 0, 0);
+    const half = THREE.MathUtils.degToRad(15), rr = p.r * (wide ? 1.15 : 1.02);
+    const d = wide ? 11.5 : Math.max(rr / Math.sin(half), rr / Math.sin(Math.atan(Math.tan(half) * camera.aspect)));
+    camera.position.set(0, d * .1, d); camera.lookAt(wide ? .3 : 0, wide ? -.15 : 0, 0);
+    ground.position.set(p.g.position.x - .3, p.g.position.y + p.floor, 0); ground.scale.set(p.r * 2.2, p.r * .8, 1);
+  };
+  return p;
+}
+
+function mount(root){
+  if (!GL) return null;
+  const stops = [];
+  root.querySelectorAll('.part[data-part]').forEach(el => {
+    const kind = el.dataset.part, st = stage(el);
+    stops.push(st.dispose);
+    if (kind === 'hero'){ const p = heroPart(el); st.set(p); stops.push(() => removeEventListener('pointermove', p.move)); return; }
+    if (kind === 'stage'){
+      const slugs = window.CINTUBE.PROC.map(x => x.s), cache = {}, items = [...root.querySelectorAll('.item')];
+      const show = k => { const p = cache[k] || (cache[k] = build(slugs[k], el, { loop:true })); p.g.scale.setScalar(1); st.set(p); };
+      let cur = -1;
+      const pick = () => { const mid = innerHeight * (innerWidth < 980 ? .66 : .5); let best = 0, bd = 1e9;
+        items.forEach((it, i) => { const r = it.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid); if (d < bd){ bd = d; best = i; } });
+        if (best !== cur){ cur = best; items.forEach((it, i) => it.classList.toggle('on', i === best)); show(best); } };
+      addEventListener('scroll', pick, { passive:true }); pick();
+      stops.push(() => removeEventListener('scroll', pick));
+      return;
+    }
+    const p = build(kind, el); st.set(p);
+    const seg = el.parentNode.querySelector('.seg');
+    if (seg && p.setWay){ const btns = [...seg.querySelectorAll('button')];
+      seg.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
+        p.setWay(+b.dataset.way); btns.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); st.kick(); }); }
+  });
+  return () => stops.forEach(f => f());
+}
+window.ACIER3D = { mount };
+dispatchEvent(new Event('acier3d-ready'));
 
 </script>
 </body>
