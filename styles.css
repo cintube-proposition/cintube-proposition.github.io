@@ -224,13 +224,13 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 .folder__body .role{color:var(--mute);font-size:15px}
 .folder__body .adr{margin-top:6px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
 .folder__body .tel{display:inline-flex;align-items:center;min-height:36px;font-family:var(--m);font-size:14px;color:var(--ink)}
-.folder__body .ar{position:absolute;right:18px;top:18px;width:38px;height:38px;padding:9px;border-radius:999px;background:var(--signal);color:var(--on-signal);transition:transform .5s var(--ease)}
+.folder__body > .ar{position:absolute;right:18px;top:18px;width:38px;height:38px;padding:9px;border-radius:999px;background:var(--signal);color:var(--on-signal);transition:transform .5s var(--ease)}
 @media (hover:hover){
   .folder:hover{--lift:0 -3px}
   .folder:hover .folder__sheet{translate:0 -14px}
   .folder:hover .folder__sheet:nth-child(2){translate:0 -8px}
   .folder:hover .folder__sheet:nth-child(3){translate:0 -3px}
-  .folder:hover .ar{transform:translate(2px,-2px) rotate(-45deg)}
+  .folder:hover .folder__body > .ar{transform:translate(2px,-2px) rotate(-45deg)}
 }
 
 /* ── dépôt de plans ── */
