@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cintube | Cintrage et fabrication métallique sur mesure depuis 1955</title>
+<meta name="description" content="Cintreur et fabricant métallique sur mesure depuis 1955. Usines à Lachine, Mississauga et Plattsburgh. Code ASME, estampilles S et U.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#243C33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23243C33'/%3E%3Cpath d='M7 25V18a11 11 0 0 1 11-11h7' fill='none' stroke='%23DADEE0' stroke-width='4.5'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cintube | Cintrage et fabrication métallique sur mesure depuis 1955">
+<meta property="og:description" content="Cintreur et fabricant métallique sur mesure depuis 1955. Usines à Lachine, Mississauga et Plattsburgh. Code ASME, estampilles S et U.">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:locale:alternate" content="en_CA">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono:wght@400&display=swap">
+<style>
+/* Plaque signalétique : chaque appareil sous pression que Cintube fabrique porte
+   une plaque d'inox rivée sur sa tôle peinte. Le site fait la même chose : la tôle
+   émaillée est le fond, les faits sont gravés sur l'inox. */
+:root{
+  --enamel:#243C33; --enamel-2:#2C483D; --enamel-3:#355648;
+  --on:#E8EFE9; --on-2:#C3D2C8; --on-mute:#A9BCB1; --rule:rgba(232,239,233,.16);
+  --etch:#1B2021; --etch-2:#3A4245;
+  --f:"B612", "Helvetica Neue", Arial, sans-serif;
+  --m:"B612 Mono", ui-monospace, Menlo, monospace;
+  --gut:clamp(16px,5vw,72px); --max:1180px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{background:var(--enamel);color-scheme:dark;scrollbar-color:var(--enamel-3) var(--enamel);-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--on);font-family:var(--f);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--enamel);caret-color:var(--on);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--on);color:var(--enamel)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--enamel)}
+::-webkit-scrollbar-thumb{background:var(--enamel-3);border-radius:10px;border:2px solid var(--enamel)}
+:focus-visible{outline:2px solid var(--on);outline-offset:3px;border-radius:6px}
+.plate :focus-visible{outline-color:var(--etch)}
+h1:focus{outline:none}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,dl,dd,dt,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+main,#top,#foot{position:relative;z-index:1}
+main{display:block;max-width:var(--max);margin:0 auto;padding:0 var(--gut) clamp(60px,10vh,120px)}
+.pg-home{max-width:none;padding:0}
+
+/* ── entête ── */
+#top{display:flex;align-items:center;gap:28px;padding:18px var(--gut);max-width:calc(var(--max) + 2*var(--gut));margin:0 auto}
+.skip{position:absolute;left:var(--gut);top:-80px;z-index:9;min-height:44px;padding:0 16px;border-radius:10px;border:0;background:var(--on);color:var(--enamel);font:700 16px var(--f)}
+.skip:focus{top:10px}
+.brand{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:20px;letter-spacing:-.01em}
+.links{display:flex;gap:26px;margin-left:auto;color:var(--on-2);font-size:16px}
+.links a{display:inline-flex;align-items:center;min-height:44px}.links a:hover,.links a[aria-current]{color:var(--on)}
+.links a[aria-current]{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:8px}
+.lang{color:var(--on-mute);font-size:16px;padding:0 6px;min-height:44px;display:inline-flex;align-items:center}
+.lang:hover{color:var(--on)}
+#top .cta{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid rgba(232,239,233,.35);font-size:16px;font-weight:700}
+#top .cta:hover{background:var(--enamel-2)}
+.menu{display:none;width:46px;height:46px;border-radius:12px;border:1px solid rgba(232,239,233,.25);background:transparent;color:var(--on);align-items:center;justify-content:center;cursor:pointer}
+.menu svg{width:18px;height:18px}
+#drawer{position:fixed;inset:82px 0 0 0;z-index:20;background:var(--enamel);padding:10px var(--gut) 40px;overflow:auto}
+#drawer nav{display:flex;flex-direction:column}
+#drawer a{display:flex;align-items:center;min-height:60px;font-size:24px;font-weight:700;border-bottom:1px solid var(--rule)}
+#drawer a:last-child{font-size:18px;color:var(--on-2);font-weight:400}
+html.menu-open{overflow:hidden}
+
+/* ── la plaque ── */
+.plate{--mx:30%;--my:20%;position:relative;border-radius:16px;color:var(--etch);
+  padding:clamp(28px,4.4vw,64px) clamp(22px,4.6vw,72px) clamp(30px,4vw,58px);
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 2px,transparent 2px 4px),
+    linear-gradient(104deg,#B7BCBF 0%,#DADEE0 26%,#C3C8CB 50%,#E1E4E6 72%,#BABFC2 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -2px 0 rgba(0,0,0,.18),0 2px 3px rgba(0,0,0,.35),0 40px 80px -40px rgba(0,0,0,.75)}
+.plate::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:soft-light;
+  background:radial-gradient(60% 80% at var(--mx) var(--my),rgba(255,255,255,.75),rgba(255,255,255,0) 60%)}
+.plate > .etched{position:relative;z-index:1}
+.rivet{position:absolute;width:18px;height:18px;border-radius:50%;z-index:1;
+  background:radial-gradient(circle at 36% 34%,#F7F8F9 0 18%,#B9BEC1 45%,#7C8286 80%,#5D6367 100%);
+  box-shadow:0 1px 2px rgba(0,0,0,.45),inset 0 -1px 1px rgba(0,0,0,.3)}
+.rivet:nth-of-type(1){left:18px;top:18px}.rivet:nth-of-type(2){right:18px;top:18px}
+.rivet:nth-of-type(3){left:18px;bottom:18px}.rivet:nth-of-type(4){right:18px;bottom:18px}
+.etched{text-shadow:0 1px 0 rgba(255,255,255,.6)}
+.plate a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+
+/* accueil */
+.hero{padding:clamp(10px,3vh,40px) var(--gut) clamp(60px,10vh,120px)}
+.hplate{max-width:var(--max);margin:0 auto}
+.maker{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding:0 6px}
+.maker b{font-weight:700;font-size:clamp(20px,2vw,26px)}
+.maker span{font-size:16px;color:var(--etch-2)}
+.hero h1{margin-top:clamp(22px,3.4vw,46px);font-weight:700;font-size:clamp(38px,5.4vw,80px);line-height:1.02;letter-spacing:-.035em;max-width:16ch;padding:0 6px;text-wrap:balance}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px clamp(24px,4vw,64px);margin-top:clamp(28px,4vw,52px);padding:0 6px}
+.fields dt,.facts dt,.codes dd,.pfields dt{font-size:16px;color:var(--etch-2)}
+.fields dd{margin-top:4px;font-size:clamp(18px,1.6vw,21px);font-weight:700;line-height:1.42}
+.drop{margin-top:clamp(28px,4vw,48px);display:flex;align-items:center;gap:12px;padding:10px 10px 10px 20px;border-radius:12px;
+  background:linear-gradient(180deg,#B8BEC1,#CBD0D2);box-shadow:inset 0 2px 5px rgba(0,0,0,.35),inset 0 -1px 0 rgba(255,255,255,.5),0 1px 0 rgba(255,255,255,.6)}
+.drop.over{background:linear-gradient(180deg,#AEB4B8,#C2C7CA)}
+.drop svg{width:22px;height:22px;flex:none;color:var(--etch)}
+.drop .t{flex:1;min-width:0;cursor:pointer;min-height:44px;display:flex;flex-direction:column;justify-content:center}
+.drop .t b{display:block;font-size:16px}
+.drop .t span{display:block;font-size:16px;color:var(--etch);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;border:0;cursor:pointer;
+  background:var(--etch);color:#E9ECEE;font-family:var(--f);font-weight:700;font-size:16px;text-align:center;text-decoration:none!important;text-shadow:none;
+  box-shadow:0 1px 0 rgba(255,255,255,.4),0 6px 14px -8px rgba(0,0,0,.7);transition:background .3s var(--ease),transform .2s var(--ease)}
+.btn:hover{background:#2B3233}.btn:active{transform:translateY(1px)}
+main > .btn,.prose .btn,.btn.solo{background:var(--on);color:var(--enamel);box-shadow:none}
+main > .btn:hover,.prose .btn:hover{background:#fff}
+.btn.big{min-height:54px;padding:0 26px;font-size:17px}
+.btn.solo{margin-top:clamp(36px,6vh,64px)}
+.btn.ghost{background:transparent;color:var(--etch);box-shadow:inset 0 0 0 1.5px var(--etch)}
+.btn.ghost:hover{background:rgba(27,32,33,.08)}
+
+/* bandes et rangées */
+.band{padding:clamp(56px,9vh,110px) 0 0}
+.pg-home .band{max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.band.tight{padding-top:clamp(40px,6vh,70px)}
+.band h2{font-weight:700;font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;line-height:1.04;max-width:18ch;text-wrap:balance}
+.band h2.sm{font-size:clamp(24px,2.4vw,32px);max-width:none}
+.band .intro{margin-top:18px;color:var(--on-2);max-width:56ch;font-size:18px}
+.rows{margin-top:clamp(32px,5vh,60px);border-bottom:1px solid var(--rule)}
+.band h2.sm + .rows{margin-top:20px}
+.row{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) 24px;align-items:baseline;gap:10px clamp(24px,5vw,80px);padding:28px 0;border-top:1px solid var(--rule);transition:background .4s var(--ease)}
+.row h2,.row h3{font-weight:700;font-size:clamp(23px,2.4vw,34px);letter-spacing:-.02em;line-height:1.1}
+.row p{color:var(--on-2);max-width:46ch}
+.row .ar{width:22px;height:22px;color:var(--on-mute);transition:transform .5s var(--ease),color .3s}
+.row:hover .ar{transform:translateX(4px);color:var(--on)}
+.row:hover h2,.row:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.fig.inrow{padding:6px 0 34px}
+.after{margin-top:28px;color:var(--on-2);max-width:60ch}
+
+/* page intérieure */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding-top:clamp(18px,4vh,40px);font-size:16px;color:var(--on-mute)}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-2)}.crumbs a:hover{color:var(--on)}
+.phead{padding-top:clamp(18px,4vh,46px)}
+.phead h1{font-weight:700;font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.04em;max-width:15ch;text-wrap:balance}
+.phead .lede{margin-top:clamp(18px,2.6vh,28px);font-size:clamp(18px,1.7vw,22px);color:var(--on-2);max-width:48ch;line-height:1.5}
+.phead .role{margin-top:12px;font-size:18px;color:var(--on-mute)}
+.fig-wrap{margin-top:clamp(40px,7vh,80px)}
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px clamp(30px,6vw,96px);padding-top:clamp(48px,8vh,90px);align-items:start}
+.prose{display:flex;flex-direction:column;gap:18px;font-size:clamp(18px,1.5vw,20px);max-width:52ch}
+.prose .btn{align-self:flex-start;margin-top:14px}
+.lk{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.lk .ar{width:20px;height:20px}
+.spec-t{width:100%;border-collapse:collapse;font-size:16px}
+.spec-t caption{text-align:left;font-weight:700;font-size:18px;padding-bottom:12px}
+.spec-t th,.spec-t td{text-align:left;vertical-align:top;padding:12px 12px 12px 0;border-top:1px solid var(--rule)}
+.spec-t thead th{color:var(--on-mute);font-weight:400;border-top:0}
+.spec-t tbody th{font-weight:700}
+.spec-t td{color:var(--on-2)}
+.xlist h2{font-size:18px;font-weight:700}
+.xlist ul{margin-top:12px;border-bottom:1px solid var(--rule)}
+.xlist li{padding:11px 0;border-top:1px solid var(--rule);color:var(--on-2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips a{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid rgba(232,239,233,.3);font-size:16px}
+.chips a:hover{background:var(--enamel-2);border-color:var(--on-2)}
+.next{display:grid;grid-template-columns:1fr 24px;align-items:center;gap:6px 20px;margin-top:clamp(56px,9vh,100px);padding:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.next span{grid-column:1;font-size:16px;color:var(--on-mute)}
+.next b{grid-column:1;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;line-height:1.1}
+.next .ar{grid-column:2;grid-row:1/3;width:24px;height:24px;transition:transform .5s var(--ease)}
+.next:hover .ar{transform:translateX(5px)}
+
+/* dessins techniques */
+.fig{color:var(--on)}
+.drw{display:block;width:100%;max-width:820px;height:auto;overflow:visible}
+.fig figcaption{margin-top:16px;font-size:16px;color:var(--on-mute)}
+.drw .p,.mini .p{fill:none;stroke:var(--on);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.drw .tw{stroke:var(--on);stroke-linecap:butt}
+.drw .ti{stroke:var(--enamel);stroke-linecap:butt}
+.drw .ax,.mini .ax{fill:none;stroke:var(--on-mute);stroke-width:1.4;stroke-dasharray:10 6 2 6}
+.drw .ax.back{stroke-dasharray:6 6;stroke-width:1.6}
+.drw .dm{fill:none;stroke:var(--on-2);stroke-width:1.2}
+.drw .grid{fill:none;stroke:rgba(232,239,233,.1);stroke-width:1}
+.drw .tx{font-family:var(--m);font-size:28px;fill:var(--on)}
+.minis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px 18px}
+.fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(4,minmax(0,1fr))}
+.mini{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.mini svg{width:100%;max-width:150px;height:auto;overflow:visible}
+.fig .mini svg{max-width:170px}
+.mini b{font-size:16px;font-weight:700}
+.mini span{font-size:16px;color:var(--on-mute);line-height:1.45}
+html.draw .fig .p{stroke-dasharray:1;stroke-dashoffset:1}
+html.draw .fig .ax,html.draw .fig .dm,html.draw .fig .tx,html.draw .fig .grid{opacity:0}
+html.draw .fig.in .p{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s var(--ease)}
+html.draw .fig.in .ax,html.draw .fig.in .dm,html.draw .fig.in .tx,html.draw .fig.in .grid{opacity:1;transition:opacity 1.2s ease 1.4s}
+html.draw .fig.in .mini:nth-child(2) .p{transition-delay:.2s}
+html.draw .fig.in .mini:nth-child(3) .p{transition-delay:.4s}
+html.draw .fig.in .mini:nth-child(4) .p{transition-delay:.6s}
+html.draw .fig.in .mini:nth-child(5) .p{transition-delay:.8s}
+html.draw .fig.in .mini:nth-child(6) .p{transition-delay:1s}
+html.draw .fig.in .mini:nth-child(7) .p{transition-delay:1.2s}
+
+/* plaques intérieures */
+.facts-plate,.codes-plate,.plant-plate{padding:clamp(34px,4vw,56px) clamp(26px,4vw,56px)}
+.facts{display:grid;gap:18px}
+.facts dd{margin-top:2px;font-size:clamp(20px,1.8vw,24px);font-weight:700;line-height:1.3}
+.tbc{display:inline-block;margin-left:6px;font-family:var(--m);font-size:16px;font-weight:400;color:var(--etch-2);text-shadow:none;border-bottom:1px dashed currentColor}
+.codes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.codes dt{font-size:clamp(34px,4.4vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.codes dd{margin-top:8px}
+.cols{columns:3 220px;column-gap:40px;margin-top:20px}
+.cols li{break-inside:avoid;padding:11px 0;border-top:1px solid var(--rule);color:var(--on-2)}
+.pfields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 48px}
+.pfields .wide{grid-column:1/-1}
+.pfields dd{margin-top:4px;font-size:clamp(19px,1.7vw,23px);font-weight:700;line-height:1.4}
+.pfields .wide dd{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.01em}
+.pfields .tbc{font-size:16px}
+.pfields dd a{display:inline-flex;align-items:center;min-height:44px}
+
+/* accueil : réalisations, usines */
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px clamp(24px,4vw,60px);margin-top:clamp(32px,5vh,60px)}
+.plant{padding-top:22px;border-top:1px solid var(--rule)}
+.plant h3{font-size:clamp(26px,2.8vw,38px);font-weight:700;letter-spacing:-.02em}
+.plant h3 a{display:inline-flex;align-items:center;min-height:44px}
+.plant h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.plant .role{color:var(--on-mute);font-size:16px}
+.plant .adr{margin-top:14px;color:var(--on-2)}
+.tel{display:inline-flex;align-items:center;min-height:44px;font-family:var(--m);font-size:16px}
+.plant .tel{margin-top:6px}
+.works{margin-top:clamp(20px,4vh,40px)}
+.work{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;align-items:baseline;gap:10px 40px;padding:30px 0;border-top:1px solid var(--rule)}
+.work:last-child{border-bottom:1px solid var(--rule)}
+.work h2{font-size:clamp(24px,2.6vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.work p{color:var(--on-2)}
+.work .lk{font-size:16px;color:var(--on-2)}
+
+/* soumission : le formulaire est une grande plaque */
+.form-plate{margin-top:clamp(36px,6vh,64px)}
+.qform fieldset{border:0;margin:0;padding:0}
+.qform fieldset + fieldset{margin-top:clamp(34px,5vh,52px)}
+.qform legend{padding:0;font-weight:700;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin-top:20px}
+.fld{display:flex;flex-direction:column;gap:8px;min-width:0}
+.fld.wide{grid-column:1/-1}
+.fld label{font-size:16px;color:var(--etch-2)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 14px;border:0;border-radius:10px;font:16px var(--f);color:var(--etch);
+  background:linear-gradient(180deg,#B8BEC1,#CED3D5);box-shadow:inset 0 2px 5px rgba(0,0,0,.32),inset 0 -1px 0 rgba(255,255,255,.5),0 1px 0 rgba(255,255,255,.6)}
+.fld textarea{resize:vertical;line-height:1.5}
+.fld ::placeholder{color:var(--etch-2);opacity:1}
+.fld select{appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231B2021' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 8l4 4 4-4'/%3E%3C/svg%3E") right 14px center/18px no-repeat,linear-gradient(180deg,#B8BEC1,#CED3D5)}
+.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{outline:2px solid var(--etch);outline-offset:2px}
+.zone{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:22px;border-radius:12px;border:1.5px dashed rgba(27,32,33,.55);background:rgba(255,255,255,.18)}
+.zone.over{background:rgba(255,255,255,.4)}
+.zone svg{width:28px;height:28px;flex:none}
+.zone p{flex:1;min-width:200px;font-size:16px}
+.flist{margin-top:12px}
+.flist li{display:flex;align-items:center;gap:12px;min-height:48px;padding:0 4px 0 2px;border-bottom:1px solid rgba(27,32,33,.18);font-size:16px}
+.flist li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.flist li small{font-size:16px;font-family:var(--m);color:var(--etch-2)}
+.flist li button{width:44px;height:44px;border:0;background:transparent;font-size:24px;color:var(--etch);cursor:pointer;border-radius:8px}
+.flist li button:hover{background:rgba(27,32,33,.1)}
+.flist .none{color:var(--etch-2);font-weight:400}
+.send{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:clamp(34px,5vh,52px)}
+.mock{font-size:16px;font-weight:700;color:var(--etch);max-width:52ch}
+.hero .mock{margin-top:14px;padding:0 6px}
+
+/* pied de page */
+#foot{max-width:calc(var(--max) + 2*var(--gut));margin:0 auto;padding:clamp(50px,8vh,90px) var(--gut) 34px;border-top:1px solid var(--rule)}
+.fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 30px}
+.fcols h2{font-size:16px;font-weight:700;color:var(--on)}
+.fcols ul{margin-top:10px}
+.fcols li{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px}
+.fcols a{display:inline-flex;align-items:center;min-height:44px;font-size:16px;color:var(--on-2)}
+.fcols a:hover{color:var(--on)}
+.fcols .tel{color:var(--on-mute)}
+.mockline{margin-top:40px;padding-top:22px;border-top:1px solid var(--rule);font-size:16px;color:var(--on-mute)}
+
+@media (max-width:1060px){
+  .links,#top .lang{display:none}
+  .menu{display:inline-flex}
+  #top .cta{margin-left:auto}
+  .split{grid-template-columns:1fr}
+  .fcols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .minis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(3,minmax(0,1fr))}
+  .codes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .row{grid-template-columns:minmax(0,1fr) 22px}
+  .row p{grid-column:1}
+  .row .ar{grid-column:2;grid-row:1}
+  .trio{grid-template-columns:1fr;gap:10px}
+  .work{grid-template-columns:1fr}
+  .grid,.pfields{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  #top{gap:10px}
+  #top .cta{padding:0 14px}
+  #drawer{inset:80px 0 0 0}
+  .fields{grid-template-columns:1fr;gap:18px}
+  .drop{flex-wrap:wrap;padding:16px}
+  .drop .btn{width:100%}
+  .rivet{width:14px;height:14px}
+  .rivet:nth-of-type(1),.rivet:nth-of-type(3){left:12px}.rivet:nth-of-type(2),.rivet:nth-of-type(4){right:12px}
+  .rivet:nth-of-type(1),.rivet:nth-of-type(2){top:12px}.rivet:nth-of-type(3),.rivet:nth-of-type(4){bottom:12px}
+  .minis,.fig .minis:has(.mini:nth-child(7)){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fcols{grid-template-columns:1fr}
+  .send .btn{width:100%}
+  .zone .btn{width:100%}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hplate{animation:seat 1.6s var(--ease) both}
+  @keyframes seat{from{opacity:.001;transform:translateY(22px)}}
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Cintube Ltée", "alternateName": "Cintube Ltd", "foundingDate": "1955", "url": "http://www.cintube.com/", "email": "salesmtl@cintube.ca", "location": [{"@type": "Place", "name": "Cintube Ltée, Lachine", "telephone": "+1 514 634-3592", "address": {"@type": "PostalAddress", "streetAddress": "2075, 52e Avenue", "addressLocality": "Lachine", "addressRegion": "QC", "postalCode": "H8T 3C3", "addressCountry": "CA"}}, {"@type": "Place", "name": "Cintube, Mississauga", "telephone": "+1 905 625-1900", "faxNumber": "+1 905 625-1500", "address": {"@type": "PostalAddress", "streetAddress": "1200 Lakeshore Road East", "addressLocality": "Mississauga", "addressRegion": "ON", "postalCode": "L5E 1E9", "addressCountry": "CA"}}, {"@type": "Place", "name": "Cintube International Ltd, Plattsburgh", "telephone": "+1 518 324-3333", "faxNumber": "+1 518 324-3389", "address": {"@type": "PostalAddress", "streetAddress": "139 Distribution Way, Building K", "addressLocality": "Plattsburgh", "addressRegion": "NY", "postalCode": "12901", "addressCountry": "US"}}]}</script>
+<header id="top"></header>
+<div id="drawer" hidden></div>
+<main id="main"></main>
+<footer id="foot"></footer>
+<noscript><p style="padding:24px">Cintube Ltée, 2075, 52e Avenue, Lachine (Québec) H8T 3C3. +1 514 634-3592. salesmtl@cintube.ca</p></noscript>
+<script>
+/* Contenu du site Cintube, en français et en anglais.
+   Chaque phrase factuelle vient de leur site (INVENTAIRE_FR.md, INVENTAIRE_EN.md,
+   CONTENU_CINTUBE.md). Les chiffres de 2009 portent la marque « à confirmer ». */
+window.CINTUBE = (function(){
+
+var PROC = [
+ {s:'cintrage-de-precision', e:'precision-bending', sect:['petrochimie-et-raffinage','mines','architecture-et-ornemental'],
+  fr:{t:'Cintrage de précision de tubes et de tuyaux', h:'Cintrage de précision',
+      d:'Cintrage sur mesure de tubes et de tuyaux en acier au carbone, inox, cuivre, laiton, aluminium et titane, toutes dimensions.',
+      l:'Tubes et tuyaux cintrés sur mesure, combinés au besoin à des composants offerts commercialement.',
+      b:['Cintube cintre des tuyaux, des tubes, des cornières, des poutres et des profilés en U de toutes dimensions.',
+         'Le personnel technique travaille avec le client pour trouver la solution la plus économique à ses exigences de cintrage.'],
+      xh:'Matériaux cintrés', x:['Acier au carbone','Acier inoxydable','Cuivre','Laiton','Aluminium','Titane']},
+  en:{t:'Precision tube and pipe bending', h:'Precision bending',
+      d:'Custom tube and pipe bending in carbon steel, stainless steel, copper, brass, aluminum and titanium, all sizes.',
+      l:'Custom tube and pipe bending, combined when needed with commercially available components.',
+      b:['Cintube bends pipes, tubes, angles, beams and channels of all sizes.',
+         'Cintube’s technical personnel work with customers to find economical solutions to their bending requirements.'],
+      xh:'Materials bent', x:['Carbon steel','Stainless steel','Copper','Brass','Aluminum','Titanium']}},
+
+ {s:'roulage-de-charpente', e:'structural-rolling', table:true, sect:['transport-et-infrastructure','architecture-et-ornemental'],
+  fr:{t:'Roulage de charpente : poutres, cornières, profilés en U', h:'Roulage de charpente',
+      d:'Roulage sur mesure de poutres en I, poutres à large bride, cornières, profilés en U, plats et tubulaires, sens facile et sens difficile.',
+      l:'Roulage sur mesure d’une vaste gamme de matériaux et de profilés, dans le sens facile comme dans le sens difficile.',
+      b:['Toutes les fermes de toit de l’édifice Peter B. Lewis ont été roulées chez Cintube.']},
+  en:{t:'Structural rolling: beams, angles, channels', h:'Structural rolling',
+      d:'Custom roll bending of I-beams, wide flange beams, angles, channels, flat bar and tubular, easy way and hard way.',
+      l:'Custom roll bending of a wide variety of materials and shapes, easy way and hard way.',
+      b:['All roof trusses of the Peter B. Lewis Building were rolled by Cintube.']}},
+
+ {s:'serpentins', e:'coils', sect:['energie-et-hydroelectricite','produits-forestiers'],
+  fr:{t:'Fabrication de serpentins sur mesure', h:'Serpentins',
+      d:'Serpentins sur demande de tous types, formes et tailles, incluant les demi-coquilles de refroidissement à l’eau.',
+      l:'Serpentins de tous types, formes et tailles, dans une grande variété de matériaux.',
+      b:['Cintube fabrique aussi les demi-coquilles de refroidissement à l’eau, et des serpentins de chaudière sur mesure.',
+         'L’entreprise est un manufacturier reconnu de serpentins de refroidissement et de serpentins de refroidissement pour grilloirs.']},
+  en:{t:'Custom coil fabrication', h:'Coils',
+      d:'Custom coils of all types, shapes and sizes, including half pipe water cooled jackets.',
+      l:'Coils of all types, shapes and sizes, in a wide variety of materials.',
+      b:['Cintube also builds half pipe water cooled jackets, and custom boiler coils.',
+         'The company is a recognized manufacturer of cooling coils and roaster cooling coils.']}},
+
+ {s:'formage-de-bout', e:'end-forming', sect:['petrochimie-et-raffinage','mines'],
+  fr:{t:'Formage de bout : filetage, chanfreinage, rainurage Victaulic', h:'Formage de bout',
+      d:'Filetage, chanfreinage, rainurage Victaulic, réduction, perlage, évasement et expansion, en petite ou grande quantité.',
+      l:'Préparation des bouts de tubes et de tuyaux, en petite ou grande quantité.',
+      b:['Le formage de bout s’ajoute au cintrage, chez le même fournisseur.'],
+      xh:'Opérations', x:['Filetage','Chanfreinage','Rainurage Victaulic','Réduction','Perlage','Évasement','Expansion']},
+  en:{t:'End forming: threading, beveling, Victaulic grooving', h:'End forming',
+      d:'Threading, beveling, Victaulic grooving, swaging, beading, flaring and expanding, in small or large quantities.',
+      l:'Tube and pipe end forming, in small or large quantities.',
+      b:['End forming comes on top of bending, from the same supplier.'],
+      xh:'Operations', x:['Threading','Beveling','Victaulic grooving','Swaging','Beading','Flaring','Expanding']}},
+
+ {s:'tubes-de-chaudiere', e:'boiler-tubes', sect:['energie-et-hydroelectricite','petrochimie-et-raffinage'],
+  fr:{t:'Cintrage de tubes de chaudière de remplacement', h:'Tubes de chaudière',
+      d:'Cintrage sur mesure de tubes de chaudière de remplacement, sur gabarit grandeur nature.',
+      l:'Cintrage sur mesure de tubes de chaudière de remplacement, sur gabarit grandeur nature.',
+      b:['Cintube est un manufacturier reconnu de chaudières, de générateurs de vapeur, de surchauffeurs et d’économiseurs.']},
+  en:{t:'Replacement boiler tube bending', h:'Boiler tubes',
+      d:'Custom bending of replacement boiler tubes, on full size layouts.',
+      l:'Custom bending of replacement boiler tubes, on full size layouts.',
+      b:['Cintube is a recognized manufacturer of boilers, steam generators, super heaters and economizers.']}},
+
+ {s:'panneaux-de-tubes', e:'tube-panels', sect:['energie-et-hydroelectricite','petrochimie-et-raffinage'],
+  fr:{t:'Fabrication de panneaux de tubes de chaudière', h:'Panneaux de tubes',
+      d:'Fabrication sur demande de panneaux de tubes de chaudière de remplacement, en petite ou grande quantité.',
+      l:'Fabrication sur demande de panneaux de tubes de chaudière de remplacement, en petite ou grande quantité.',
+      b:['Les tubes de chaudière de remplacement sont aussi cintrés sur mesure, sur gabarit grandeur nature.']},
+  en:{t:'Boiler tube panel fabrication', h:'Tube panels',
+      d:'Custom fabrication of replacement boiler tube panels, in small or large quantities.',
+      l:'Custom fabrication of replacement boiler tube panels, in small or large quantities.',
+      b:['Replacement boiler tubes are also custom bent, on full size layouts.']}},
+
+ {s:'appareils-sous-pression', e:'pressure-components', sect:['energie-et-hydroelectricite','petrochimie-et-raffinage'],
+  fr:{t:'Appareils sous pression, code ASME, estampilles S et U', h:'Appareils sous pression',
+      d:'Générateurs de vapeur, économiseurs, surchauffeurs et chaudières, selon le code ASME et les spécifications TSSA, ANSI et ASTM.',
+      l:'Manufacturier reconnu de générateurs de vapeur, d’économiseurs et de chaudières, selon le code ASME.',
+      b:['Codes applicables : ASME, estampilles S et U, et spécifications TSSA, ANSI et ASTM.',
+         'Les certificats AQ/CQ à jour s’obtiennent auprès de l’usine concernée.'],
+      xh:'Manufacturier reconnu de', x:['Générateurs de vapeur','Réchauffeurs de liquides thermiques','Serpentins de refroidissement','Serpentins de refroidissement pour grilloirs','Économiseurs','Unités de récupération de chaleur perdue','Surchauffeurs','Chaudières','Creusets']},
+  en:{t:'Pressure components, ASME code, S and U stamps', h:'Pressure components',
+      d:'Steam generators, economizers, super heaters and boilers, to the ASME code and TSSA, ANSI and ASTM specifications.',
+      l:'Recognized manufacturer of steam generators, economizers and boilers, to the ASME code.',
+      b:['Applicable codes: ASME, S and U stamps, and TSSA, ANSI and ASTM specifications.',
+         'For the latest QA/QC certificates, contact the Cintube plant you require.'],
+      xh:'Recognized manufacturer of', x:['Steam generators','Thermal fluid heaters','Cooling coils','Roaster cooling coils','Economizers','Waste heat recovery units','Super heaters','Boilers','Crucibles']}},
+
+ {s:'fabrication-sur-mesure', e:'custom-fabrication', sect:['transport-et-infrastructure','mines','produits-forestiers'],
+  fr:{t:'Fabrication métallique sur mesure', h:'Fabrication sur mesure',
+      d:'Fabrication métallique sur demande, en petite ou grande quantité, avec intégration de composants du commerce.',
+      l:'Fabrication sur demande, en petite ou grande quantité, avec intégration de composants du commerce.',
+      b:['Cintube combine le cintrage sur mesure de tubes et de tuyaux avec des composants offerts commercialement.',
+         'Exemples : la structure de rail du transport surélevé de l’aéroport Pearson, et des sections de toit de son aérogare 3.']},
+  en:{t:'Custom metal fabrication', h:'Custom fabrication',
+      d:'Custom metal fabrication in small or large quantities, integrating commercially available components.',
+      l:'Custom fabrication in small or large quantities, integrating commercially available components.',
+      b:['Cintube combines custom tube and pipe bending with commercially available components.',
+         'Examples: the track structure of the Pearson International elevated passenger transit, and roof sections of its Terminal 3.']}}
+];
+
+/* Roulage : le tableau qui était prisonnier d'une image sur leur site */
+var ROLL = {
+ fr:[['Poutres en I','Sens facile, sens difficile'],['Poutres à large bride','Sens facile, sens difficile'],
+     ['Cornières','Aile extérieure, aile intérieure'],['Profilés en U','Ailes extérieures, ailes intérieures, sens difficile'],
+     ['Plats','Sens facile, sens difficile'],['Tubulaires','Tubulaire de charpente, tube, tuyau']],
+ en:[['I-beams','Easy way, hard way'],['Wide flange beams','Easy way, hard way'],
+     ['Angles','Leg out, leg in'],['Channels','Flanges out, flanges in, hard way'],
+     ['Flat bar','Easy way, hard way'],['Tubular','Structural tubing, tube, pipe']]
+};
+
+var SECT = [
+ {s:'petrochimie-et-raffinage', e:'petrochemical-and-refining', proc:['tubes-de-chaudiere','formage-de-bout','cintrage-de-precision'],
+  fr:{t:'Cintrage et fabrication pour la pétrochimie et le raffinage', h:'Pétrochimie et raffinage',
+      d:'Tubes de chaudière, formage de bout et cintrage de précision pour le domaine pétrochimique et les raffineries.',
+      l:'Le domaine pétrochimique et les raffineries comptent parmi les secteurs que Cintube dessert.'},
+  en:{t:'Bending and fabrication for petroleum and refining', h:'Petroleum and refining',
+      d:'Boiler tubes, end forming and precision bending for the petroleum and refining sectors.',
+      l:'Petroleum and refining are among the industrial sectors Cintube serves.'}},
+ {s:'energie-et-hydroelectricite', e:'power-and-hydroelectric', proc:['appareils-sous-pression','serpentins','tubes-de-chaudiere','panneaux-de-tubes'],
+  fr:{t:'Serpentins et appareils sous pression pour la production d’énergie', h:'Énergie et hydroélectricité',
+      d:'Générateurs de vapeur, économiseurs, surchauffeurs et serpentins, pour les centrales hydroélectriques et la production d’énergie.',
+      l:'Cintube dessert les centrales hydroélectriques et fabrique générateurs de vapeur, économiseurs et surchauffeurs.'},
+  en:{t:'Coils and pressure components for power generation', h:'Power and hydroelectric',
+      d:'Steam generators, economizers, super heaters and coils, for hydroelectric utilities and power generation.',
+      l:'Cintube serves hydroelectric utilities and builds steam generators, economizers and super heaters.'}},
+ {s:'mines', e:'mining', proc:['cintrage-de-precision','fabrication-sur-mesure','formage-de-bout'],
+  fr:{t:'Cintrage et fabrication pour l’industrie minière', h:'Mines',
+      d:'Cintrage de précision, fabrication sur mesure et formage de bout pour l’industrie minière.',
+      l:'L’industrie minière compte parmi les secteurs que Cintube dessert.'},
+  en:{t:'Bending and fabrication for the mining industry', h:'Mining',
+      d:'Precision bending, custom fabrication and end forming for the mining industry.',
+      l:'Mining is among the industrial sectors Cintube serves.'}},
+ {s:'produits-forestiers', e:'forest-products', proc:['serpentins','fabrication-sur-mesure','cintrage-de-precision'],
+  fr:{t:'Cintrage et fabrication pour l’industrie forestière', h:'Produits forestiers',
+      d:'Serpentins, fabrication sur mesure et cintrage de précision pour l’industrie forestière.',
+      l:'L’industrie forestière compte parmi les secteurs que Cintube dessert.'},
+  en:{t:'Bending and fabrication for forest products', h:'Forest products',
+      d:'Coils, custom fabrication and precision bending for the forest products industry.',
+      l:'Forest products are among the industrial sectors Cintube serves.'}},
+ {s:'transport-et-infrastructure', e:'transportation-and-infrastructure', proc:['roulage-de-charpente','fabrication-sur-mesure'],
+  proj:['aeroport-pearson-transport-sureleve','aeroport-pearson-aerogare-3'],
+  fr:{t:'Roulage de charpente pour le transport', h:'Transport',
+      d:'Structure de rail et sections de toit roulées pour l’aéroport international Pearson.',
+      l:'À l’aéroport Pearson, Cintube a roulé la structure de rail du transport surélevé et des sections de toit de l’aérogare 3.'},
+  en:{t:'Structural rolling for transportation', h:'Transportation',
+      d:'Track structure and roof sections rolled for Pearson International Airport.',
+      l:'At Pearson International, Cintube rolled the track structure of the elevated passenger transit and roof sections of Terminal 3.'}},
+ {s:'architecture-et-ornemental', e:'architectural-and-ornamental', proc:['roulage-de-charpente','cintrage-de-precision','fabrication-sur-mesure'],
+  proj:['edifice-peter-b-lewis','casino-niagara-fallsview'],
+  fr:{t:'Roulage architectural et ornemental', h:'Architecture et ornemental',
+      d:'Applications architecturales et décoratives : édifice Peter B. Lewis, Casino Niagara Fallsview.',
+      l:'Toutes les fermes de toit de l’édifice Peter B. Lewis ont été roulées chez Cintube.'},
+  en:{t:'Architectural and ornamental rolling', h:'Architectural and ornamental',
+      d:'Architectural and decorative applications: Peter B. Lewis Building, Niagara Fallsview Casino Resort.',
+      l:'All roof trusses of the Peter B. Lewis Building were rolled by Cintube.'}}
+];
+
+var PROJ = [
+ {s:'edifice-peter-b-lewis', proc:'roulage-de-charpente',
+  fr:{h:'Édifice Peter B. Lewis', l:'Toutes les fermes de toit roulées chez Cintube.'},
+  en:{h:'Peter B. Lewis Building', l:'All roof trusses rolled by Cintube.'}},
+ {s:'aeroport-pearson-transport-sureleve', proc:'roulage-de-charpente',
+  fr:{h:'Aéroport Pearson, transport surélevé', l:'Roulage de la structure de rail du transport de passagers.'},
+  en:{h:'Pearson International, elevated transit', l:'Track structural rolling for the elevated passenger transit.'}},
+ {s:'aeroport-pearson-aerogare-3', proc:'roulage-de-charpente',
+  fr:{h:'Aéroport Pearson, aérogare 3', l:'Roulage de sections de toit, en sous-traitance.'},
+  en:{h:'Pearson International, Terminal 3', l:'Roof section rolling, via subcontract.'}},
+ {s:'casino-niagara-fallsview', proc:'fabrication-sur-mesure',
+  fr:{h:'Casino Niagara Fallsview', l:'Projet de cintrage et de fabrication pour le complexe.'},
+  en:{h:'Niagara Fallsview Casino Resort', l:'Bending and fabrication project for the resort.'}}
+];
+
+var PLANTS = [
+ {s:'lachine', city:'Lachine', tel:'+1 514 634-3592', telh:'+15146343592', mail:'salesmtl@cintube.ca',
+  fr:{t:'Usine et siège social de Cintube à Lachine (Québec)', r:'Siège social',
+      d:'Siège social et usine de fabrication de Cintube Ltée à Lachine, au Québec. 2075, 52e Avenue.',
+      l:'Le siège social de Cintube Ltée, et l’une de ses trois usines de fabrication.',
+      a:['2075, 52e Avenue','Lachine (Québec) H8T 3C3','Canada']},
+  en:{t:'Cintube head office and plant in Lachine, Quebec', r:'Head office',
+      d:'Cintube Ltd head office and fabrication plant in Lachine, Quebec. 2075, 52nd Avenue.',
+      l:'The head office of Cintube Ltd, and one of its three fabrication plants.',
+      a:['2075, 52nd Avenue','Lachine, QC H8T 3C3','Canada']}},
+ {s:'mississauga', city:'Mississauga', tel:'+1 905 625-1900', telh:'+19056251900', fax:'+1 905 625-1500', who:['Bart Martindale','Ken Carrier'],
+  fr:{t:'Usine Cintube à Mississauga (Ontario)', r:'Usine de fabrication',
+      d:'Usine de fabrication de Cintube à Mississauga, en Ontario. 1200 Lakeshore Road East.',
+      l:'L’usine ontarienne de Cintube.',
+      a:['1200 Lakeshore Road East','Mississauga (Ontario) L5E 1E9','Canada']},
+  en:{t:'Cintube plant in Mississauga, Ontario', r:'Fabrication plant',
+      d:'Cintube fabrication plant in Mississauga, Ontario. 1200 Lakeshore Road East.',
+      l:'Cintube’s Ontario plant.',
+      a:['1200 Lakeshore Road East','Mississauga, ON L5E 1E9','Canada']}},
+ {s:'plattsburgh', city:'Plattsburgh', tel:'+1 518 324-3333', telh:'+15183243333', fax:'+1 518 324-3389', who:['Brandon Puritt'],
+  fr:{t:'Cintube International Ltd à Plattsburgh (New York)', r:'Cintube International Ltd',
+      d:'Cintube International Ltd, usine de fabrication à Plattsburgh, dans l’État de New York. 139 Distribution Way.',
+      l:'Cintube International Ltd, l’usine américaine de Cintube.',
+      a:['139 Distribution Way, Building K','Plattsburgh, NY 12901','États-Unis']},
+  en:{t:'Cintube International Ltd in Plattsburgh, New York', r:'Cintube International Ltd',
+      d:'Cintube International Ltd, fabrication plant in Plattsburgh, New York. 139 Distribution Way.',
+      l:'Cintube International Ltd, Cintube’s American plant.',
+      a:['139 Distribution Way, Building K','Plattsburgh, NY 12901','United States']}}
+];
+
+var UI = {
+ fr:{
+  nav:['Procédés','Secteurs','Réalisations','Usines','Entreprise'], quote:'Soumission', other:'EN', otherName:'English', menu:'Menu', close:'Fermer',
+  skip:'Aller au contenu', home:'Accueil', foot:'Maquette de proposition, non publiée par Cintube',
+  dropB:'Déposez votre plan', dropS:'PDF, DWG ou STEP', dropBtn:'Demander une soumission',
+  h1:'Nous cintrons l’acier depuis 1955.',
+  lede:'Tubes, tuyaux et profilés de charpente, cintrés et fabriqués sur mesure à Lachine, Mississauga et Plattsburgh.',
+  maker:'Cintube Ltée / Ltd', makerS:'Cintrage et fabrication métallique sur mesure',
+  fUs:'Usines', fUsV:'Lachine (Québec) · Mississauga (Ontario) · Plattsburgh (New York)',
+  fCo:'Codes', fCoV:'ASME S et U · TSSA · ANSI · ASTM',
+  fMa:'Matériaux', fMaV:'Acier au carbone · inox · cuivre · laiton · aluminium · titane',
+  fFo:'Formes', fFoV:'Tuyaux · tubes · cornières · poutres · profilés en U, toutes dimensions',
+  procH:'Huit procédés, un seul fournisseur.', procI:'Acier au carbone, inox, cuivre, laiton, aluminium et titane, toutes dimensions.',
+  projH:'Toutes les fermes de toit de l’édifice Peter B. Lewis ont été roulées ici.',
+  plantsH:'Trois usines.', plantsI:'Pour une soumission, écrivez ou appelez l’usine la plus près de vous.',
+  sectH:'Les secteurs que Cintube dessert.', sectI:'Cintube fournit des services de cintrage et de fabrication sur mesure à tous les grands secteurs industriels.',
+  sectMore:'Cintube dessert aussi la chimie, l’alimentation et la construction.',
+  procUsed:'Procédés utilisés', sectFor:'Secteurs desservis', projSee:'Réalisations',
+  askProc:'Demander une soumission pour ce procédé', next:'Procédé suivant', see:'Voir',
+  rollCap:'Profilés roulés et sens de roulage offerts', rollA:'Profilé', rollB:'Sens de roulage',
+  coH:'Une entreprise privée, canadienne, fondée en 1955.',
+  co:['Cintube Ltée est une société privée fondée en 1955, entièrement détenue par des intérêts canadiens. Son siège social est à Lachine, au Québec, et elle dispose de capacités de fabrication à Lachine, à Mississauga et à Plattsburgh.',
+      'Cintube fournit des services de cintrage et de fabrication sur mesure à tous les grands secteurs industriels.',
+      'Le personnel technique travaille avec le client pour trouver la solution la plus économique à ses exigences de cintrage. L’entreprise investit en recherche et développement pour élargir sans cesse sa gamme de procédés.'],
+  facts:[['Fondée','1955'],['Propriété','Entièrement canadienne'],['Siège social','Lachine (Québec)'],['Usines','3'],
+         ['Machines à cintrer','Plus de 60',1],['Atelier','200 000 pi²',1],['Cour','80 acres',1]],
+  tbc:'à confirmer',
+  qH:'Codes et certifications.', qL:'Les appareils sous pression sont fabriqués selon le code ASME, estampilles S et U.',
+  qCodes:[['ASME','Estampilles S et U'],['TSSA','Spécifications'],['ANSI','Spécifications'],['ASTM','Spécifications']],
+  qMfr:'Manufacturier reconnu de', qCert:'Pour les derniers certificats AQ/CQ, communiquez avec l’usine Cintube dont vous avez besoin.',
+  addr:'Adresse', tel:'Téléphone', fax:'Télécopieur', mail:'Courriel', who:'Contacts aux ventes', otherPlants:'Les autres usines',
+  askPlant:'Demander une soumission à cette usine',
+  qtH:'Demander une soumission.', qtL:'Joignez votre plan et vos exigences. La demande va à l’usine choisie, ou à la plus près de vous.',
+  qtFiles:'Plans et modèles', qtFilesS:'PDF, DWG, DXF ou STEP. Glissez vos fichiers ici, ou choisissez-les.', qtPick:'Choisir des fichiers', qtNone:'Aucun fichier pour l’instant.',
+  qtPart:'La pièce', qtProc:'Procédé', qtMat:'Matériau', qtForm:'Forme', qtDim:'Dimensions', qtDimP:'Diamètre, épaisseur, rayon, longueur',
+  qtQty:'Quantité', qtCode:'Code applicable', qtDue:'Échéance', qtPlant:'Usine', qtNear:'La plus près de mon chantier',
+  qtYou:'Vous', qtName:'Nom', qtCo:'Entreprise', qtMail:'Courriel', qtTel:'Téléphone', qtMsg:'Précisions',
+  qtUnsure:'Je ne sais pas', qtNoCode:'Aucun', qtOther:'Autre', qtSend:'Envoyer la demande',
+  qtMock:'Maquette : rien n’est envoyé. Sur le vrai site, votre demande et vos fichiers partiraient à l’usine choisie.',
+  mats:['Acier au carbone','Acier inoxydable','Cuivre','Laiton','Aluminium','Titane'],
+  forms:['Tuyau','Tube','Cornière','Poutre en I','Poutre à large bride','Profilé en U','Plat','Tubulaire de charpente'],
+  codes:['ASME','TSSA','ANSI','ASTM'],
+  title:'Cintube | Cintrage et fabrication métallique sur mesure depuis 1955',
+  desc:'Cintreur et fabricant métallique sur mesure depuis 1955. Usines à Lachine, Mississauga et Plattsburgh. Code ASME, estampilles S et U.',
+  tProcs:'Procédés de cintrage, de roulage et de fabrication', dProcs:'Cintrage de précision, roulage de charpente, serpentins, formage de bout, tubes et panneaux de chaudière, appareils sous pression et fabrication sur mesure.',
+  tSects:'Secteurs desservis', dSects:'Pétrochimie et raffinage, énergie et hydroélectricité, mines, produits forestiers, transport, architecture et ornemental.',
+  tProj:'Réalisations', dProj:'Édifice Peter B. Lewis, aéroport Pearson et Casino Niagara Fallsview.',
+  tCo:'Entreprise : Cintube Ltée, depuis 1955', dCo:'Société privée fondée en 1955, entièrement détenue par des intérêts canadiens, dont le siège social est à Lachine, au Québec.',
+  tQ:'Codes et certifications : ASME S et U, TSSA, ANSI, ASTM', dQ:'Code ASME, estampilles S et U, spécifications TSSA, ANSI et ASTM. Manufacturier reconnu de générateurs de vapeur, d’économiseurs et de chaudières.',
+  tPlants:'Usines : Lachine, Mississauga, Plattsburgh', dPlants:'Trois usines de fabrication : Lachine au Québec, Mississauga en Ontario et Plattsburgh dans l’État de New York.',
+  tQt:'Demander une soumission de cintrage', dQt:'Envoyez votre plan en PDF, DWG ou STEP, avec le matériau, la forme, les dimensions, la quantité, le code et l’échéance.',
+  procsH:'Huit procédés, un seul fournisseur.', procsL:'Du tube cintré au panneau de chaudière, avec le formage de bout et la fabrication.',
+  projL:'Des ouvrages où la géométrie se voit.', more:'En savoir plus'
+ },
+ en:{
+  nav:['Capabilities','Industries','Projects','Plants','Company'], quote:'Quote', other:'FR', otherName:'Français', menu:'Menu', close:'Close',
+  skip:'Skip to content', home:'Home', foot:'Proposal mockup, not published by Cintube',
+  dropB:'Drop your drawing', dropS:'PDF, DWG or STEP', dropBtn:'Request a quote',
+  h1:'We have been bending steel since 1955.',
+  lede:'Tube, pipe and structural shapes, custom bent and fabricated in Lachine, Mississauga and Plattsburgh.',
+  maker:'Cintube Ltd / Ltée', makerS:'Custom bending and metal fabrication',
+  fUs:'Plants', fUsV:'Lachine (Quebec) · Mississauga (Ontario) · Plattsburgh (New York)',
+  fCo:'Codes', fCoV:'ASME S and U · TSSA · ANSI · ASTM',
+  fMa:'Materials', fMaV:'Carbon steel · stainless · copper · brass · aluminum · titanium',
+  fFo:'Shapes', fFoV:'Pipes · tubes · angles · beams · channels, all sizes',
+  procH:'Eight capabilities, one supplier.', procI:'Carbon steel, stainless, copper, brass, aluminum and titanium, all sizes.',
+  projH:'All roof trusses of the Peter B. Lewis Building were rolled here.',
+  plantsH:'Three plants.', plantsI:'For a quote, write or call the plant nearest you.',
+  sectH:'The industries Cintube serves.', sectI:'Cintube provides custom bending and fabrication to all major industrial sectors.',
+  sectMore:'Cintube also serves chemical, food processing and construction.',
+  procUsed:'Capabilities used', sectFor:'Industries served', projSee:'Projects',
+  askProc:'Request a quote for this capability', next:'Next capability', see:'See',
+  rollCap:'Shapes rolled and rolling directions offered', rollA:'Shape', rollB:'Rolling direction',
+  coH:'A private Canadian company, founded in 1955.',
+  co:['Cintube Ltd is a private company founded in 1955 and wholly owned by Canadians. Its head office is in Lachine, Quebec, and it has fabrication capacities in Lachine, Mississauga and Plattsburgh.',
+      'Cintube provides custom bending and fabrication to all major industrial sectors.',
+      'Cintube’s technical personnel work with customers to find economical solutions to their bending requirements. The company engages in research and development to offer an ever expanding range of bending services and techniques.'],
+  facts:[['Founded','1955'],['Ownership','Wholly Canadian'],['Head office','Lachine, Quebec'],['Plants','3'],
+         ['Bending machines','More than 60',1],['Shop space','200,000 sq ft',1],['Yard space','80 acres',1]],
+  tbc:'to be confirmed',
+  qH:'Codes and certifications.', qL:'Pressure components are built to the ASME code, S and U stamps.',
+  qCodes:[['ASME','S and U stamps'],['TSSA','Specifications'],['ANSI','Specifications'],['ASTM','Specifications']],
+  qMfr:'Recognized manufacturer of', qCert:'For the latest QA/QC certificates, contact the Cintube plant you require.',
+  addr:'Address', tel:'Phone', fax:'Fax', mail:'Email', who:'Sales contacts', otherPlants:'The other plants',
+  askPlant:'Request a quote from this plant',
+  qtH:'Request a quote.', qtL:'Attach your drawing and requirements. The request goes to the plant you choose, or the one nearest you.',
+  qtFiles:'Drawings and models', qtFilesS:'PDF, DWG, DXF or STEP. Drag your files here, or choose them.', qtPick:'Choose files', qtNone:'No files yet.',
+  qtPart:'The part', qtProc:'Capability', qtMat:'Material', qtForm:'Shape', qtDim:'Dimensions', qtDimP:'Diameter, wall, radius, length',
+  qtQty:'Quantity', qtCode:'Applicable code', qtDue:'Needed by', qtPlant:'Plant', qtNear:'Nearest to my job site',
+  qtYou:'You', qtName:'Name', qtCo:'Company', qtMail:'Email', qtTel:'Phone', qtMsg:'Details',
+  qtUnsure:'Not sure', qtNoCode:'None', qtOther:'Other', qtSend:'Send the request',
+  qtMock:'Mockup: nothing is sent. On the real site, your request and files would go to the plant you chose.',
+  mats:['Carbon steel','Stainless steel','Copper','Brass','Aluminum','Titanium'],
+  forms:['Pipe','Tube','Angle','I-beam','Wide flange beam','Channel','Flat bar','Structural tubing'],
+  codes:['ASME','TSSA','ANSI','ASTM'],
+  title:'Cintube | Custom bending and metal fabrication since 1955',
+  desc:'Custom bender and metal fabricator since 1955. Plants in Lachine, Mississauga and Plattsburgh. ASME code, S and U stamps.',
+  tProcs:'Bending, rolling and fabrication capabilities', dProcs:'Precision bending, structural rolling, coils, end forming, boiler tubes and panels, pressure components and custom fabrication.',
+  tSects:'Industries served', dSects:'Petroleum and refining, power and hydroelectric, mining, forest products, transportation, architectural and ornamental.',
+  tProj:'Projects', dProj:'Peter B. Lewis Building, Pearson International and Niagara Fallsview Casino Resort.',
+  tCo:'Company: Cintube Ltd, since 1955', dCo:'Private company founded in 1955, wholly owned by Canadians, with its head office in Lachine, Quebec.',
+  tQ:'Codes and certifications: ASME S and U, TSSA, ANSI, ASTM', dQ:'ASME code, S and U stamps, TSSA, ANSI and ASTM specifications. Recognized manufacturer of steam generators, economizers and boilers.',
+  tPlants:'Plants: Lachine, Mississauga, Plattsburgh', dPlants:'Three fabrication plants: Lachine in Quebec, Mississauga in Ontario and Plattsburgh in New York State.',
+  tQt:'Request a bending quote', dQt:'Send your drawing as PDF, DWG or STEP, with material, shape, dimensions, quantity, code and due date.',
+  procsH:'Eight capabilities, one supplier.', procsL:'From bent tube to boiler panel, with end forming and fabrication.',
+  projL:'Work where the geometry shows.', more:'Learn more'
+ }
+};
+
+return {PROC:PROC, ROLL:ROLL, SECT:SECT, PROJ:PROJ, PLANTS:PLANTS, UI:UI};
+})();
+
+/* Habillage « plaque signalétique ».
+   La tôle émaillée verte est le fond ; les faits sont gravés sur des plaques
+   d'inox rivées ; chaque procédé a son dessin technique, tracé au défilement. */
+window.WORLD = (function(){
+var D = window.CINTUBE, UI = D.UI;
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var RIV = '<span class="rivet"></span><span class="rivet"></span><span class="rivet"></span><span class="rivet"></span>';
+function plate(inner, cls){ return '<div class="plate ' + (cls || '') + '">' + RIV + '<div class="etched">' + inner + '</div></div>'; }
+
+/* ── dessins techniques : un tube se dessine comme deux traits (large, puis
+   la couleur du fond par-dessus), l'axe en tirets, les cotes en traits fins ── */
+function tube(d, w){ return '<path class="p tw" pathLength="1" style="stroke-width:' + w + '" d="' + d + '"/><path class="p ti" pathLength="1" style="stroke-width:' + (w - 5) + '" d="' + d + '"/>'; }
+function line(d){ return '<path class="p" pathLength="1" d="' + d + '"/>'; }
+function ax(d){ return '<path class="ax" d="' + d + '"/>'; }
+function dm(d){ return '<path class="dm" d="' + d + '"/>'; }
+function tx(x, y, t){ return '<text class="tx" x="' + x + '" y="' + y + '">' + t + '</text>'; }
+function svg(vb, body, label){ return '<svg class="drw" viewBox="' + vb + '" role="img" aria-label="' + label + '">' + body + '</svg>'; }
+function helix(){
+  var f = '', b = '', x0 = 70, pitch = 66, n = 6;
+  for (var k = 0; k < n; k++){
+    for (var half = 0; half < 2; half++){
+      var s = '';
+      for (var i = 0; i <= 24; i++){ var th = Math.PI * (half + i / 24), x = x0 + pitch * (k + (half + i / 24) / 2), y = 160 - 100 * Math.cos(th);
+        s += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1); }
+      if (half === 0) f += s; else b += s;
+    }
+  }
+  return line('M20 60H70' + f + 'L' + (x0 + pitch * n) + ' 60H540') + '<path class="ax back" d="' + b + '"/>' + ax('M14 160H546');
+}
+function grid(w, h, s){ var g = ''; for (var x = s; x < w; x += s) g += 'M' + x + ' 0V' + h; for (var y = s; y < h; y += s) g += 'M0 ' + y + 'H' + w; return '<path class="grid" d="' + g + '"/>'; }
+function panel(){
+  var s = '';
+  for (var i = 0; i < 7; i++){ var cx = 64 + i * 72;
+    s += line('M' + (cx - 26) + ' 100a26 26 0 1 0 52 0a26 26 0 1 0 -52 0') + line('M' + (cx - 18) + ' 100a18 18 0 1 0 36 0a18 18 0 1 0 -36 0');
+    if (i < 6) s += line('M' + (cx + 25) + ' 95H' + (cx + 47) + 'M' + (cx + 25) + ' 105H' + (cx + 47)); }
+  return s + ax('M14 100H546');
+}
+var ENDS = [
+  'M10 30H60l5-6l5 6l5-6l5 6l5-6l5 6l5-6l5 6l5-6l5 6V70l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6l-5 6l-5-6H10',
+  'M10 30H100L110 40V60L100 70H10',
+  'M10 30H86V36H96V30H110V70H96V64H86V70H10',
+  'M10 26H66L84 38H110V62H84L66 74H10',
+  'M10 30H78Q86 18 94 30H110V70H94Q86 82 78 70H10',
+  'M10 32H84Q100 32 112 16V84Q100 68 84 68H10',
+  'M10 34H70L82 25H110V75H82L70 66H10'
+];
+var SECTS = [
+  'M20 14H80V24H55V76H80V86H20V76H45V24H20Z', 'M10 14H90V25H54V75H90V86H10V75H46V25H10Z', 'M22 14H34V74H82V86H22Z',
+  'M74 14H26V86H74V75H38V25H74Z', 'M12 42H88V58H12Z', 'M50 16A34 34 0 1 1 49.99 16ZM50 26A24 24 0 1 0 50.01 26Z'
+];
+var SAX = [50, 50, 28, 32, 50, 50];
+function minis(paths, axes, labels, notes, vb){
+  return '<div class="minis">' + paths.map(function(d, i){
+    return '<div class="mini"><svg viewBox="' + vb + '" aria-hidden="true">' + line(d) + ax(axes(i)) + '</svg><b>' + labels[i] + '</b>' + (notes ? '<span>' + notes[i] + '</span>' : '') + '</div>';
+  }).join('') + '</div>';
+}
+function sections(L){
+  return minis(SECTS, function(i){ return 'M' + SAX[i] + ' 2V98'; }, D.ROLL[L].map(function(r){ return r[0]; }), D.ROLL[L].map(function(r){ return r[1]; }), '0 0 100 100');
+}
+var CAP = {
+ 'cintrage-de-precision':['Coude à 90°, rayon de cintrage R','90° bend, bend radius R'],
+ 'tubes-de-chaudiere':['Tube cintré posé sur son gabarit grandeur nature','Bent tube laid on its full size layout'],
+ 'panneaux-de-tubes':['Panneau de tubes, en coupe','Tube panel, in section'],
+ 'appareils-sous-pression':['Serpentin entre deux collecteurs','Coil between two headers'],
+ 'fabrication-sur-mesure':['Tube cintré et brides du commerce, assemblés','Bent tube with commercial flanges, assembled'],
+ 'serpentins':['Serpentin hélicoïdal, vu de côté','Helical coil, side view']
+};
+function fig(s, L){
+  var c = CAP[s] ? CAP[s][L === 'fr' ? 0 : 1] : '', body;
+  if (s === 'roulage-de-charpente') return '<figure class="fig">' + sections(L) + '</figure>';
+  if (s === 'formage-de-bout'){
+    var p = D.PROC[3][L].x;
+    return '<figure class="fig">' + minis(ENDS, function(){ return 'M2 50H118'; }, p, null, '0 0 120 100') + '</figure>';
+  }
+  if (s === 'cintrage-de-precision') body = svg('0 0 560 360',
+    line('M40 320H260A180 180 0 0 0 440 140V20') + line('M40 280H260A140 140 0 0 0 400 140V20') + line('M40 280V320M400 20H440') +
+    ax('M28 300H260A160 160 0 0 0 420 140V8') + dm('M260 140L373 253M250 140H270M260 130V150') +
+    tx(322, 186, 'R') + tx(452, 318, '90°'), c);
+  if (s === 'serpentins') body = svg('0 0 560 320', helix(), c);
+  if (s === 'tubes-de-chaudiere') body = svg('0 0 560 340', grid(560, 340, 40) +
+    tube('M40 280H200A40 40 0 0 0 240 240V140A40 40 0 0 1 280 100H420A40 40 0 0 1 460 140V300', 22) +
+    ax('M40 280H200A40 40 0 0 0 240 240V140A40 40 0 0 1 280 100H420A40 40 0 0 1 460 140V300'), c);
+  if (s === 'panneaux-de-tubes') body = svg('0 0 560 200', panel(), c);
+  if (s === 'appareils-sous-pression') body = svg('0 0 560 340',
+    line('M40 50a20 20 0 0 1 20-20h0a20 20 0 0 1 20 20v240a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20Z') +
+    line('M480 50a20 20 0 0 1 20-20h0a20 20 0 0 1 20 20v240a20 20 0 0 1-20 20h0a20 20 0 0 1-20-20Z') +
+    tube('M80 60H440A30 30 0 0 1 440 120H120A30 30 0 0 0 120 180H440A30 30 0 0 1 440 240H120A30 30 0 0 0 120 300H480', 16), c);
+  if (s === 'fabrication-sur-mesure') body = svg('0 0 560 340',
+    tube('M70 280H260A120 120 0 0 0 380 160V60', 36) + line('M52 230H70V330H52Z') + line('M330 42H430V60H330Z') +
+    ax('M70 280H260A120 120 0 0 0 380 160V60') + dm('M38 248H84M38 312H84M348 28V74M412 28V74'), c);
+  return '<figure class="fig">' + body + (c ? '<figcaption>' + c + '</figcaption>' : '') + '</figure>';
+}
+
+function hero(L, slot){
+  var u = UI[L];
+  return '<header class="hero"><div class="plate hplate">' + RIV +
+    '<div class="maker etched"><b>' + u.maker + '</b><span>' + u.makerS + '</span></div>' +
+    '<h1 class="etched" tabindex="-1">' + u.h1 + '</h1>' +
+    '<dl class="fields etched"><div><dt>' + u.fUs + '</dt><dd>' + u.fUsV + '</dd></div><div><dt>' + u.fCo + '</dt><dd>' + u.fCoV + '</dd></div>' +
+    '<div><dt>' + u.fMa + '</dt><dd>' + u.fMaV + '</dd></div><div><dt>' + u.fFo + '</dt><dd>' + u.fFoV + '</dd></div></dl>' + slot +
+    '</div></header>';
+}
+function homeProcs(L, href){
+  var u = UI[L], ar = '<svg class="ar" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
+  return '<section class="band procs"><h2>' + u.procH + '</h2><p class="intro">' + u.procI + '</p><div class="rows">' +
+    D.PROC.map(function(p){ return '<a class="row" href="' + href(L, 'procs', p) + '"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p>' + ar + '</a>' +
+      (p.s === 'roulage-de-charpente' ? '<div class="fig inrow">' + sections(L) + '</div>' : ''); }).join('') + '</div></section>';
+}
+function plantHead(p, L, head, role){ return head.replace('</h1>', '</h1>' + role); }
+
+/* ── après chaque page : tracer les dessins à leur arrivée, reflet sur l'inox ── */
+function after(root){
+  var offs = [];
+  var figs = [].slice.call(root.querySelectorAll('.fig'));
+  if (!reduce && 'IntersectionObserver' in window && figs.length){
+    document.documentElement.classList.add('draw');
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting && e.boundingClientRect.top < innerHeight * .9){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:[0, .25, .5]});
+    figs.forEach(function(f){ io.observe(f); });
+    var chk = function(){ figs.forEach(function(f){ if (!f.classList.contains('in') && f.getBoundingClientRect().top < innerHeight * .86){ f.classList.add('in'); io.unobserve(f); } }); };
+    addEventListener('scroll', chk, {passive:true}); chk();
+    offs.push(function(){ io.disconnect(); removeEventListener('scroll', chk); });
+  } else figs.forEach(function(f){ f.classList.add('in'); });
+  var plates = [].slice.call(root.querySelectorAll('.plate'));
+  if (!reduce && plates.length && matchMedia('(pointer:fine)').matches){
+    var mv = function(e){ plates.forEach(function(p){ var b = p.getBoundingClientRect();
+      if (b.bottom < 0 || b.top > innerHeight) return;
+      p.style.setProperty('--mx', Math.max(0, Math.min(100, (e.clientX - b.left) / b.width * 100)).toFixed(1) + '%');
+      p.style.setProperty('--my', Math.max(0, Math.min(100, (e.clientY - b.top) / b.height * 100)).toFixed(1) + '%'); }); };
+    addEventListener('pointermove', mv, {passive:true});
+    offs.push(function(){ removeEventListener('pointermove', mv); });
+  }
+  return function(){ offs.forEach(function(f){ f(); }); };
+}
+return {name:'plaque', hero:hero, homeProcs:homeProcs, fig:fig, plate:plate, plantHead:plantHead, after:after};
+})();
+
+/* Le site : routes par #, pages en français et en anglais, titre et description
+   propres à chaque page. L'habillage (plaque ou acier en 3D) fournit WORLD :
+   hero, homeProcs, fig, plate, after. */
+(function(){
+var D = window.CINTUBE, W = window.WORLD, UI = D.UI;
+var SEC = {
+  fr:{procs:'procedes', sects:'secteurs', proj:'realisations', co:'entreprise', q:'qualite', plants:'usines', quote:'soumission'},
+  en:{procs:'capabilities', sects:'industries', proj:'projects', co:'company', q:'quality', plants:'plants', quote:'quote'}
+};
+var NAV = ['procs','sects','proj','plants','co'];
+var state = {files:[]}, cleanup = null;
+
+function slugOf(it, L){ return L === 'en' && it.e ? it.e : it.s; }
+function href(L, sec, it, q){
+  var p = L === 'en' ? '#/en' : '#';
+  if (sec && sec !== 'home') p += '/' + SEC[L][sec]; else if (L === 'fr') p = '#/';
+  if (it) p += '/' + slugOf(it, L);
+  return p + (q ? '?' + q : '');
+}
+function find(list, slug, L){ for (var i = 0; i < list.length; i++) if (slugOf(list[i], L) === slug || list[i].s === slug) return list[i]; return null; }
+function byS(list, s){ return find(list, s, 'fr'); }
+function parse(){
+  var h = location.hash.replace(/^#\/?/, ''), q = {}, i = h.indexOf('?');
+  if (i >= 0){ h.slice(i + 1).split('&').forEach(function(kv){ var p = kv.split('='); q[p[0]] = decodeURIComponent(p[1] || ''); }); h = h.slice(0, i); }
+  var parts = h.split('/').filter(Boolean), L = 'fr';
+  if (parts[0] === 'en'){ L = 'en'; parts.shift(); }
+  var sec = 'home';
+  if (parts[0]){ sec = 'none'; for (var k in SEC[L]) if (SEC[L][k] === parts[0]) sec = k; }
+  return {L:L, sec:sec, slug:parts[1], q:q};
+}
+var ARROW = '<svg class="ar" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
+var FILE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 17v-6M9 14l3-3 3 3"/></svg>';
+
+function crumbs(L, items){
+  var u = UI[L], h = '<nav class="crumbs" aria-label="' + (L === 'fr' ? 'Fil d’Ariane' : 'Breadcrumb') + '"><a href="' + href(L) + '">' + u.home + '</a>';
+  items.forEach(function(x){ h += '<span aria-hidden="true">/</span>' + (x[1] ? '<a href="' + x[1] + '">' + x[0] + '</a>' : '<span aria-current="page">' + x[0] + '</span>'); });
+  return h + '</nav>';
+}
+function phead(h1, lede){ return '<header class="phead"><h1 tabindex="-1">' + h1 + '</h1>' + (lede ? '<p class="lede">' + lede + '</p>' : '') + '</header>'; }
+function procRows(L, list, tag){
+  tag = tag || 'h2';
+  return '<div class="rows">' + list.map(function(p){
+    return '<a class="row" href="' + href(L, 'procs', p) + '"><' + tag + '>' + p[L].h + '</' + tag + '><p>' + p[L].l + '</p>' + ARROW + '</a>';
+  }).join('') + '</div>';
+}
+function plantTel(p){ return '<a class="tel" href="tel:' + p.telh + '">' + p.tel + '</a>'; }
+function tbc(L){ return ' <span class="tbc">' + UI[L].tbc + '</span>'; }
+function dropSlot(L, id){
+  var u = UI[L];
+  return '<form class="drop" id="' + id + '" novalidate>' + FILE +
+    '<label class="t" for="' + id + '-f"><b>' + u.dropB + '</b><span class="fn">' + u.dropS + '</span></label>' +
+    '<input class="vh" id="' + id + '-f" type="file" multiple accept=".pdf,.dwg,.dxf,.step,.stp">' +
+    '<button class="btn" type="submit">' + u.dropBtn + '</button></form>';
+}
+
+/* ═══ PAGES ═══ */
+var P = {};
+P.home = function(L){
+  var u = UI[L];
+  return {title:u.title, desc:u.desc, html:
+    W.hero(L, dropSlot(L, 'drop-hero')) + W.homeProcs(L, href) +
+    '<section class="band proj"><h2>' + u.projH + '</h2><div class="rows">' + D.PROJ.slice(1).map(function(p){
+      return '<a class="row" href="' + href(L, 'proj') + '"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p>' + ARROW + '</a>'; }).join('') + '</div></section>' +
+    '<section class="band plants"><h2>' + u.plantsH + '</h2><p class="intro">' + u.plantsI + '</p><div class="trio">' +
+    D.PLANTS.map(function(p){ return '<div class="plant"><h3><a href="' + href(L, 'plants', p) + '">' + p.city + '</a></h3><p class="role">' + p[L].r + '</p><p class="adr">' + p[L].a.join('<br>') + '</p>' + plantTel(p) + '</div>'; }).join('') +
+    '</div></section>'};
+};
+P.procs = function(L, r){
+  var u = UI[L];
+  if (r.slug){ var p = find(D.PROC, r.slug, L); if (!p) return P.procs(L, {}); return P.proc(L, p); }
+  return {title:u.tProcs, desc:u.dProcs, html:crumbs(L, [[u.nav[0]]]) + phead(u.procsH, u.procsL) + '<section class="band">' + procRows(L, D.PROC) + '</section>'};
+};
+P.proc = function(L, p){
+  var u = UI[L], t = p[L], i = D.PROC.indexOf(p), nx = D.PROC[(i + 1) % D.PROC.length], side = '';
+  if (p.table) side = '<table class="spec-t"><caption>' + u.rollCap + '</caption><thead><tr><th scope="col">' + u.rollA + '</th><th scope="col">' + u.rollB + '</th></tr></thead><tbody>' +
+    D.ROLL[L].map(function(r){ return '<tr><th scope="row">' + r[0] + '</th><td>' + r[1] + '</td></tr>'; }).join('') + '</tbody></table>';
+  else if (t.x) side = '<div class="xlist"><h2>' + t.xh + '</h2><ul>' + t.x.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul></div>';
+  return {title:t.t, desc:t.d, html:
+    crumbs(L, [[u.nav[0], href(L, 'procs')], [t.h]]) + phead(t.h, t.l) +
+    '<div class="fig-wrap">' + W.fig(p.s, L) + '</div>' +
+    '<section class="split"><div class="prose">' + t.b.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
+      '<a class="btn big" href="' + href(L, 'quote', null, 'p=' + p.s) + '">' + u.askProc + '</a></div>' + side + '</section>' +
+    '<section class="band tight"><h2 class="sm">' + u.sectFor + '</h2><ul class="chips">' + p.sect.map(function(s){ var x = byS(D.SECT, s);
+      return '<li><a href="' + href(L, 'sects', x) + '">' + x[L].h + '</a></li>'; }).join('') + '</ul></section>' +
+    '<a class="next" href="' + href(L, 'procs', nx) + '"><span>' + u.next + '</span><b>' + nx[L].h + '</b>' + ARROW + '</a>'};
+};
+P.sects = function(L, r){
+  var u = UI[L];
+  if (r.slug){ var s = find(D.SECT, r.slug, L); if (!s) return P.sects(L, {}); return P.sect(L, s); }
+  return {title:u.tSects, desc:u.dSects, html:crumbs(L, [[u.nav[1]]]) + phead(u.sectH, u.sectI) +
+    '<section class="band"><div class="rows">' + D.SECT.map(function(s){
+      return '<a class="row" href="' + href(L, 'sects', s) + '"><h2>' + s[L].h + '</h2><p>' + s[L].l + '</p>' + ARROW + '</a>'; }).join('') +
+    '</div><p class="after">' + u.sectMore + '</p></section>'};
+};
+P.sect = function(L, s){
+  var u = UI[L], t = s[L], procs = s.proc.map(function(x){ return byS(D.PROC, x); }), proj = (s.proj || []).map(function(x){ return byS(D.PROJ, x); });
+  return {title:t.t, desc:t.d, html:
+    crumbs(L, [[u.nav[1], href(L, 'sects')], [t.h]]) + phead(t.h, t.l) +
+    '<div class="fig-wrap">' + W.fig(procs[0].s, L) + '</div>' +
+    '<section class="band"><h2 class="sm">' + u.procUsed + '</h2>' + procRows(L, procs, 'h3') + '</section>' +
+    (proj.length ? '<section class="band tight"><h2 class="sm">' + u.projSee + '</h2><div class="rows">' + proj.map(function(p){
+      return '<a class="row" href="' + href(L, 'proj') + '"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p>' + ARROW + '</a>'; }).join('') + '</div></section>' : '') +
+    '<a class="btn big solo" href="' + href(L, 'quote') + '">' + u.dropBtn + '</a>'};
+};
+P.proj = function(L){
+  var u = UI[L];
+  return {title:u.tProj, desc:u.dProj, html:crumbs(L, [[u.nav[2]]]) + phead(u.nav[2], u.projL) +
+    '<section class="band"><div class="works">' + D.PROJ.map(function(p){ var pr = byS(D.PROC, p.proc);
+      return '<article class="work" id="' + p.s + '"><h2>' + p[L].h + '</h2><p>' + p[L].l + '</p><a class="lk" href="' + href(L, 'procs', pr) + '">' + pr[L].h + ARROW + '</a></article>'; }).join('') +
+    '</div></section>'};
+};
+P.co = function(L){
+  var u = UI[L];
+  var facts = '<dl class="facts">' + u.facts.map(function(f){ return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + (f[2] ? tbc(L) : '') + '</dd></div>'; }).join('') + '</dl>';
+  return {title:u.tCo, desc:u.dCo, html:crumbs(L, [[u.nav[4]]]) + phead(u.coH) +
+    '<section class="split co"><div class="prose">' + u.co.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
+    '<p><a class="lk" href="' + href(L, 'q') + '">' + u.qH.replace('.', '') + ARROW + '</a></p></div>' + W.plate(facts, 'facts-plate') + '</section>'};
+};
+P.q = function(L){
+  var u = UI[L], ap = byS(D.PROC, 'appareils-sous-pression');
+  var codes = '<dl class="codes">' + u.qCodes.map(function(c){ return '<div><dt>' + c[0] + '</dt><dd>' + c[1] + '</dd></div>'; }).join('') + '</dl>';
+  return {title:u.tQ, desc:u.dQ, html:crumbs(L, [[u.nav[4], href(L, 'co')], [u.qH.replace('.', '')]]) + phead(u.qH, u.qL) +
+    '<div class="fig-wrap">' + W.plate(codes, 'codes-plate') + '</div>' +
+    '<section class="band"><h2 class="sm">' + u.qMfr + '</h2><ul class="cols">' + ap[L].x.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul>' +
+    '<p class="after">' + u.qCert + '</p><ul class="chips">' + D.PLANTS.map(function(p){ return '<li><a href="' + href(L, 'plants', p) + '">' + p.city + '</a></li>'; }).join('') + '</ul></section>'};
+};
+P.plants = function(L, r){
+  var u = UI[L];
+  if (r.slug){ var p = find(D.PLANTS, r.slug, L); if (!p) return P.plants(L, {}); return P.plant(L, p); }
+  return {title:u.tPlants, desc:u.dPlants, html:crumbs(L, [[u.nav[3]]]) + phead(u.plantsH, u.plantsI) +
+    '<section class="band"><div class="rows">' + D.PLANTS.map(function(p){
+      return '<a class="row" href="' + href(L, 'plants', p) + '"><h2>' + p.city + '</h2><p>' + p[L].r + '<br>' + p[L].a.slice(0, 2).join(', ') + '</p>' + ARROW + '</a>'; }).join('') + '</div></section>'};
+};
+P.plant = function(L, p){
+  var u = UI[L], t = p[L];
+  var f = '<dl class="pfields"><div class="wide"><dt>' + u.addr + '</dt><dd>' + t.a.join('<br>') + '</dd></div>' +
+    '<div><dt>' + u.tel + '</dt><dd>' + plantTel(p) + '</dd></div>' +
+    (p.fax ? '<div><dt>' + u.fax + '</dt><dd>' + p.fax + '</dd></div>' : '') +
+    (p.mail ? '<div><dt>' + u.mail + '</dt><dd><a href="mailto:' + p.mail + '">' + p.mail + '</a></dd></div>' : '') +
+    (p.who ? '<div><dt>' + u.who + '</dt><dd>' + p.who.join(', ') + tbc(L) + '</dd></div>' : '') + '</dl>';
+  return {title:t.t, desc:t.d, html:crumbs(L, [[u.nav[3], href(L, 'plants')], [p.city]]) +
+    W.plantHead(p, L, phead(p.city, t.l), '<p class="role">' + t.r + '</p>') +
+    '<div class="fig-wrap">' + W.plate(f, 'plant-plate', p) + '</div>' +
+    '<a class="btn big solo" href="' + href(L, 'quote', null, 'u=' + p.s) + '">' + u.askPlant + '</a>' +
+    '<section class="band tight"><h2 class="sm">' + u.otherPlants + '</h2><ul class="chips">' + D.PLANTS.filter(function(x){ return x !== p; }).map(function(x){
+      return '<li><a href="' + href(L, 'plants', x) + '">' + x.city + '</a></li>'; }).join('') + '</ul></section>'};
+};
+P.quote = function(L, r){
+  var u = UI[L], q = r.q || {}, pre = q.p ? find(D.PROC, q.p, L) : null, pu = q.u ? find(D.PLANTS, q.u, L) : null;
+  function sel(id, label, opts, val, first){
+    return '<div class="fld"><label for="' + id + '">' + label + '</label><select id="' + id + '" name="' + id + '">' + (first ? '<option value="">' + first + '</option>' : '') +
+      opts.map(function(o){ return '<option value="' + o[0] + '"' + (o[0] === val ? ' selected' : '') + '>' + o[1] + '</option>'; }).join('') + '</select></div>';
+  }
+  function inp(id, label, type, extra){ return '<div class="fld"><label for="' + id + '">' + label + '</label><input id="' + id + '" name="' + id + '" type="' + type + '"' + (extra || '') + '></div>'; }
+  var form = '<form class="qform" id="qform" novalidate>' +
+    '<fieldset><legend>' + u.qtFiles + '</legend><div class="zone" id="zone">' + FILE + '<p>' + u.qtFilesS + '</p>' +
+      '<label class="btn ghost" for="qfiles">' + u.qtPick + '</label><input class="vh" id="qfiles" type="file" multiple accept=".pdf,.dwg,.dxf,.step,.stp"></div>' +
+      '<ul class="flist" id="flist" aria-live="polite"></ul></fieldset>' +
+    '<fieldset><legend>' + u.qtPart + '</legend><div class="grid">' +
+      sel('proc', u.qtProc, D.PROC.map(function(p){ return [p.s, p[L].h]; }), pre ? pre.s : '', u.qtUnsure) +
+      sel('mat', u.qtMat, u.mats.map(function(m){ return [m, m]; }).concat([[u.qtOther, u.qtOther]]), '', '…') +
+      sel('form', u.qtForm, u.forms.map(function(m){ return [m, m]; }).concat([[u.qtOther, u.qtOther]]), '', '…') +
+      inp('dim', u.qtDim, 'text', ' placeholder="' + u.qtDimP + '"') +
+      inp('qty', u.qtQty, 'number', ' min="1" inputmode="numeric"') +
+      sel('code', u.qtCode, u.codes.map(function(m){ return [m, m]; }).concat([[u.qtNoCode, u.qtNoCode]]), '', u.qtUnsure) +
+      inp('due', u.qtDue, 'date') +
+      sel('plant', u.qtPlant, D.PLANTS.map(function(p){ return [p.s, p.city]; }), pu ? pu.s : '', u.qtNear) +
+    '</div></fieldset>' +
+    '<fieldset><legend>' + u.qtYou + '</legend><div class="grid">' +
+      inp('name', u.qtName, 'text', ' autocomplete="name"') + inp('company', u.qtCo, 'text', ' autocomplete="organization"') +
+      inp('email', u.qtMail, 'email', ' autocomplete="email"') + inp('phone', u.qtTel, 'tel', ' autocomplete="tel"') +
+      '<div class="fld wide"><label for="msg">' + u.qtMsg + '</label><textarea id="msg" name="msg" rows="4"></textarea></div>' +
+    '</div></fieldset>' +
+    '<div class="send"><button class="btn big" type="submit">' + u.qtSend + '</button><p class="mock" id="qmock" role="status"></p></div></form>';
+  return {title:u.tQt, desc:u.dQt, html:crumbs(L, [[u.quote]]) + phead(u.qtH, u.qtL) + W.plate(form, 'form-plate')};
+};
+
+/* ═══ CHARPENTE : entête, menu, pied ═══ */
+function chrome(r){
+  var L = r.L, u = UI[L], O = L === 'fr' ? 'en' : 'fr', cur = r.sec;
+  var it = r.slug ? (cur === 'procs' ? find(D.PROC, r.slug, L) : cur === 'sects' ? find(D.SECT, r.slug, L) : cur === 'plants' ? find(D.PLANTS, r.slug, L) : null) : null;
+  var other = href(O, cur === 'none' ? 'home' : cur, it, r.q && (r.q.p || r.q.u) ? (r.q.p ? 'p=' + r.q.p : 'u=' + r.q.u) : '');
+  var links = NAV.map(function(k, i){ return '<a href="' + href(L, k) + '"' + (cur === k || (k === 'co' && cur === 'q') ? ' aria-current="page"' : '') + '>' + u.nav[i] + '</a>'; }).join('');
+  document.getElementById('top').innerHTML =
+    '<button class="skip" type="button">' + u.skip + '</button>' +
+    '<a class="brand" href="' + href(L) + '">Cintube</a>' +
+    '<nav class="links" aria-label="' + (L === 'fr' ? 'Principale' : 'Main') + '">' + links + '</nav>' +
+    '<a class="lang" href="' + other + '" hreflang="' + O + '" lang="' + O + '" aria-label="' + u.otherName + '">' + u.other + '</a>' +
+    '<a class="cta" href="' + href(L, 'quote') + '">' + u.quote + '</a>' +
+    '<button class="menu" type="button" aria-expanded="false" aria-controls="drawer" aria-label="' + u.menu + '"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h14M3 13h14"/></svg></button>';
+  document.getElementById('drawer').innerHTML = '<nav aria-label="' + u.menu + '">' + links +
+    '<a href="' + href(L, 'quote') + '">' + u.quote + '</a><a href="' + other + '" hreflang="' + O + '" lang="' + O + '">' + u.otherName + '</a></nav>';
+  var col = function(h, list){ return '<div><h2>' + h + '</h2><ul>' + list.join('') + '</ul></div>'; };
+  var li = function(h, t){ return '<li><a href="' + h + '">' + t + '</a></li>'; };
+  document.getElementById('foot').innerHTML = '<div class="fcols">' +
+    col(u.nav[0], D.PROC.map(function(p){ return li(href(L, 'procs', p), p[L].h); })) +
+    col(u.nav[1], D.SECT.map(function(s){ return li(href(L, 'sects', s), s[L].h); })) +
+    col('Cintube', [li(href(L, 'proj'), u.nav[2]), li(href(L, 'co'), u.nav[4]), li(href(L, 'q'), u.qH.replace('.', '')), li(href(L, 'quote'), u.quote)]) +
+    col(u.nav[3], D.PLANTS.map(function(p){ return '<li><a href="' + href(L, 'plants', p) + '">' + p.city + '</a> ' + plantTel(p) + '</li>'; })) +
+    '</div><p class="mockline">' + u.foot + '</p>';
+  document.documentElement.lang = L === 'fr' ? 'fr-CA' : 'en-CA';
+}
+function setMenu(open){
+  var b = document.querySelector('#top .menu'), d = document.getElementById('drawer');
+  if (!b) return; b.setAttribute('aria-expanded', open ? 'true' : 'false'); d.hidden = !open;
+  document.documentElement.classList.toggle('menu-open', open);
+}
+function meta(name, val, prop){
+  var el = document.head.querySelector('meta[' + (prop ? 'property' : 'name') + '="' + name + '"]');
+  if (!el){ el = document.createElement('meta'); el.setAttribute(prop ? 'property' : 'name', name); document.head.appendChild(el); }
+  el.setAttribute('content', val);
+}
+
+/* ═══ FORMULAIRES : rien ne part, la maquette le dit ═══ */
+function bind(root, r){
+  var u = UI[r.L];
+  var hero = root.querySelector('#drop-hero');
+  if (hero){
+    var hi = hero.querySelector('input'), fn = hero.querySelector('.fn');
+    var take = function(list){ if (list && list.length){ state.files = [].slice.call(list); fn.textContent = state.files.map(function(f){ return f.name; }).join(', '); } };
+    hi.addEventListener('change', function(){ take(hi.files); });
+    ['dragenter','dragover'].forEach(function(e){ hero.addEventListener(e, function(ev){ ev.preventDefault(); hero.classList.add('over'); }); });
+    ['dragleave','drop'].forEach(function(e){ hero.addEventListener(e, function(ev){ ev.preventDefault(); hero.classList.remove('over'); if (ev.dataTransfer) take(ev.dataTransfer.files); }); });
+    hero.addEventListener('submit', function(ev){ ev.preventDefault(); location.hash = href(r.L, 'quote').slice(1); });
+  }
+  var qf = root.querySelector('#qform');
+  if (!qf) return;
+  var zone = qf.querySelector('#zone'), qi = qf.querySelector('#qfiles'), fl = qf.querySelector('#flist');
+  function draw(){
+    fl.innerHTML = state.files.length ? state.files.map(function(f, i){
+      return '<li><span>' + f.name.replace(/</g, '&lt;') + '</span><small>' + Math.max(1, Math.round(f.size / 1024)) + ' Ko</small><button type="button" data-i="' + i + '" aria-label="' + (r.L === 'fr' ? 'Retirer ' : 'Remove ') + f.name.replace(/"/g, '') + '">×</button></li>'; }).join('')
+      : '<li class="none">' + u.qtNone + '</li>';
+  }
+  function add(list){ state.files = state.files.concat([].slice.call(list || [])); draw(); }
+  draw();
+  qi.addEventListener('change', function(){ add(qi.files); qi.value = ''; });
+  ['dragenter','dragover'].forEach(function(e){ zone.addEventListener(e, function(ev){ ev.preventDefault(); zone.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(e){ zone.addEventListener(e, function(ev){ ev.preventDefault(); zone.classList.remove('over'); if (ev.dataTransfer) add(ev.dataTransfer.files); }); });
+  fl.addEventListener('click', function(ev){ var b = ev.target.closest('button'); if (!b) return; state.files.splice(+b.dataset.i, 1); draw(); });
+  qf.addEventListener('submit', function(ev){ ev.preventDefault(); var m = qf.querySelector('#qmock'); m.textContent = ''; setTimeout(function(){ m.textContent = u.qtMock; }, 60); });
+}
+
+/* ═══ ROUTEUR ═══ */
+function render(){
+  var r = parse(), L = r.L, u = UI[L];
+  if (cleanup){ try { cleanup(); } catch(e){} cleanup = null; }
+  var fn = r.sec === 'none' ? P.home : P[r.sec] || P.home;
+  var pg = fn(L, r);
+  chrome(r); setMenu(false);
+  var main = document.getElementById('main');
+  main.className = 'pg-' + (r.sec === 'none' ? 'home' : r.sec) + (r.slug ? ' detail' : '');
+  main.innerHTML = pg.html;
+  document.title = r.sec === 'home' || r.sec === 'none' ? pg.title : pg.title + ' | Cintube';
+  meta('description', pg.desc); meta('og:title', document.title, 1); meta('og:description', pg.desc, 1);
+  meta('og:locale', L === 'fr' ? 'fr_CA' : 'en_CA', 1);
+  bind(main, r);
+  cleanup = W.after(main, r) || null;
+  window.scrollTo(0, 0);
+  if (render.ran){ var h = main.querySelector('h1'); if (h) h.focus({preventScroll:true}); }
+  render.ran = true;
+}
+document.addEventListener('click', function(ev){
+  var t = ev.target;
+  if (t.closest('.menu')){ setMenu(document.getElementById('drawer').hidden); return; }
+  if (t.closest('.skip')){ var h = document.querySelector('#main h1'); if (h) h.focus(); return; }
+  if (t.closest('#drawer a')) setMenu(false);
+});
+document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape') setMenu(false); });
+addEventListener('hashchange', render);
+render();
+})();
+
+</script>
+</body>
+</html>
