@@ -145,7 +145,7 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 
 /* ── sections ── */
 .sec{padding:clamp(72px,11vh,130px) 0}
-.sec__head{display:flex;flex-direction:column;gap:16px;max-width:52rem;margin-bottom:clamp(32px,5vh,56px)}
+.sec__head{display:flex;flex-direction:column;gap:16px;max-width:52rem;margin-bottom:clamp(44px,6vh,64px)}
 .sec__head h2{font-weight:600;font-size:clamp(34px,4.4vw,64px);letter-spacing:-.04em;line-height:1.02;text-wrap:balance}
 .sec__head p{font-size:clamp(17px,1.35vw,20px);color:var(--ink-2);max-width:54ch}
 .sec__head.center{align-items:center;text-align:center;margin-left:auto;margin-right:auto}
@@ -153,12 +153,12 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 .h3{font-weight:600;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.025em}
 
 /* ── cartes à révélation (procédés, secteurs) ── */
-.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .cards--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:4/5;padding:22px;border-radius:var(--r);overflow:hidden;isolation:isolate;
   background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);translate:var(--lift,0 0);
   transition:translate .5s var(--ease),box-shadow .5s var(--ease),border-color .4s}
-.card__img{position:absolute;left:0;top:-14%;z-index:0;object-fit:cover;width:100%;height:128%;
+.card__img{position:absolute;left:0;top:-20%;z-index:0;object-fit:cover;width:100%;height:140%;
   filter:grayscale(1) contrast(.82) brightness(1.04);opacity:.8;--sc:1;transform:translate3d(0,var(--dy,0px),0) scale(var(--sc));
   transition:filter .8s var(--ease-io),opacity .8s var(--ease-io),scale 1.2s var(--ease)}
 :root[data-theme="dark"] .card__img,html:not([data-theme="light"]) .card__img:where(.dark *){filter:grayscale(1) contrast(.9) brightness(.8)}
@@ -330,13 +330,15 @@ html.js.is-ready .plx__copy>:nth-child(2){animation-delay:.26s}
 .fline .sel a:hover,.fline .sel a[aria-current]{color:var(--ink);border-bottom-color:var(--signal)}
 
 /* ── entrées au défilement ── */
-[data-drift]{transform:translate3d(0,var(--dy,0px),0);will-change:transform}
-html.js .rv{opacity:0;translate:0 14px}
-html.js .rv.in{opacity:1;translate:var(--lift,0 0);transition:opacity .9s var(--ease-io),translate .5s var(--ease)}
+[data-drift],.rv{transform:translate3d(0,calc(var(--dy,0px) + var(--ry,0px)),0) scale(var(--rs,1))}
+[data-drift]{will-change:transform}
+html.js .rv:not(.scrub){opacity:0;--ry:14px}
+html.js .rv.in{opacity:1;--ry:0px;translate:var(--lift,0 0);transition:opacity .9s var(--ease-io),translate .5s var(--ease)}
+html.js .rv.scrub{translate:var(--lift,0 0);transition:translate .5s var(--ease)}
 .ar{display:inline-block}
 
 @media (max-width:1100px){
-  .cards{gap:14px}
+  .cards{gap:20px}
   .card{padding:18px}
   .fcols{grid-template-columns:repeat(3,minmax(0,1fr))}
   .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -379,6 +381,6 @@ html.js .rv.in{opacity:1;translate:var(--lift,0 0);transition:opacity .9s var(--
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
   html.js .plx__title h1,html.js .plx__crumbs,html.js .plx__copy>*,html.js .rv{opacity:1;translate:0 0}
-  [data-drift]{transform:none}
+  [data-drift],.rv{transform:none}
   html.js main{opacity:1;translate:0 0}
 }

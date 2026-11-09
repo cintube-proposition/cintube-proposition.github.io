@@ -130,13 +130,15 @@ function drift(root){
   var narrow = matchMedia('(max-width: 900px)'), items = [], vh = innerHeight;
   function measure(){
     vh = innerHeight; var f = narrow.matches ? .6 : 1;
-    var KCOL = [.03, -.02, .02, -.03];
-    items = els.map(function(el){ el.style.setProperty('--dy', '0px'); var r = el.getBoundingClientRect(), k;
+    var KCOL = [.045, -.03, .035, -.045];
+    /* positions de mise en page (offsetTop/offsetLeft), insensibles aux transformations en cours */
+    var layoutTop = function(e){ var y = 0; while (e){ y += e.offsetTop; e = e.offsetParent; } return y; };
+    items = els.map(function(el){ el.style.setProperty('--dy', '0px'); var k;
       if (el.dataset.drift === 'col'){ /* vitesse par colonne réelle : les cartes d'une même colonne glissent ensemble */
-        var lefts = []; [].forEach.call(el.parentNode.children, function(c){ var x = Math.round(c.getBoundingClientRect().left); if (lefts.indexOf(x) < 0) lefts.push(x); });
-        lefts.sort(function(a, b){ return a - b; }); k = KCOL[lefts.indexOf(Math.round(r.left)) % 4] * f; }
+        var lefts = []; [].forEach.call(el.parentNode.children, function(c){ var x = c.offsetLeft; if (lefts.indexOf(x) < 0) lefts.push(x); });
+        lefts.sort(function(a, b){ return a - b; }); k = KCOL[lefts.indexOf(el.offsetLeft) % 4] * f; }
       else k = (parseFloat(el.dataset.drift) || 0) * f;
-      return { el:el, top:r.top + scrollY, h:r.height, k:k, last:null }; });
+      return { el:el, top:layoutTop(el), h:el.offsetHeight, k:k, last:null }; });
   }
   function render(){
     var y = scrollY, mid = vh / 2;
@@ -153,13 +155,23 @@ function drift(root){
   return function(){ clearTimeout(t); removeEventListener('scroll', render); removeEventListener('resize', onRz); removeEventListener('load', onRz); if (lenis) lenis.off('scroll', render); };
 }
 
-/* ── révélations : une seule fois, en entrant ── */
+/* ── révélations liées au défilement : elles se font en descendant et se défont en remontant ── */
 function reveals(root){
-  var els = root.querySelectorAll('.rv'); if (!els.length) return function(){};
-  if (reduce){ els.forEach(function(e){ e.classList.add('in'); }); return function(){}; }
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin:'0px 0px -8% 0px', threshold:.05 });
-  els.forEach(function(e, i){ e.style.transitionDelay = (Math.min(i % 4, 3) * 70) + 'ms'; io.observe(e); });
-  return function(){ io.disconnect(); };
+  var els = [].slice.call(root.querySelectorAll('.rv')); if (!els.length) return function(){};
+  if (reduce || !window.gsap || !window.ScrollTrigger){ els.forEach(function(e){ e.classList.add('in'); }); return function(){}; }
+  var tweens = els.map(function(el){
+    el.classList.add('scrub');
+    /* les cartes et chemises grandissent sur place (aucun chevauchement possible) ; le reste monte de 32 px */
+    var grid = el.classList.contains('card') || el.classList.contains('folder');
+    var from = grid ? { '--rs':.94, opacity:0 } : { '--ry':'32px', opacity:0 }, to = grid ? { '--rs':1, opacity:1 } : { '--ry':'0px', opacity:1 };
+    to.ease = 'none'; to.immediateRender = true; to.scrollTrigger = { trigger:el, start:'top 97%', end:'top 82%', scrub:.15 };
+    return gsap.fromTo(el, from, to);
+  });
+  /* un élément trop bas pour atteindre le seuil (fin de page) est révélé d'office */
+  function settle(){ var max = ScrollTrigger.maxScroll(window);
+    tweens.forEach(function(t){ var st = t.scrollTrigger; if (st && st.end > max - 2 && st.start > max - innerHeight * .4){ t.progress(1); st.kill(); t.scrollTrigger = null; } }); }
+  var t1 = setTimeout(function(){ ScrollTrigger.refresh(); settle(); }, 500), t2 = setTimeout(function(){ ScrollTrigger.refresh(); settle(); }, 1800);
+  return function(){ clearTimeout(t1); clearTimeout(t2); tweens.forEach(function(t){ if (t.scrollTrigger) t.scrollTrigger.kill(); t.kill(); }); };
 }
 
 /* ── chiffres : mots qui s'allument, nombres qui comptent, profil qui se trace ── */
@@ -176,7 +188,8 @@ function stats(root){
     var end = +b.dataset.n, suf = b.dataset.suf || '', pre = b.dataset.pre || '', fmt = function(v){ return pre + Math.round(v).toLocaleString(document.documentElement.lang.slice(0, 2) === 'fr' ? 'fr-CA' : 'en-CA').replace(/ /g, ' ') + suf; };
     if (reduce){ b.textContent = fmt(end); return; }
     var o = { v:0 }; b.textContent = fmt(0);
-    trigs.push(ScrollTrigger.create({ trigger:b, start:'top 88%', once:true, onEnter:function(){ gsap.to(o, { v:end, duration:1.6, ease:'power3.out', onUpdate:function(){ b.textContent = fmt(o.v); } }); } }));
+    var play = function(){ gsap.killTweensOf(o); gsap.to(o, { v:end, duration:1.6, ease:'power3.out', onUpdate:function(){ b.textContent = fmt(o.v); } }); };
+    trigs.push(ScrollTrigger.create({ trigger:b, start:'top 88%', onEnter:play, onEnterBack:play, onLeaveBack:function(){ gsap.killTweensOf(o); o.v = 0; b.textContent = fmt(0); } }));
   });
   var prof = sec.querySelector('.profile');
   if (prof){ var paths = prof.querySelectorAll('.p');

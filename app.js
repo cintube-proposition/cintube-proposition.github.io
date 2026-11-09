@@ -68,19 +68,19 @@ function imgOf(s){ return 'img/' + s + '.webp'; }
 function cards(L, list, sec, cls){
   return '<div class="cards' + (cls ? ' ' + cls : '') + '">' + list.map(function(p, i){
     var img = sec === 'procs' ? p.s : p.proc[0];
-    return '<a class="card rv" data-drift="col" href="' + href(L, sec, p) + '"><img class="card__img" data-drift="-.09" src="' + imgOf(img) + '" alt="" loading="lazy" width="800" height="1000">' + ARROW +
+    return '<a class="card rv" data-drift="col" href="' + href(L, sec, p) + '"><img class="card__img" data-drift="-.13" src="' + imgOf(img) + '" alt="" loading="lazy" width="800" height="1000">' + ARROW +
       '<div class="card__body"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p></div></a>'; }).join('') + '</div>';
 }
 function words(t){ return t.split(' ').map(function(w){ return '<span class="w">' + w + '</span>'; }).join(' '); }
 function statsHtml(L){
   var x = X[L];
   return '<div class="stats"><p class="stats__text" data-drift=".04">' + words(x.statsT) + '</p>' +
-    '<svg class="profile" data-drift=".06" viewBox="0 0 900 220" role="img" aria-label="' + x.profile + '">' +
+    '<svg class="profile" data-drift=".04" viewBox="0 0 900 220" role="img" aria-label="' + x.profile + '">' +
       '<path class="ax" d="M40 200H860M560 20V200"/><path class="ax" d="M560 200 L560 20 M560 200 A180 180 0 0 1 740 20"/>' +
       '<path class="p" pathLength="1" d="M40 200H560"/><path class="p" pathLength="1" d="M560 200a180 180 0 0 0 180-180"/><path class="p" pathLength="1" d="M740 20V0"/>' +
       '<path class="p" pathLength="1" d="M40 156H560"/><path class="p" pathLength="1" d="M560 156a136 136 0 0 0 136-136"/><path class="p" pathLength="1" d="M696 20V0"/>' +
       '<path class="p" pathLength="1" d="M560 200 L560 20"/><text x="572" y="112" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="currentColor">R</text></svg>' +
-    '<dl class="nums" data-drift="-.02">' + x.nums.map(function(n){ return '<div class="num rv"><b data-n="' + n[0] + '"' + (n[0] === '60' ? ' data-pre="+ "' : '') + '>' + n[0] + '</b><span>' + n[1] + (n[2] ? ' ' + tbc(L) : '') + '</span></div>'; }).join('') + '</dl></div>';
+    '<dl class="nums">' + x.nums.map(function(n){ return '<div class="num rv"><b data-n="' + n[0] + '"' + (n[0] === '60' ? ' data-pre="+ "' : '') + '>' + n[0] + '</b><span>' + n[1] + (n[2] ? ' ' + tbc(L) : '') + '</span></div>'; }).join('') + '</dl></div>';
 }
 var DRAW = {
   'edifice-peter-b-lewis':'<path class="t" d="M30 230A170 170 0 0 1 270 230"/><path class="t" d="M60 230A120 120 0 0 1 240 230"/><path class="p" d="M60 230L75 160M75 160L105 120M105 120L120 96M120 96L150 80M150 80L180 96M180 96L195 120M195 120L225 160M225 160L240 230M75 160L52 192M52 192L105 120M105 120L87 136M120 96L150 110M150 110L180 96M195 120L213 136M225 160L248 192"/><path class="ax" d="M20 230H280"/>',
@@ -90,11 +90,11 @@ var DRAW = {
 };
 function fanHtml(L){
   var items = D.PROJ;
-  return '<div class="fan" data-drift=".05" tabindex="0" aria-roledescription="carousel">' + items.map(function(p, i){ var pr = byS(D.PROC, p.proc);
+  return '<div class="fanwrap" data-drift=".015"><div class="fan" tabindex="0" aria-roledescription="carousel">' + items.map(function(p, i){ var pr = byS(D.PROC, p.proc);
     return '<article class="fan__card glass" aria-label="' + p[L].h + '"><svg viewBox="0 0 300 300" aria-hidden="true">' + (DRAW[p.s] || '') + '</svg><h3>' + p[L].h + '</h3><p>' + pr[L].h + '</p></article>'; }).join('') + '</div>' +
     '<div class="fan__nav"><button class="ico" type="button" data-fan="prev" aria-label="' + (L === 'fr' ? 'Précédent' : 'Previous') + '"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l-6 6 6 6"/></svg></button>' +
     '<div class="fan__dots" role="tablist">' + items.map(function(p, i){ return '<button type="button" aria-label="' + p[L].h + '"></button>'; }).join('') + '</div>' +
-    '<button class="ico" type="button" data-fan="next" aria-label="' + (L === 'fr' ? 'Suivant' : 'Next') + '"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l6 6-6 6"/></svg></button></div>';
+    '<button class="ico" type="button" data-fan="next" aria-label="' + (L === 'fr' ? 'Suivant' : 'Next') + '"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l6 6-6 6"/></svg></button></div></div>';
 }
 function folder(L, p, body){
   var who = p.who ? p.who.join(', ') : (L === 'fr' ? 'Ventes' : 'Sales');
@@ -115,9 +115,9 @@ function dropHtml(L, id, big){
 }
 function ctaHtml(L){
   var x = X[L];
-  return '<section class="sec"><div class="wrap"><div class="cta glass rim rv"><div data-drift=".03"><h2>' + x.ctaH + '</h2><p>' + x.ctaP + '</p></div><div data-drift="-.03">' + dropHtml(L, 'drop-cta', true) + '</div></div></div></section>';
+  return '<section class="sec"><div class="wrap"><div class="cta glass rim rv"><div data-drift=".03"><h2>' + x.ctaH + '</h2><p>' + x.ctaP + '</p></div><div data-drift="-.01">' + dropHtml(L, 'drop-cta', true) + '</div></div></div></section>';
 }
-function head(h2, p, center){ return '<div class="sec__head rv' + (center ? ' center' : '') + '" data-drift=".03"><h2>' + h2 + '</h2>' + (p ? '<p>' + p + '</p>' : '') + '</div>'; }
+function head(h2, p, center){ return '<div class="sec__head rv' + (center ? ' center' : '') + '" data-drift=".015"><h2>' + h2 + '</h2>' + (p ? '<p>' + p + '</p>' : '') + '</div>'; }
 
 /* ═══ PAGES ═══ */
 var P = {};
@@ -147,8 +147,8 @@ P.proc = function(L, p){
   return {title:t.t, desc:t.d, html:
     plx({L:L, short:1, crumbs:[[u.nav[0], href(L, 'procs')], [t.h]], h1:t.h, lead:t.l, mesh:.8, front:part(p.s, t.d, p.s === 'cintrage-de-precision' ? '<span class="dim" hidden>0°</span>' : ''),
       ctas:'<a class="pill" href="' + href(L, 'quote', null, 'p=' + p.s) + '">' + u.askProc + '</a>'}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.03">' + t.b.map(function(b){ return '<p>' + b + '</p>'; }).join('') + seg + '</div>' +
-      (side ? '<div class="panel glass rim rv" data-drift=".04">' + side + '</div>' : '') + '</div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.01">' + t.b.map(function(b){ return '<p>' + b + '</p>'; }).join('') + seg + '</div>' +
+      (side ? '<div class="panel glass rim rv" data-drift=".03">' + side + '</div>' : '') + '</div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv">' + u.sectFor + '</h3><div class="chips rv" style="margin-top:16px">' + p.sect.map(function(s){ var x = byS(D.SECT, s);
       return '<a class="glass" href="' + href(L, 'sects', x) + '">' + x[L].h + '</a>'; }).join('') + '</div>' +
     '<a class="next glass rim rv" data-drift=".04" href="' + href(L, 'procs', nx) + '"><div><span>' + u.next + '</span><b>' + nx[L].h + '</b></div>' + ARROW + '</a></div></section>'};
@@ -179,14 +179,14 @@ P.co = function(L){
   var u = UI[L], x = X[L];
   return {title:u.tCo, desc:u.dCo, html:plx({L:L, short:1, crumbs:[[u.nav[4]]], h1:u.coH, lead:u.co[1], mesh:.8}) +
     '<section class="sec sec--tight"><div class="wrap">' + statsHtml(L) + '</div></section>' +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.03">' + u.co.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.01">' + u.co.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
     '<a class="pill pill--ghost" href="' + href(L, 'q') + '">' + u.qH.replace('.', '') + ARROW + '</a></div>' +
-    '<div class="panel glass rim rv" data-drift=".04"><dl class="pf">' + u.facts.map(function(f){ return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + (f[2] ? ' ' + tbc(L) : '') + '</dd></div>'; }).join('') + '</dl></div></div></div></section>'};
+    '<div class="panel glass rim rv" data-drift=".03"><dl class="pf">' + u.facts.map(function(f){ return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + (f[2] ? ' ' + tbc(L) : '') + '</dd></div>'; }).join('') + '</dl></div></div></div></section>'};
 };
 P.q = function(L){
   var u = UI[L], ap = byS(D.PROC, 'appareils-sous-pression');
   return {title:u.tQ, desc:u.dQ, html:plx({L:L, short:1, crumbs:[[u.nav[4], href(L, 'co')], [u.qH.replace('.', '')]], h1:u.qH, lead:u.qL, mesh:.8, front:part('appareils-sous-pression', ap[L].d)}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv" data-drift=".04"><dl class="codes">' + u.qCodes.map(function(c){ return '<div><dt>' + c[0] + '</dt><dd>' + c[1] + '</dd></div>'; }).join('') + '</dl></div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv" data-drift=".03"><dl class="codes">' + u.qCodes.map(function(c){ return '<div><dt>' + c[0] + '</dt><dd>' + c[1] + '</dd></div>'; }).join('') + '</dl></div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv">' + u.qMfr + '</h3><ul class="cols rv" style="margin-top:16px">' + ap[L].x.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul>' +
     '<p class="rv" style="margin-top:28px;color:var(--ink-2)">' + u.qCert + '</p><div class="chips rv" style="margin-top:16px">' + D.PLANTS.map(function(p){ return '<a class="glass" href="' + href(L, 'plants', p) + '">' + p.city + '</a>'; }).join('') + '</div></div></section>'};
 };
@@ -204,8 +204,8 @@ P.plant = function(L, p){
     (p.who ? '<div><dt>' + u.who + '</dt><dd>' + p.who.join(', ') + ' ' + tbc(L) + '</dd></div>' : '') + '</dl>';
   return {title:t.t, desc:t.d, html:plx({L:L, short:1, crumbs:[[u.nav[3], href(L, 'plants')], [p.city]], h1:p.city, lead:t.l, mesh:.8,
       ctas:'<a class="pill" href="' + href(L, 'quote', null, 'u=' + p.s) + '">' + u.askPlant + '</a>'}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="panel glass rim rv" data-drift=".04">' + f + '</div>' +
-    '<div class="prose rv" data-drift="-.03"><p>' + t.d + '</p><p>' + t.r + '</p></div></div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="panel glass rim rv" data-drift=".03">' + f + '</div>' +
+    '<div class="prose rv" data-drift="-.01"><p>' + t.d + '</p><p>' + t.r + '</p></div></div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv" data-drift=".03">' + u.otherPlants + '</h3><div class="folders" style="margin-top:44px">' + D.PLANTS.filter(function(x){ return x !== p; }).map(function(x){ return folder(L, x); }).join('') + '</div></div></section>'};
 };
 P.quote = function(L, r){
