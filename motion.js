@@ -18,6 +18,7 @@ function boot(){
       gsap.ticker.lagSmoothing(0);
     } else { var tick = function(t){ lenis.raf(t); requestAnimationFrame(tick); }; requestAnimationFrame(tick); }
   }
+  try { history.scrollRestoration = 'manual'; } catch(e){}
   var ready = function(){ document.documentElement.classList.add('is-ready'); };
   requestAnimationFrame(function(){ requestAnimationFrame(ready); }); setTimeout(ready, 400);
   var top = document.getElementById('top');
@@ -25,7 +26,8 @@ function boot(){
   addEventListener('scroll', nav, { passive:true }); nav();
 }
 function scrollTop(){
-  if (lenis) lenis.scrollTo(0, { immediate:true, force:true });
+  window.scrollTo(0, 0);
+  if (lenis){ lenis.scrollTo(0, { immediate:true, force:true }); lenis.scrollTo(0, { immediate:true, force:true }); }
   window.scrollTo(0, 0);
 }
 function isDark(){ var t = document.documentElement.getAttribute('data-theme'); return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
@@ -119,6 +121,32 @@ function parallax(root){
   return function(){ removeEventListener('scroll', render); removeEventListener('resize', onRz); if (lenis) lenis.off('scroll', render); };
 }
 
+
+/* ── dérive : chaque élément marqué glisse à sa propre vitesse sur toute la page.
+   k > 0 : plus lent que la page (arrière-plan) ; k < 0 : plus vite (avant-plan). ── */
+function drift(root){
+  var els = [].slice.call(root.querySelectorAll('[data-drift]')); if (!els.length || reduce) return function(){};
+  var narrow = matchMedia('(max-width: 900px)'), items = [], vh = innerHeight;
+  function measure(){
+    vh = innerHeight; var f = narrow.matches ? .6 : 1;
+    items = els.map(function(el){ el.style.setProperty('--dy', '0px'); var r = el.getBoundingClientRect();
+      return { el:el, top:r.top + scrollY, h:r.height, k:(parseFloat(el.dataset.drift) || 0) * f, last:null }; });
+  }
+  function render(){
+    var y = scrollY, mid = vh / 2;
+    for (var i = 0; i < items.length; i++){ var it = items[i], c = it.top + it.h / 2 - y;
+      if (c < -vh || c > vh * 2){ continue; }
+      var d = Math.round((mid - c) * it.k * 10) / 10;
+      if (d !== it.last){ it.last = d; it.el.style.setProperty('--dy', d + 'px'); } }
+  }
+  var rz; var onRz = function(){ clearTimeout(rz); rz = setTimeout(function(){ measure(); render(); }, 120); };
+  measure(); render();
+  addEventListener('scroll', render, { passive:true }); addEventListener('resize', onRz); addEventListener('load', onRz);
+  if (lenis) lenis.on('scroll', render);
+  var t = setTimeout(function(){ measure(); render(); }, 700);
+  return function(){ clearTimeout(t); removeEventListener('scroll', render); removeEventListener('resize', onRz); removeEventListener('load', onRz); if (lenis) lenis.off('scroll', render); };
+}
+
 /* ── révélations : une seule fois, en entrant ── */
 function reveals(root){
   var els = root.querySelectorAll('.rv'); if (!els.length) return function(){};
@@ -147,8 +175,8 @@ function stats(root){
   var prof = sec.querySelector('.profile');
   if (prof){ var paths = prof.querySelectorAll('.p');
     if (reduce){ paths.forEach(function(p){ p.style.strokeDashoffset = 0; }); prof.classList.add('in'); }
-    else trigs.push(ScrollTrigger.create({ trigger:prof, start:'top 85%', once:true, onEnter:function(){
-      gsap.to(paths, { strokeDashoffset:0, duration:2.2, ease:'power2.inOut', stagger:.15 }); prof.classList.add('in'); } })); }
+    else { var tl = gsap.timeline({ scrollTrigger:{ trigger:prof, start:'top 90%', end:'bottom 45%', scrub:.4, onEnter:function(){ prof.classList.add('in'); } } });
+      tl.to(paths, { strokeDashoffset:0, duration:1, ease:'none', stagger:.12 }); trigs.push(tl.scrollTrigger); } }
   return function(){ trigs.forEach(function(t){ t.kill(); }); };
 }
 
@@ -186,7 +214,7 @@ function page(root){
   var stops = [];
   root.querySelectorAll('.plx').forEach(function(p){ stops.push(parallax(p)); });
   root.querySelectorAll('[data-mesh]').forEach(function(m){ stops.push(waveMesh(m, { strength:+m.dataset.mesh || 1 })); });
-  stops.push(reveals(root), stats(root), fan(root));
+  stops.push(reveals(root), stats(root), fan(root), drift(root));
   if (window.ScrollTrigger) ScrollTrigger.refresh();
   return function(){ stops.forEach(function(f){ try { f(); } catch(e){} }); };
 }

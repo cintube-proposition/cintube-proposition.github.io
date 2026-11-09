@@ -56,7 +56,7 @@ function plantTel(p){ return '<a class="tel" href="tel:' + p.telh + '">' + p.tel
 function plx(o){
   var crumbs = o.crumbs ? '<nav class="plx__crumbs" aria-label="' + (o.L === 'fr' ? 'Fil d’Ariane' : 'Breadcrumb') + '"><a href="' + href(o.L) + '">' + UI[o.L].home + '</a>' +
     o.crumbs.map(function(c){ return '<span aria-hidden="true">/</span>' + (c[1] ? '<a href="' + c[1] + '">' + c[0] + '</a>' : '<span>' + c[0] + '</span>'); }).join('') + '</nav>' : '';
-  return '<section class="plx' + (o.short ? ' plx--short' : '') + '"><div class="plx__head"><div class="plx__vis"><div class="plx__layers" data-plx-layers>' +
+  return '<section class="plx' + (o.short ? ' plx--short' : '') + (o.front ? '' : ' plx--bare') + '"><div class="plx__head"><div class="plx__vis"><div class="plx__layers" data-plx-layers>' +
     '<div class="plx__bg" data-plx-layer="1" data-mesh="' + (o.mesh || 1) + '" aria-hidden="true"></div>' +
     '<div class="plx__title" data-plx-layer="2">' + crumbs + '<h1 tabindex="-1">' + o.h1 + '</h1></div>' +
     (o.front ? '<div class="plx__front" data-plx-layer="3">' + o.front + '</div>' : '') +
@@ -66,21 +66,22 @@ function plx(o){
 function part(kind, label, extra){ return '<div class="part" data-part="' + kind + '" role="img" aria-label="' + label + '">' + (extra || '') + '</div>'; }
 function imgOf(s){ return 'img/' + s + '.webp'; }
 function cards(L, list, sec, cls){
-  return '<div class="cards' + (cls ? ' ' + cls : '') + '">' + list.map(function(p){
+  var K = [.14, -.08, .1, -.14];
+  return '<div class="cards' + (cls ? ' ' + cls : '') + '">' + list.map(function(p, i){
     var img = sec === 'procs' ? p.s : p.proc[0];
-    return '<a class="card rv" href="' + href(L, sec, p) + '"><img class="card__img" src="' + imgOf(img) + '" alt="" loading="lazy" width="800" height="1000">' + ARROW +
+    return '<a class="card rv" data-drift="' + K[i % 4] + '" href="' + href(L, sec, p) + '"><img class="card__img" data-drift="-.16" src="' + imgOf(img) + '" alt="" loading="lazy" width="800" height="1000">' + ARROW +
       '<div class="card__body"><h3>' + p[L].h + '</h3><p>' + p[L].l + '</p></div></a>'; }).join('') + '</div>';
 }
 function words(t){ return t.split(' ').map(function(w){ return '<span class="w">' + w + '</span>'; }).join(' '); }
 function statsHtml(L){
   var x = X[L];
-  return '<div class="stats"><p class="stats__text">' + words(x.statsT) + '</p>' +
-    '<svg class="profile" viewBox="0 0 900 220" role="img" aria-label="' + x.profile + '">' +
+  return '<div class="stats"><p class="stats__text" data-drift=".08">' + words(x.statsT) + '</p>' +
+    '<svg class="profile" data-drift=".14" viewBox="0 0 900 220" role="img" aria-label="' + x.profile + '">' +
       '<path class="ax" d="M40 200H860M560 20V200"/><path class="ax" d="M560 200 L560 20 M560 200 A180 180 0 0 1 740 20"/>' +
       '<path class="p" pathLength="1" d="M40 200H560"/><path class="p" pathLength="1" d="M560 200a180 180 0 0 0 180-180"/><path class="p" pathLength="1" d="M740 20V0"/>' +
       '<path class="p" pathLength="1" d="M40 156H560"/><path class="p" pathLength="1" d="M560 156a136 136 0 0 0 136-136"/><path class="p" pathLength="1" d="M696 20V0"/>' +
       '<path class="p" pathLength="1" d="M560 200 L560 20"/><text x="572" y="112" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="currentColor">R</text></svg>' +
-    '<dl class="nums">' + x.nums.map(function(n){ return '<div class="num rv"><b data-n="' + n[0] + '"' + (n[0] === '60' ? ' data-pre="+ "' : '') + '>' + n[0] + '</b><span>' + n[1] + (n[2] ? ' ' + tbc(L) : '') + '</span></div>'; }).join('') + '</dl></div>';
+    '<dl class="nums" data-drift="-.1">' + x.nums.map(function(n){ return '<div class="num rv"><b data-n="' + n[0] + '"' + (n[0] === '60' ? ' data-pre="+ "' : '') + '>' + n[0] + '</b><span>' + n[1] + (n[2] ? ' ' + tbc(L) : '') + '</span></div>'; }).join('') + '</dl></div>';
 }
 var DRAW = {
   'edifice-peter-b-lewis':'<path class="t" d="M30 230A170 170 0 0 1 270 230"/><path class="t" d="M60 230A120 120 0 0 1 240 230"/><path class="p" d="M60 230L75 160M75 160L105 120M105 120L120 96M120 96L150 80M150 80L180 96M180 96L195 120M195 120L225 160M225 160L240 230M75 160L52 192M52 192L105 120M105 120L87 136M120 96L150 110M150 110L180 96M195 120L213 136M225 160L248 192"/><path class="ax" d="M20 230H280"/>',
@@ -90,7 +91,7 @@ var DRAW = {
 };
 function fanHtml(L){
   var items = D.PROJ;
-  return '<div class="fan" tabindex="0" aria-roledescription="carousel">' + items.map(function(p, i){ var pr = byS(D.PROC, p.proc);
+  return '<div class="fan" data-drift=".1" tabindex="0" aria-roledescription="carousel">' + items.map(function(p, i){ var pr = byS(D.PROC, p.proc);
     return '<article class="fan__card glass" aria-label="' + p[L].h + '"><svg viewBox="0 0 300 300" aria-hidden="true">' + (DRAW[p.s] || '') + '</svg><h3>' + p[L].h + '</h3><p>' + pr[L].h + '</p></article>'; }).join('') + '</div>' +
     '<div class="fan__nav"><button class="ico" type="button" data-fan="prev" aria-label="' + (L === 'fr' ? 'Précédent' : 'Previous') + '"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l-6 6 6 6"/></svg></button>' +
     '<div class="fan__dots" role="tablist">' + items.map(function(p, i){ return '<button type="button" aria-label="' + p[L].h + '"></button>'; }).join('') + '</div>' +
@@ -102,7 +103,7 @@ function folder(L, p, body){
     '<div class="folder__sheet">' + p.tel + '</div><div class="folder__sheet">' + who + '</div><div class="folder__sheet">' + (p.mail || 'cintube.ca') + '</div></div>' +
     '<div class="folder__body glass rim">' + ARROW + '<h3>' + p.city + '</h3><p class="role">' + p[L].r + '</p><p class="adr">' + p[L].a.slice(0, 2).join('<br>') + '</p></div></a>';
 }
-function foldersHtml(L){ return '<div class="folders">' + D.PLANTS.map(function(p){ return folder(L, p); }).join('') + '</div>'; }
+function foldersHtml(L){ var K = [.14, -.06, .1]; return '<div class="folders">' + D.PLANTS.map(function(p, i){ return folder(L, p).replace('class="folder rv"', 'class="folder rv" data-drift="' + K[i % 3] + '"'); }).join('') + '</div>'; }
 function dropHtml(L, id, big){
   var u = UI[L];
   return '<form class="drop" id="' + id + '" novalidate><div class="folder__tab"></div><div class="folder__body glass rim">' +
@@ -112,9 +113,9 @@ function dropHtml(L, id, big){
 }
 function ctaHtml(L){
   var x = X[L];
-  return '<section class="sec"><div class="wrap"><div class="cta glass rim rv"><div><h2>' + x.ctaH + '</h2><p>' + x.ctaP + '</p></div>' + dropHtml(L, 'drop-cta', true) + '</div></div></section>';
+  return '<section class="sec"><div class="wrap"><div class="cta glass rim rv"><div data-drift=".08"><h2>' + x.ctaH + '</h2><p>' + x.ctaP + '</p></div><div data-drift="-.1">' + dropHtml(L, 'drop-cta', true) + '</div></div></div></section>';
 }
-function head(h2, p, center){ return '<div class="sec__head rv' + (center ? ' center' : '') + '"><h2>' + h2 + '</h2>' + (p ? '<p>' + p + '</p>' : '') + '</div>'; }
+function head(h2, p, center){ return '<div class="sec__head rv' + (center ? ' center' : '') + '" data-drift=".1"><h2>' + h2 + '</h2>' + (p ? '<p>' + p + '</p>' : '') + '</div>'; }
 
 /* ═══ PAGES ═══ */
 var P = {};
@@ -144,11 +145,11 @@ P.proc = function(L, p){
   return {title:t.t, desc:t.d, html:
     plx({L:L, short:1, crumbs:[[u.nav[0], href(L, 'procs')], [t.h]], h1:t.h, lead:t.l, mesh:.8, front:part(p.s, t.d, p.s === 'cintrage-de-precision' ? '<span class="dim" hidden>0°</span>' : ''),
       ctas:'<a class="pill" href="' + href(L, 'quote', null, 'p=' + p.s) + '">' + u.askProc + '</a>'}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv">' + t.b.map(function(b){ return '<p>' + b + '</p>'; }).join('') + seg + '</div>' +
-      (side ? '<div class="panel glass rim rv">' + side + '</div>' : '') + '</div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.06">' + t.b.map(function(b){ return '<p>' + b + '</p>'; }).join('') + seg + '</div>' +
+      (side ? '<div class="panel glass rim rv" data-drift=".12">' + side + '</div>' : '') + '</div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv">' + u.sectFor + '</h3><div class="chips rv" style="margin-top:16px">' + p.sect.map(function(s){ var x = byS(D.SECT, s);
       return '<a class="glass" href="' + href(L, 'sects', x) + '">' + x[L].h + '</a>'; }).join('') + '</div>' +
-    '<a class="next glass rim rv" href="' + href(L, 'procs', nx) + '"><div><span>' + u.next + '</span><b>' + nx[L].h + '</b></div>' + ARROW + '</a></div></section>'};
+    '<a class="next glass rim rv" data-drift=".1" href="' + href(L, 'procs', nx) + '"><div><span>' + u.next + '</span><b>' + nx[L].h + '</b></div>' + ARROW + '</a></div></section>'};
 };
 P.sects = function(L, r){
   var u = UI[L];
@@ -176,14 +177,14 @@ P.co = function(L){
   var u = UI[L], x = X[L];
   return {title:u.tCo, desc:u.dCo, html:plx({L:L, short:1, crumbs:[[u.nav[4]]], h1:u.coH, lead:u.co[1], mesh:.8}) +
     '<section class="sec sec--tight"><div class="wrap">' + statsHtml(L) + '</div></section>' +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv">' + u.co.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="prose rv" data-drift="-.06">' + u.co.map(function(b){ return '<p>' + b + '</p>'; }).join('') +
     '<a class="pill pill--ghost" href="' + href(L, 'q') + '">' + u.qH.replace('.', '') + ARROW + '</a></div>' +
-    '<div class="panel glass rim rv"><dl class="pf">' + u.facts.map(function(f){ return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + (f[2] ? ' ' + tbc(L) : '') + '</dd></div>'; }).join('') + '</dl></div></div></div></section>'};
+    '<div class="panel glass rim rv" data-drift=".1"><dl class="pf">' + u.facts.map(function(f){ return '<div><dt>' + f[0] + '</dt><dd>' + f[1] + (f[2] ? ' ' + tbc(L) : '') + '</dd></div>'; }).join('') + '</dl></div></div></div></section>'};
 };
 P.q = function(L){
   var u = UI[L], ap = byS(D.PROC, 'appareils-sous-pression');
   return {title:u.tQ, desc:u.dQ, html:plx({L:L, short:1, crumbs:[[u.nav[4], href(L, 'co')], [u.qH.replace('.', '')]], h1:u.qH, lead:u.qL, mesh:.8, front:part('appareils-sous-pression', ap[L].d)}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv"><dl class="codes">' + u.qCodes.map(function(c){ return '<div><dt>' + c[0] + '</dt><dd>' + c[1] + '</dd></div>'; }).join('') + '</dl></div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv" data-drift=".1"><dl class="codes">' + u.qCodes.map(function(c){ return '<div><dt>' + c[0] + '</dt><dd>' + c[1] + '</dd></div>'; }).join('') + '</dl></div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv">' + u.qMfr + '</h3><ul class="cols rv" style="margin-top:16px">' + ap[L].x.map(function(x){ return '<li>' + x + '</li>'; }).join('') + '</ul>' +
     '<p class="rv" style="margin-top:28px;color:var(--ink-2)">' + u.qCert + '</p><div class="chips rv" style="margin-top:16px">' + D.PLANTS.map(function(p){ return '<a class="glass" href="' + href(L, 'plants', p) + '">' + p.city + '</a>'; }).join('') + '</div></div></section>'};
 };
@@ -201,8 +202,8 @@ P.plant = function(L, p){
     (p.who ? '<div><dt>' + u.who + '</dt><dd>' + p.who.join(', ') + ' ' + tbc(L) + '</dd></div>' : '') + '</dl>';
   return {title:t.t, desc:t.d, html:plx({L:L, short:1, crumbs:[[u.nav[3], href(L, 'plants')], [p.city]], h1:p.city, lead:t.l, mesh:.8,
       ctas:'<a class="pill" href="' + href(L, 'quote', null, 'u=' + p.s) + '">' + u.askPlant + '</a>'}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="panel glass rim rv">' + f + '</div>' +
-    '<div class="prose rv"><p>' + t.d + '</p><p>' + t.r + '</p></div></div></div></section>' +
+    '<section class="sec sec--tight"><div class="wrap"><div class="split"><div class="panel glass rim rv" data-drift=".1">' + f + '</div>' +
+    '<div class="prose rv" data-drift="-.06"><p>' + t.d + '</p><p>' + t.r + '</p></div></div></div></section>' +
     '<section class="sec sec--tight"><div class="wrap"><h3 class="h3 rv">' + u.otherPlants + '</h3><div class="folders" style="margin-top:22px">' + D.PLANTS.filter(function(x){ return x !== p; }).map(function(x){ return folder(L, x); }).join('') + '</div></div></section>'};
 };
 P.quote = function(L, r){
@@ -229,7 +230,7 @@ P.quote = function(L, r){
       '<div class="fld wide"><label for="msg">' + u.qtMsg + '</label><textarea id="msg" name="msg" rows="4"></textarea></div></div></fieldset>' +
     '<div class="send"><button class="pill" type="submit">' + u.qtSend + '</button><p class="mock" id="qmock" role="status"></p></div></form>';
   return {title:u.tQt, desc:u.dQt, html:plx({L:L, short:1, crumbs:[[u.quote]], h1:u.qtH, lead:u.qtL, mesh:.8}) +
-    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv">' + form + '</div></div></section>'};
+    '<section class="sec sec--tight"><div class="wrap"><div class="panel glass rim rv" data-drift=".06">' + form + '</div></div></section>'};
 };
 
 /* ═══ CHARPENTE ═══ */
@@ -314,6 +315,8 @@ function mount(){
   bind(main, r);
   M.scrollTop();
   var stops = [M.page(main)];
+  /* le navigateur borne la position pendant que la page change : on remet en haut sur les images suivantes, la page est encore invisible */
+  M.scrollTop(); requestAnimationFrame(M.scrollTop); setTimeout(M.scrollTop, 60); setTimeout(M.scrollTop, 200);
   var go3d = function(){ var s = window.PARTS3D && window.PARTS3D.mount(main); if (s) stops.push(s); };
   if (window.PARTS3D) go3d(); else addEventListener('parts3d-ready', go3d, { once:true });
   cleanup = function(){ removeEventListener('parts3d-ready', go3d); stops.forEach(function(f){ try { f(); } catch(e){} }); };
